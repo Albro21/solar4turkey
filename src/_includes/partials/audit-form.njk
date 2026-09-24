@@ -1,0 +1,71 @@
+<section id="audit-form-section" class="relative overflow-hidden bg-slate-100 py-20 text-slate-900">
+  
+  <!-- Background Glow / Blur Accent -->
+  <span class="pointer-events-none absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-solar-yellow/15 blur-[120px]" aria-hidden="true"></span>
+
+  <div class="relative mx-auto max-w-4xl px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="inline-block rounded-full bg-solar-yellow/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber-800 mb-4">
+        {{ audit.badge }}
+      </span>
+      <h2 class="text-3xl font-extrabold uppercase tracking-wide md:text-4xl text-slate-900">
+        {{ audit.section_title }}
+      </h2>
+      <p class="mt-4 text-base md:text-lg text-slate-600">
+        {{ audit.section_subtitle }}
+      </p>
+    </div>
+
+    <!-- Placeholder Form Container -->
+    <div class="rounded-3xl bg-white p-8 border border-slate-200 shadow-xl shadow-slate-200/50 backdrop-blur-md md:p-10">
+      <form onsubmit="event.preventDefault();" class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        
+        <!-- Full Name -->
+        <div class="flex flex-col gap-2">
+          <label for="audit-name" class="text-sm font-semibold text-slate-700">
+            {{ audit.field_name }}
+          </label>
+          <input type="text" id="audit-name" placeholder="{{ audit.placeholder_name }}" class="rounded-xl bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 border border-slate-200 focus:border-amber-500 focus:bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none transition-colors"/>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="flex flex-col gap-2">
+          <label for="audit-phone" class="text-sm font-semibold text-slate-700">
+            {{ audit.field_phone }}
+          </label>
+          <input type="tel" id="audit-phone" placeholder="{{ audit.placeholder_phone }}" class="rounded-xl bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 border border-slate-200 focus:border-amber-500 focus:bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none transition-colors"/>
+        </div>
+
+        <!-- City / Location -->
+        <div class="flex flex-col gap-2">
+          <label for="audit-city" class="text-sm font-semibold text-slate-700">
+            {{ audit.field_city }}
+          </label>
+          <input type="text" id="audit-city" placeholder="{{ audit.placeholder_city }}" class="rounded-xl bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 border border-slate-200 focus:border-amber-500 focus:bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none transition-colors"/>
+        </div>
+
+        <!-- Monthly Electricity Bill / Consumption -->
+        <div class="flex flex-col gap-2">
+          <label for="audit-bill" class="text-sm font-semibold text-slate-700">
+            {{ audit.field_bill }}
+          </label>
+          <input type="text" id="audit-bill" placeholder="{{ audit.placeholder_bill }}" class="rounded-xl bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 border border-slate-200 focus:border-amber-500 focus:bg-white focus:ring-1 focus:ring-amber-500 focus:outline-none transition-colors"/>
+        </div>
+
+        <!-- Submit Button (Full Width) -->
+        <div class="md:col-span-2 mt-4">
+          <button type="submit" class="w-full rounded-xl bg-solar-yellow py-4 px-6 text-center text-base font-bold text-dark-slate shadow-lg transition-all duration-300 hover:bg-solar-yellow/90 hover:shadow-solar-yellow/20 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+            {{ audit.submit_btn }}
+          </button>
+          <p class="mt-3 text-center text-xs text-slate-500">
+            {{ audit.privacy_note }}
+          </p>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,141 @@
+<header class="fixed inset-x-0 top-0 z-50 h-14 w-full bg-dark-slate/65 backdrop-blur-md transition-all duration-300">
+  <nav class="mx-auto flex h-full w-full items-center justify-between gap-2 px-3 md:px-6" aria-label="Main menu">
+
+    <!-- Compute the clean path & language-specific base URLs -->
+    {%- set cleanPath = page.url | replace('/en/', '/') | replace('/tr/', '/') | replace('/ru/', '/') -%}
+    {%- if not cleanPath.startsWith('/') -%}
+      {%- set cleanPath = '/' + cleanPath -%}
+    {%- endif -%}
+
+    {%- set homeUrl = "/en/" -%}
+    {%- if page.url.startsWith('/ru/') -%}
+      {%- set homeUrl = "/ru/" -%}
+    {%- elif page.url.startsWith('/tr/') -%}
+      {%- set homeUrl = "/tr/" -%}
+    {%- endif -%}
+
+    <!-- Left Section: Logo Image & Logo Text -->
+    <div class="flex shrink-0 items-center gap-2">
+      <a aria-label="Solar4Turkey — Home" class="group flex shrink-0 items-center gap-2" href="{{ homeUrl }}#">
+        <!-- Small Logo Icon -->
+        <img src="/assets/img/logo_small_transparent.png" alt="Solar4Turkey Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-9"/>
+        <!-- Logo Text Image -->
+        <img src="/assets/img/logo_text_transparent.png" alt="Solar4Turkey" class="h-6 w-auto object-contain sm:h-7"/>
+      </a>
+    </div>
+
+    <!-- Middle Section: Main Navigation Links -->
+    <div class="hidden min-w-0 flex-1 lg:block">
+      <div class="flex items-center justify-center gap-1 xl:gap-2">
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#zero-investment-model">{{ nav.financing }}</a>
+
+        <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
+
+        <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
+
+        <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
+
+        <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
+      </div>
+    </div>
+
+    <!-- Right Section: Language Switcher, Phone & CTA -->
+    <div class="hidden shrink-0 items-center gap-3 lg:flex">
+
+      <!-- Language Switcher (Desktop) -->
+      <div class="flex items-center rounded-lg bg-white/10 p-0.5 ring-1 ring-white/20 text-xs font-semibold text-white">
+        <a href="/en{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">EN</a>
+        <a href="/tr{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">TR</a>
+        <a href="/ru{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if page.url.startsWith('/ru/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">RU</a>
+      </div>
+
+      <a href="tel:+905000000000" class="flex items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30 transition-colors hover:bg-white/10">
+        <span class="inline-flex items-center justify-center">
+          <i class="fa-solid fa-phone text-solar-yellow leading-none" aria-hidden="true"></i>
+        </span>
+        <span>+90 500 000 0000</span>
+      </a>
+
+      <a class="whitespace-nowrap rounded-lg bg-solar-yellow px-3.5 py-1.5 text-sm font-bold text-dark-slate shadow-md transition-colors hover:bg-solar-yellow/90" href="{{ homeUrl }}#audit-form-section">
+        {{ nav.cta }}
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <div class="flex items-center lg:hidden">
+      <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" class="grid h-9 w-9 place-items-center rounded-lg bg-white/10 text-white ring-1 ring-white/30 backdrop-blur-sm transition-colors hover:bg-white/20">
+        <span id="menu-icon-open-wrap" class="items-center justify-center">
+          <i id="menu-icon-open" class="fa-solid fa-bars text-lg leading-none transition-transform duration-200" aria-hidden="true"></i>
+        </span>
+        <span id="menu-icon-close-wrap" class="hidden items-center justify-center">
+          <i id="menu-icon-close" class="fa-solid fa-xmark text-lg leading-none transition-transform duration-200" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Collapsible Menu Container with Smooth Height Animation -->
+  <div id="mobile-menu" class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-in-out lg:hidden">
+    <div class="overflow-hidden bg-white">
+      <div class="flex flex-col space-y-3 px-4 py-4">
+
+        <!-- Language Switcher (Mobile) -->
+        <div class="flex items-center justify-center gap-2 rounded-lg bg-slate-100 p-1 text-sm font-semibold text-dark-slate">
+          <a href="/en{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">English</a>
+          <a href="/tr{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">Türkçe</a>
+          <a href="/ru{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if page.url.startsWith('/ru/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">Русский</a>
+        </div>
+
+        <!-- Action items -->
+        <a href="tel:+905000000000" class="flex items-center justify-center gap-2 rounded-lg border border-slate-200 py-2.5 text-base font-semibold text-dark-slate transition-colors hover:bg-slate-100">
+          <span class="inline-flex items-center justify-center">
+            <i class="fa-solid fa-phone text-solar-yellow leading-none" aria-hidden="true"></i>
+          </span>
+          <span>+90 500 000 0000</span>
+        </a>
+        <a class="block w-full rounded-lg bg-solar-yellow py-2.5 text-center font-bold text-dark-slate transition-colors hover:bg-solar-yellow/90" href="{{ homeUrl }}#audit-form-section">
+          {{ nav.cta }}
+        </a>
+
+        <hr class="my-1 border-slate-200"/>
+
+        <!-- Navigation Links -->
+        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#zero-investment-model">{{ nav.financing }}</a>
+        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
+        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
+        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
+        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open-wrap');
+    const iconClose = document.getElementById('menu-icon-close-wrap');
+
+    mobileBtn?.addEventListener('click', () => {
+      const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', !isExpanded);
+
+      if (!isExpanded) {
+        mobileMenu.classList.remove('grid-rows-[0fr]');
+        mobileMenu.classList.add('grid-rows-[1fr]');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.remove('grid-rows-[1fr]');
+        mobileMenu.classList.add('grid-rows-[0fr]');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+    });
+  });
+</script>

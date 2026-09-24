@@ -1,0 +1,124 @@
+<section id="zero-investment-model" class="relative overflow-hidden bg-slate-100 py-16 md:py-20">
+  <div class="mx-auto max-w-6xl px-6">
+
+    <!-- Header Block -->
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="mt-4 text-[clamp(1.8rem,1.3rem+1.5vw,2.75rem)] font-extrabold tracking-tight text-dark-slate">
+        {{ financing.titlePrefix }} — <span class="text-eco-green">{{ financing.titleHighlight }}</span>
+      </h2>
+      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-eco-green-light" aria-hidden="true"></div>
+      <p class="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+        {{ financing.description }}
+      </p>
+    </div>
+
+    <!-- Key Metrics Grid -->
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Metric 1: Capital Expenditure (Eco-Green Light Focus) -->
+      <div class="group relative flex flex-col justify-between rounded-2xl bg-white p-7 shadow-xs ring-1 ring-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="absolute top-0 right-0 h-1.5 w-16 rounded-tr-2xl bg-eco-green-light"></div>
+        <div>
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-eco-green-light/15 text-eco-green">
+            <i class="fa-solid fa-coins text-xl leading-none" aria-hidden="true"></i>
+          </div>
+          <div class="mt-6 text-3xl font-extrabold tracking-tight text-dark-slate">
+            {{ financing.card1.stat }}
+          </div>
+          <div class="mt-1 text-sm font-bold text-eco-green">
+            {{ financing.card1.title }}
+          </div>
+          <p class="mt-3 text-xs leading-relaxed text-slate-500">
+            {{ financing.card1.desc }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Metric 2: Fully Funded Scope (Eco-Green Focus) -->
+      <div class="group relative flex flex-col justify-between rounded-2xl bg-white p-7 shadow-xs ring-1 ring-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="absolute top-0 right-0 h-1.5 w-16 rounded-tr-2xl bg-eco-green"></div>
+        <div>
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-eco-green/15 text-eco-green">
+            <i class="fa-solid fa-building text-xl leading-none" aria-hidden="true"></i>
+          </div>
+          <div class="mt-6 text-3xl font-extrabold tracking-tight text-dark-slate">
+            {{ financing.card2.stat }}
+          </div>
+          <div class="mt-1 text-sm font-bold text-eco-green">
+            {{ financing.card2.title }}
+          </div>
+          <p class="mt-3 text-xs leading-relaxed text-slate-500">
+            {{ financing.card2.desc }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Metric 3: Long-term Savings (Eco-Green Light Focus) -->
+      <div class="group relative flex flex-col justify-between rounded-2xl bg-white p-7 shadow-xs ring-1 ring-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="absolute top-0 right-0 h-1.5 w-16 rounded-tr-2xl bg-eco-green-light"></div>
+        <div>
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-eco-green-light/15 text-eco-green">
+            <i class="fa-solid fa-chart-line text-xl leading-none" aria-hidden="true"></i>
+          </div>
+          <div class="mt-6 text-3xl font-extrabold tracking-tight text-dark-slate">
+            {{ financing.card3.stat }}
+          </div>
+          <div class="mt-1 text-sm font-bold text-eco-green">
+            {{ financing.card3.title }}
+          </div>
+          <p class="mt-3 text-xs leading-relaxed text-slate-500">
+            {{ financing.card3.desc }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Metric 4: Resident Security (Eco-Green Focus) -->
+      <div class="group relative flex flex-col justify-between rounded-2xl bg-white p-7 shadow-xs ring-1 ring-slate-200/80 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="absolute top-0 right-0 h-1.5 w-16 rounded-tr-2xl bg-eco-green"></div>
+        <div>
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-eco-green/15 text-eco-green">
+            <i class="fa-solid fa-shield-halved text-xl leading-none" aria-hidden="true"></i>
+          </div>
+          <div class="mt-6 text-3xl font-extrabold tracking-tight text-dark-slate">
+            {{ financing.card4.stat }}
+          </div>
+          <div class="mt-1 text-sm font-bold text-eco-green">
+            {{ financing.card4.title }}
+          </div>
+          <p class="mt-3 text-xs leading-relaxed text-slate-500">
+            {{ financing.card4.desc }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Feature Highlight Banner (Eco-Green Gradient Accent) -->
+    <div class="relative mt-10 overflow-hidden rounded-2xl bg-dark-slate p-8 text-white shadow-xl border-l-4 border-solar-yellow md:p-10">
+
+      <!-- Decorative Gradient Corner -->
+      <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-linear-to-br from-solar-yellow/30 via-solar-yellow/20 to-transparent blur-2xl"></div>
+
+      <div class="relative flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-solar-yellow">
+            <span class="h-2 w-2 rounded-full bg-solar-yellow"></span> {{ financing.banner.tag }}
+          </div>
+          <h3 class="mt-2 text-xl font-bold text-white md:text-2xl">
+            {{ financing.banner.title }}
+          </h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-300">
+            {{ financing.banner.desc }}
+          </p>
+        </div>
+        <div class="shrink-0 w-full sm:w-auto">
+          <!-- CTA Button with Eco-Green Light Branding -->
+          <a href="/{{ page.lang | default('en') }}/#audit-form-section" class="inline-flex w-full sm:w-auto items-center justify-center rounded-xl bg-solar-yellow px-8 py-4 text-sm font-bold text-dark-slate shadow-lg transition-all duration-300 hover:bg-eco-green hover:text-white focus:ring-2 focus:ring-eco-green-light focus:outline-none">
+            {{ financing.banner.cta }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+permalink: /index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar4Turkey — Redirecting...</title>
+  
+  <script>
+    (function() {
+      const savedLang = localStorage.getItem('preferred_lang');
+      let targetLang = 'en'; // default fallback
+
+      if (savedLang && ['en', 'tr', 'ru'].includes(savedLang)) {
+        targetLang = savedLang;
+      } else {
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (browserLang.startsWith('tr')) {
+          targetLang = 'tr';
+        } else if (browserLang.startsWith('ru')) {
+          targetLang = 'ru';
+        }
+      }
+
+      window.location.replace('/' + targetLang + '/');
+    })();
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px; background: #0f172a; color: #f8fafc;">
+  <p>Redirecting to Solar4Turkey...</p>
+  <p style="font-size: 0.9rem; color: #94a3b8;">
+    If you are not redirected automatically, please choose your language:
+  </p>
+  <p style="margin-top: 20px;">
+    <a href="/en/" style="color: #38bdf8; margin: 0 10px;" onclick="localStorage.setItem('preferred_lang', 'en')">English</a> | 
+    <a href="/tr/" style="color: #38bdf8; margin: 0 10px;" onclick="localStorage.setItem('preferred_lang', 'tr')">Türkçe</a> | 
+    <a href="/ru/" style="color: #38bdf8; margin: 0 10px;" onclick="localStorage.setItem('preferred_lang', 'ru')">Русский</a>
+  </p>
+</body>
+</html>

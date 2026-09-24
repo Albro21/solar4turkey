@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" class="scroll-smooth scroll-p-top-20">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- SEO Meta Placeholders -->
+    <meta name="description" content="{{ description | default('Turnkey solar energy systems across Turkey.') }}">
+    <meta name="keywords" content="{{ keywords | default('solar energy, turkey solar, photovoltaic systems, turnkey solar') }}">
+    
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/favicons/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="/assets/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/favicons/android-chrome-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="/assets/favicons/android-chrome-512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/c1b39fa0dc.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-slate-100 text-slate-900 antialiased">
+
+    {% include "partials/header.njk" %}
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+  </body>
+</html>

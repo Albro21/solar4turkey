@@ -1,0 +1,120 @@
+<!-- Footer Section -->
+<footer class="relative overflow-hidden bg-dark-slate pt-16 md:pt-20">
+
+  <!-- Background Texture Image -->
+  <img alt="" loading="lazy" decoding="async" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-overlay"src="/img/texture-solar-glass.webp" />
+
+  <!-- Dark Gradient Overlay -->
+  <div class="absolute inset-0 bg-linear-to-b from-dark-slate/90 via-dark-slate/95 to-dark-slate" aria-hidden="true"></div>
+
+  <!-- Top Accent Border (Brand Red to Yellow Gradient) -->
+  <span class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-red/60 to-transparent" aria-hidden="true"></span>
+
+  <!-- Subtle Glowing Light Blur in Center-Top -->
+  <span class="pointer-events-none absolute -top-40 left-1/2 h-90 w-160 -translate-x-1/2 rounded-full bg-solar-blue/20 blur-[110px]" aria-hidden="true"></span>
+
+  <div class="relative mx-auto max-w-6xl px-6">
+    <div class="grid gap-12 lg:grid-cols-3 lg:gap-10">
+
+      <!-- Column 1: Brand Info, Description, Socials & CTA Button -->
+      <div class="flex flex-col justify-between">
+        <div>
+          <!-- Logo Image & Logo Text Images -->
+          <a class="group inline-flex items-center gap-2" aria-label="Solar4Turkey — Homepage" href="{{ homeUrl | default('/') }}">
+            <img src="/assets/img/logo_small_transparent.png" alt="Solar4Turkey Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-9"/>
+            <img src="/assets/img/logo_text_transparent.png" alt="Solar4Turkey" class="h-6 w-auto object-contain sm:h-7"/>
+          </a>
+          <p class="mt-5 max-w-[34ch] text-[0.95rem] leading-relaxed text-white/80">
+            {{ footer.description }}
+          </p>
+        </div>
+
+        <div class="mt-8 flex flex-col items-start gap-6">
+          <!-- Get Free Audit Button -->
+          <a href="{{ homeUrl }}#audit-form-section" class="inline-flex items-center justify-center rounded-xl bg-solar-yellow px-6 py-3 text-sm font-bold text-dark-slate shadow-lg transition-all duration-300 hover:bg-solar-yellow/90 hover:shadow-solar-yellow/20 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+            {{ footer.cta }}
+          </a>
+
+          <!-- Social Links -->
+          <div class="flex gap-2.5">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-brand-red hover:bg-brand-red/10 hover:text-white">
+              <i class="fa-brands fa-facebook-f h-4.5 w-4.5" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-solar-yellow hover:bg-solar-yellow/10 hover:text-solar-yellow">
+              <i class="fa-brands fa-instagram h-4.5 w-4.5" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-solar-blue hover:bg-solar-blue/20 hover:text-white">
+              <i class="fa-brands fa-linkedin-in h-4.5 w-4.5" aria-hidden="true"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red">
+              <i class="fa-brands fa-youtube h-4.5 w-4.5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation Links -->
+      <nav aria-labelledby="footer-col-nav">
+        <h2 id="footer-col-nav" class="text-[0.75rem] font-semibold uppercase tracking-[0.18em] text-solar-yellow">
+          {{ footer.navigationTitle }}
+        </h2>
+        <ul class="-my-1.5 mt-4 space-y-1">
+          <li>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#zero-investment-model">{{ nav.financing }}</a>
+          </li>
+          <li>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#how-it-works">{{ nav.howItWorks }}</a>
+          </li>
+          <li>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#benefits">{{ nav.benefits }}</a>
+          </li>
+          <li>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#projects">{{ nav.projects }}</a>
+          </li>
+          <li>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#audit-form-section">{{ nav.cta }}</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Column 3: Contact Info -->
+      <div>
+        <h2 class="text-[0.75rem] font-semibold uppercase tracking-[0.18em] text-solar-yellow">
+          {{ footer.contactTitle }}
+        </h2>
+        <ul class="mt-4 space-y-3 text-[0.95rem]">
+          <li>
+            <a href="tel:+905000000000" class="inline-flex min-h-6 items-center font-bold text-[1.15rem] text-white transition-colors duration-200 hover:text-solar-yellow">
+              +90 500 000 0000
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@solar4turkey.com" class="inline-flex min-h-6 items-center text-white/75 transition-colors duration-200 hover:text-solar-yellow">
+              info@solar4turkey.com
+            </a>
+          </li>
+          <li class="text-white/80">
+            {{ footer.address }}
+          </li>
+          <li class="text-white/80">
+            {{ footer.hours }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar / Copyright -->
+    <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 py-7 sm:flex-row">
+      <div class="text-sm text-white/70">
+        {{ footer.copyright }}
+      </div>
+      <nav aria-label="Legal Information" class="-my-2 flex gap-4 text-sm font-medium text-white/70">
+        <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/privacy-policy">{{ footer.privacy }}</a>
+        <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/cookie-policy">{{ footer.cookies }}</a>
+        <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/terms">{{ footer.terms }}</a>
+      </nav>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,167 @@
+<section id="projects" class="relative overflow-hidden scroll-mt-16 py-14 md:py-16">
+  <!-- Background Glow Elements -->
+  <div class="pointer-events-none absolute -left-32 top-8" aria-hidden="true">
+    <span class="block h-96 w-96 rounded-full bg-solar-blue/10 blur-[120px]"></span>
+  </div>
+  <div class="pointer-events-none absolute -right-24 bottom-0" aria-hidden="true">
+    <span class="block h-80 w-80 rounded-full bg-solar-yellow/10 blur-[110px]"></span>
+  </div>
+
+  <!-- Section Header -->
+  <div class="mx-auto mb-8 max-w-6xl px-6 text-center md:mb-10">
+    <h2 class="text-[clamp(1.7rem,1.2rem+1.21vw,2.5rem)] font-extrabold tracking-tight text-dark-slate">
+      {{ projects.section_title }}
+    </h2>
+    <p class="mx-auto mt-3 max-w-2xl text-[clamp(0.98rem,0.9rem+0.3vw,1.15rem)] leading-relaxed text-gray-600">
+      {{ projects.section_subtitle }}
+    </p>
+  </div>
+
+  <!-- Projects Horizontal Scroll Container -->
+  <div class="relative w-full">
+    <div id="projects-carousel" class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-3 scroll-px-3 scroll-smooth scrollbar-none mask-[linear-gradient(90deg,transparent_0,#000_24px,#000_calc(100%-24px),transparent_100%)] md:scroll-pr-4 [&::-webkit-scrollbar]:hidden" role="region" aria-label="Completed Residential Projects Gallery">
+
+      <!-- Render Cards Inline using JSON data -->
+      {% set currentLang = page.lang | default('en') %}
+      {% for project in self[currentLang].projects.list or projects.list %}
+      <article class="project-card relative flex min-h-112 w-[88%] shrink-0 snap-start flex-col overflow-hidden rounded-xl bg-dark-slate sm:w-[72%] md:min-h-136 lg:w-[calc((100%-40px)/2)]">
+        <!-- Background Image -->
+        <div class="absolute inset-0 overflow-hidden">
+          <img src="{{ project.image }}" alt="{{ project.title }}" class="h-full w-full object-cover object-center" loading="lazy" />
+        </div>
+
+        <!-- Top Overlay Badge -->
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-36 bg-linear-to-b from-dark-slate/80 via-dark-slate/50 to-transparent"></div>
+        <div class="relative p-7 text-[0.9rem] font-semibold text-white/95 drop-shadow-md md:p-10 md:text-[1rem]">
+          {{ project.location }}
+        </div>
+
+        <!-- Bottom Details Content -->
+        <div class="relative mt-auto w-full bg-linear-to-t from-dark-slate via-dark-slate/80 to-transparent p-7 pt-24 md:p-10 md:pt-24">
+          <h3 class="text-[1.8rem] font-bold leading-none text-white md:text-[2.25rem]">
+            {{ project.title }}
+          </h3>
+          <div class="mt-2 text-[0.95rem] font-semibold text-solar-yellow md:text-[1.05rem]">
+            {{ project.output }}
+          </div>
+          <div class="mt-3 text-[1.08rem] font-bold text-white md:text-[1.2rem]">
+            {{ project.savings }}
+          </div>
+          <div class="mt-0.5 text-[0.9rem] text-white/70">
+            {{ project.configuration }}
+          </div>
+          <div class="mt-2 text-[0.8rem] text-white/70">
+            {{ project.specs }}
+          </div>
+
+          <!-- CTAs -->
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/{{ page.lang | default('en') }}/?project={{ project.id }}#audit-form-section"class="min-w-44 flex-1 rounded-lg bg-solar-yellow px-6 py-3.5 text-center text-[0.92rem] font-bold text-dark-slate transition-colors duration-300 hover:bg-solar-blue/90">
+              {{ projects.cta_proposal }}
+            </a>
+            <a href="/{{ page.lang | default('en') }}/projects/{{ project.id }}" class="min-w-44 flex-1 rounded-lg bg-white px-6 py-3.5 text-center text-[0.92rem] font-bold text-dark-slate transition-colors duration-300 hover:bg-white/90">
+              {{ projects.cta_view }}
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <!-- Footnote Clarification -->
+  <div class="mx-auto max-w-6xl px-6">
+    <p class="mt-6 text-center text-sm leading-relaxed text-gray-500">
+      {{ projects.footnote }}
+    </p>
+  </div>
+
+  <!-- Carousel Indicator Controls -->
+  <div class="mt-4 flex items-center justify-center gap-2">
+    <button id="prev-btn" type="button" aria-label="Previous project" class="hidden h-10 w-10 place-items-center rounded-full text-dark-slate ring-1 ring-gray-300 opacity-40 transition-all duration-200 hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed md:grid">
+      <i class="fa-solid fa-arrow-right h-5 w-5 rotate-180" aria-hidden="true"></i>
+    </button>
+
+    <div id="dots-container" class="flex justify-center gap-1.5"></div>
+
+    <button id="next-btn" type="button" aria-label="Next project" class="hidden h-10 w-10 place-items-center rounded-full text-dark-slate ring-1 ring-gray-300 transition-all duration-200 hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed md:grid">
+      <i class="fa-solid fa-arrow-right h-5 w-5" aria-hidden="true"></i>
+    </button>
+  </div>
+</section>
+
+<!-- Carousel Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('projects-carousel');
+    const cards = carousel?.querySelectorAll('.project-card');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const dotsContainer = document.getElementById('dots-container');
+
+    if (!carousel || !cards || cards.length === 0) return;
+    
+    cards.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.ariaLabel = `Go to project ${idx + 1}`;
+      dot.className = `h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'w-6 bg-dark-slate' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`;
+      dot.addEventListener('click', () => scrollToCard(idx));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function scrollToCard(index) {
+      const card = cards[index];
+      const targetOffset = card.offsetLeft - carousel.offsetLeft;
+      carousel.scrollTo({ left: targetOffset, behavior: 'smooth' });
+    }
+
+    function updateActiveState() {
+      const scrollLeft = carousel.scrollLeft;
+      let activeIndex = 0;
+      let minDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const distance = Math.abs(card.offsetLeft - carousel.offsetLeft - scrollLeft);
+        if (distance < minDistance) {
+          minDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        dot.className = idx === activeIndex 
+          ? 'h-2.5 w-6 rounded-full bg-dark-slate transition-all duration-300' 
+          : 'h-2.5 w-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
+      });
+
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      if (prevBtn) {
+        prevBtn.disabled = scrollLeft <= 10;
+        prevBtn.classList.toggle('opacity-40', prevBtn.disabled);
+      }
+      if (nextBtn) {
+        nextBtn.disabled = scrollLeft >= maxScroll - 10;
+        nextBtn.classList.toggle('opacity-40', nextBtn.disabled);
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -(cards[0].offsetWidth + 24), behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: cards[0].offsetWidth + 24, behavior: 'smooth' });
+      });
+    }
+
+    carousel.addEventListener('scroll', updateActiveState, { passive: true });
+    updateActiveState();
+  });
+</script>

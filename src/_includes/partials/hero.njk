@@ -1,0 +1,54 @@
+<section id="top" data-dark-hero="true" class="relative -mt-14 h-svh overflow-hidden bg-dark-slate pt-14">
+  <!-- Background Image & Overlay -->
+  <div class="absolute inset-0">
+    <img src="/assets/img/hero_bg.jpeg" alt="Residential Solar Panels" class="absolute inset-0 h-full w-full object-cover object-center"/>
+    <div class="absolute inset-0 bg-linear-to-t from-dark-slate via-dark-slate/80 to-transparent"></div>
+  </div>
+
+  <!-- Hero Main Content -->
+  <div class="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center px-6 pb-12 text-center md:pb-16">
+    
+    <!-- Main Heading -->
+    <h1 class="mx-auto max-w-5xl text-3xl font-extrabold uppercase tracking-wide text-white md:text-5xl lg:text-6xl">
+      {{ hero.title }}
+    </h1>
+
+    <!-- Divider Line -->
+    <div class="mt-4 h-px w-full max-w-lg bg-linear-to-r from-transparent via-white/60 to-transparent md:mt-5" aria-hidden="true"></div>
+
+    <!-- Subtitle / Stats -->
+    <p class="mt-3 text-lg font-semibold tracking-wide text-white md:text-xl">
+      {{ hero.subtitle }}
+    </p>
+
+    <!-- Value Proposition -->
+    <div class="mt-5 max-w-4xl md:mt-6">
+      <p class="text-base font-bold leading-relaxed text-white md:text-lg">
+        {{ hero.value_prop_line1 }}
+        <br>
+        <span class="text-solar-yellow">{{ hero.value_prop_highlight }}</span>
+      </p>
+    </div>
+
+    <!-- Call to Action Buttons -->
+    <div class="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
+      <a href="/{{ page.lang | default('en') }}/#audit-form-section" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-solar-yellow px-8 py-4 text-base font-bold text-dark-slate shadow-lg transition-all duration-300 hover:bg-solar-yellow/90 hover:scale-105">
+        {{ hero.cta_offer }}
+        <i class="fa-solid fa-arrow-right h-4 w-4" aria-hidden="true"></i>
+      </a>
+
+      <!-- Direct Phone Contact CTA -->
+      <a href="tel:+905000000000" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-white/10 px-8 py-4 text-base font-bold text-white ring-1 ring-white/40 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:ring-white">
+        <i class="fa-solid fa-phone h-4 w-4 text-solar-yellow" aria-hidden="true"></i>
+        +90 500 000 0000
+      </a>
+    </div>
+
+    <!-- Quick Link Anchor -->
+    <a href="#packages" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 underline underline-offset-4 transition-colors duration-200 hover:text-solar-yellow">
+      {{ hero.cta_packages }}
+      <i class="fa-solid fa-arrow-down h-4 w-4" aria-hidden="true"></i>
+    </a>
+
+  </div>
+</section>
