@@ -9,10 +9,10 @@
     "cta": "Get Free Audit"
   },
   "hero": {
-    "title": "Solar Panel Systems for Your Home",
-    "subtitle": "#1 Solar Installer in Turkey · 1,200+ Projects Completed · Packages from €3,900 with State Support",
-    "value_prop_line1": "The sun delivers more energy in a single hour than the world consumes in an entire year.",
-    "value_prop_highlight": "We turn that potential into your energy independence.",
+    "title": "Energy Independence and Up to 80% Lower Bills in Turkey",
+    "subtitle": "Turnkey solar power systems for villas and residential complexes · €0 upfront · Warranty and 24/7 service",
+    "value_prop_line1": "Cut electricity bills by up to 80% with a system designed for Turkey.",
+    "value_prop_highlight": "€0 upfront for qualifying residential complexes.",
     "cta_offer": "Get Free Offer",
     "cta_packages": "View Pricing Packages"
   },
@@ -66,11 +66,31 @@
       "annualLabel": "Annual Savings",
       "annualSub": "full year under Turkish climate"
     },
+    "currencyNote": "* Savings are calculated using TRY electricity tariffs; EUR figures are shown using the current exchange rate.",
     "disclaimer": "* Calculation based on PVGIS irradiance data for Turkey (35° tilt, south-facing), electricity tariff rate of ₺3.50/kWh with tax, and full battery self-consumption. Actual savings depend on regional weather patterns and household consumption habits."
+  },
+  "tariffGrowth": {
+    "badge": "Inflation Protection",
+    "title": "How Electricity Tariffs Are Rising in Turkey",
+    "descriptionBefore": "Over the last decade, electricity costs for commercial properties and shared residential areas have increased by more than",
+    "multiplier": "12–15×",
+    "chartTitle": "Cost Growth (TRY / kWh)",
+    "chartLabel": "Tariff (TRY / kWh)",
+    "tooltipLabel": "Tariff",
+    "period": "2015–2026",
+    "insightTitle": "Tariffs rise every year",
+    "insightDescription": "Distribution charges, lira depreciation, and inflation continue to make grid electricity more expensive over time.",
+    "solutionTitle": "The Solar4Turkey solution",
+    "solutionDescription": "A solar power station helps stabilize complex energy costs and turns every generated kilowatt-hour into direct budget savings."
   },
   "benefits": {
     "section_title": "Resident Benefits",
     "section_subtitle": "Maximum savings, comfort, and zero risk for property owners",
+    "categories": {
+      "financial": "Financial Benefit",
+      "reliability": "Technical Reliability",
+      "service": "Full Service and Long-Term Value"
+    },
     "list": [
       {
         "icon": "fa-hand-holding-dollar",
@@ -220,6 +240,32 @@
         "savings": "Estimated Yearly Savings: ~€4,700",
         "configuration": "Commercial-Grade Residential Setup",
         "specs": "30 × Jinko 500W Panels · Solis 15 kW Inverter · BYD Battery-Box 30 kWh"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "4 Simple Steps to Get Started",
+    "subtitle": "We handle the technical work, paperwork, and installation so your board can move forward with confidence.",
+    "steps": [
+      {
+        "icon": "fa-magnifying-glass-chart",
+        "title": "Free Energy Audit",
+        "description": "We survey the roof, review common-area electricity bills, and prepare a tailored project plan."
+      },
+      {
+        "icon": "fa-file-signature",
+        "title": "Approval Support",
+        "description": "You receive ready-to-use presentation materials and legal documents for the owners' meeting."
+      },
+      {
+        "icon": "fa-screwdriver-wrench",
+        "title": "Turnkey Installation",
+        "description": "Our team manages design, delivery, and installation with minimal disruption for residents."
+      },
+      {
+        "icon": "fa-chart-line",
+        "title": "Launch and Savings",
+        "description": "We connect the system, provide 24/7 monitoring access, and savings begin from day one."
       }
     ]
   },

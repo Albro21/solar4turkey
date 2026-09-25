@@ -9,10 +9,10 @@
     "cta": "Ücretsiz Keşif Alın"
   },
   "hero": {
-    "title": "Evini̇z İçi̇n Güneş Enerji̇si̇ Si̇stemleri̇",
-    "subtitle": "Türkiye'nin 1 Numaralı Güneş Enerjisi Kurucusu · 1.200+ Tamamlanan Proje · Devlet Destekli €3,900'den Başlayan Paketler",
-    "value_prop_line1": "Güneş, dünyada bir yılda tüketilen toplam enerjiden fazlasını tek bir saatte sağlar.",
-    "value_prop_highlight": "Bu potansiyeli enerji bağımsızlığınızabir dönüştürüyoruz.",
+    "title": "Türkiye'de Enerji Bağımsızlığı ve Elektrik Faturalarında %80'e Varan Tasarruf",
+    "subtitle": "Villalar ve konut siteleri için anahtar teslim güneş enerjisi · €0 peşinat · Garanti ve 7/24 servis",
+    "value_prop_line1": "Türkiye'ye özel bir sistemle elektrik faturalarınızı %80'e varan oranda azaltın.",
+    "value_prop_highlight": "Uygun konut siteleri için €0 başlangıç maliyeti.",
     "cta_offer": "Ücretsiz Teklif Alın",
     "cta_packages": "Fiyat Paketlerini İnceleyin"
   },
@@ -66,11 +66,31 @@
       "annualLabel": "Yıllık Tasarruf",
       "annualSub": "Türk ikliminde tam bir yıl"
     },
+    "currencyNote": "* Tasarruf hesaplamaları TRY elektrik tarifelerine dayanır; EUR tutarları güncel kur üzerinden gösterilir.",
     "disclaimer": "* Hesaplama, Türkiye için PVGIS ışınım verilerine (35° eğim, güney cepheli), vergiler dahil ₺3.50/kWh elektrik tarife oranına ve tam batarya öz tüketimine dayanmaktadır. Gerçek tasarruf, bölgesel hava koşullarına ve hane halkı tüketim alışkanlıklarına bağlıdır."
+  },
+  "tariffGrowth": {
+    "badge": "Enflasyona Karşı Koruma",
+    "title": "Türkiye'de Elektrik Tarifelerinin Yükselişi",
+    "descriptionBefore": "Son on yılda ticari işletmeler ve konut sitelerinin ortak alanlarında elektrik maliyetleri",
+    "multiplier": "12–15 kat",
+    "chartTitle": "Maliyet Artışı (TRY / kWh)",
+    "chartLabel": "Tarife (TRY / kWh)",
+    "tooltipLabel": "Tarife",
+    "period": "2015–2026",
+    "insightTitle": "Tarifeler her yıl yükseliyor",
+    "insightDescription": "Dağıtım bedelleri, liranın değer kaybı ve enflasyon şebeke elektriğini her yıl daha pahalı hale getiriyor.",
+    "solutionTitle": "Solar4Turkey çözümü",
+    "solutionDescription": "Güneş enerjisi santrali, sitenin enerji maliyetlerini daha öngörülebilir hale getirir ve üretilen her kilovatsaati doğrudan bütçe tasarrufuna dönüştürür."
   },
   "benefits": {
     "section_title": "Sakinler İçin Avantajlar",
     "section_subtitle": "Ev sahipleri için sıfır risk ile maksimum tasarruf ve konfor",
+    "categories": {
+      "financial": "Finansal Fayda",
+      "reliability": "Teknik Güvenilirlik",
+      "service": "Eksiksiz Hizmet ve Uzun Vadeli Değer"
+    },
     "list": [
       {
         "icon": "fa-hand-holding-dollar",
@@ -220,6 +240,32 @@
         "savings": "Tahmini Yıllık Tasarruf: ~€4,700",
         "configuration": "Ticari Sınıf Konut Kurulumu",
         "specs": "30 × Jinko 500W Panel · Solis 15 kW İnverter · BYD Battery-Box 30 kWh Batarya"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Başlamak İçin 4 Basit Adım",
+    "subtitle": "Teknik çalışmaları, resmi süreci ve kurulumu biz üstleniriz; site yönetiminiz güvenle ilerler.",
+    "steps": [
+      {
+        "icon": "fa-magnifying-glass-chart",
+        "title": "Ücretsiz Enerji Etüdü",
+        "description": "Çatıyı inceler, ortak alanların elektrik faturalarını analiz eder ve size özel proje hazırlarız."
+      },
+      {
+        "icon": "fa-file-signature",
+        "title": "Onay Sürecine Destek",
+        "description": "Kat malikleri toplantısında kullanılacak sunumları ve hukuki belgeleri hazırlarız."
+      },
+      {
+        "icon": "fa-screwdriver-wrench",
+        "title": "Anahtar Teslim Kurulum",
+        "description": "Tasarım, sevkiyat ve kurulumu sakinlerin konforunu minimum düzeyde etkileyerek yönetiriz."
+      },
+      {
+        "icon": "fa-chart-line",
+        "title": "Devreye Alma ve Tasarruf",
+        "description": "Sistemi bağlar, 7/24 izleme erişimini sunar ve tasarruf ilk günden başlar."
       }
     ]
   },

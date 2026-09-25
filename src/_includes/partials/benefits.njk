@@ -1,4 +1,4 @@
-<section id="benefits" class="py-20 bg-slate-100 text-slate-900">
+<section id="benefits" class="relative overflow-hidden bg-slate-100 py-20 text-slate-900">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     
     <!-- Section Header -->
@@ -6,19 +6,22 @@
       <h2 class="text-3xl font-extrabold uppercase tracking-wide md:text-4xl text-slate-900">
         {{ benefits.section_title }}
       </h2>
-      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-eco-green-light" aria-hidden="true"></div>
+      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-solar-yellow" aria-hidden="true"></div>
       <p class="mt-4 text-lg text-slate-600">
         {{ benefits.section_subtitle }}
       </p>
     </div>
 
     <!-- Benefits Grid (2 Columns on Desktop) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {% for item in benefits.list %}
-      <div class="flex items-start gap-5 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-eco-green-light/60">
+      {% if loop.index0 == 0 %}<h3 class="md:col-span-2 lg:col-span-3 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.financial }}</h3>{% endif %}
+      {% if loop.index0 == 5 %}<h3 class="md:col-span-2 lg:col-span-3 mt-4 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.reliability }}</h3>{% endif %}
+      {% if loop.index0 == 10 %}<h3 class="md:col-span-2 lg:col-span-3 mt-4 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.service }}</h3>{% endif %}
+      <div class="flex items-start gap-5 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:border-solar-yellow/60 hover:shadow-md">
         
         <!-- Dynamic Icon -->
-        <div class="shrink-0 p-3.5 rounded-xl bg-eco-green-light/15 text-eco-green">
+        <div class="shrink-0 rounded-xl bg-solar-yellow/15 p-3.5 text-amber-700">
           <i class="fa-solid {{ item.icon }} h-6 w-6 text-xl leading-none flex items-center justify-center" aria-hidden="true"></i>
         </div>
         

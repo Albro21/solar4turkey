@@ -1,14 +1,11 @@
 <!-- Footer Section -->
 <footer class="relative overflow-hidden bg-dark-slate pt-16 md:pt-20">
 
-  <!-- Background Texture Image -->
-  <img alt="" loading="lazy" decoding="async" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-overlay"src="/img/texture-solar-glass.webp" />
-
   <!-- Dark Gradient Overlay -->
   <div class="absolute inset-0 bg-linear-to-b from-dark-slate/90 via-dark-slate/95 to-dark-slate" aria-hidden="true"></div>
 
   <!-- Top Accent Border (Brand Red to Yellow Gradient) -->
-  <span class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-red/60 to-transparent" aria-hidden="true"></span>
+  <span class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-amber-700/60 to-transparent" aria-hidden="true"></span>
 
   <!-- Subtle Glowing Light Blur in Center-Top -->
   <span class="pointer-events-none absolute -top-40 left-1/2 h-90 w-160 -translate-x-1/2 rounded-full bg-solar-blue/20 blur-[110px]" aria-hidden="true"></span>
@@ -37,7 +34,7 @@
 
           <!-- Social Links -->
           <div class="flex gap-2.5">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-brand-red hover:bg-brand-red/10 hover:text-white">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-amber-700 hover:bg-amber-700/10 hover:text-white">
               <i class="fa-brands fa-facebook-f h-4.5 w-4.5" aria-hidden="true"></i>
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-solar-yellow hover:bg-solar-yellow/10 hover:text-solar-yellow">
@@ -46,7 +43,7 @@
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-solar-blue hover:bg-solar-blue/20 hover:text-white">
               <i class="fa-brands fa-linkedin-in h-4.5 w-4.5" aria-hidden="true"></i>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-brand-red hover:bg-brand-red/10 hover:text-brand-red">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors duration-200 hover:border-amber-700 hover:bg-amber-700/10 hover:text-amber-700">
               <i class="fa-brands fa-youtube h-4.5 w-4.5" aria-hidden="true"></i>
             </a>
           </div>
@@ -60,19 +57,19 @@
         </h2>
         <ul class="-my-1.5 mt-4 space-y-1">
           <li>
-            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#zero-investment-model">{{ nav.financing }}</a>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl }}#zero-investment-model">{{ nav.financing }}</a>
           </li>
           <li>
-            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#how-it-works">{{ nav.howItWorks }}</a>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
           </li>
           <li>
-            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#benefits">{{ nav.benefits }}</a>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
           </li>
           <li>
-            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#projects">{{ nav.projects }}</a>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
           </li>
           <li>
-            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl | default('/') }}#audit-form-section">{{ nav.cta }}</a>
+            <a class="inline-flex min-h-6 items-center py-1.5 text-[0.95rem] text-white/75 transition-colors duration-200 hover:text-solar-yellow" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
           </li>
         </ul>
       </nav>
@@ -109,7 +106,7 @@
       <div class="text-sm text-white/70">
         {{ footer.copyright }}
       </div>
-      <nav aria-label="Legal Information" class="-my-2 flex gap-4 text-sm font-medium text-white/70">
+      <nav aria-label="Legal Information" class="-my-2 flex flex-col items-center gap-1 text-sm font-medium text-white/70 sm:flex-row sm:gap-4">
         <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/privacy-policy">{{ footer.privacy }}</a>
         <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/cookie-policy">{{ footer.cookies }}</a>
         <a class="inline-flex items-center px-2 py-2 transition-colors duration-200 hover:text-solar-yellow" href="/terms">{{ footer.terms }}</a>

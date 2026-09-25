@@ -1,6 +1,7 @@
 <section id="how-it-works" class="relative overflow-hidden bg-slate-100 py-14 md:py-16">
-  <!-- Subtle Background Glow -->
-  <span class="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-eco-green-light/10 blur-[120px]" aria-hidden="true"></span>
+  <!-- Subtle Background Decorative Glows -->
+  <span class="pointer-events-none absolute -left-24 bottom-12 h-80 w-80 rounded-full bg-solar-yellow/10 blur-3xl" aria-hidden="true"></span>
+  <span class="pointer-events-none absolute -right-40 top-10 h-96 w-96 rounded-full bg-solar-yellow/10 blur-[120px]" aria-hidden="true"></span>
 
   <div class="relative mx-auto w-full max-w-[100rem] px-6">
     <!-- Section Title -->
@@ -8,7 +9,7 @@
       <h2 class="text-[clamp(1.7rem,1.2rem+1.21vw,2.5rem)] font-bold leading-[1.08] tracking-tight text-slate-900">
         {{ savings.title }}
       </h2>
-      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-eco-green-light" aria-hidden="true"></div>
+      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-solar-yellow" aria-hidden="true"></div>
     </div>
 
     <!-- 3-Column Interactive Grid -->
@@ -27,7 +28,7 @@
             {{ savings.day.desc }}
           </p>
           <div class="mt-4 h-1 overflow-hidden rounded-full bg-slate-900/10">
-            <span id="bar-day" class="block h-full w-full origin-left rounded-full bg-eco-green transition-transform duration-500" style="transform: scaleX(1);"></span>
+            <span id="bar-day" class="block h-full w-full origin-left rounded-full bg-solar-yellow transition-transform duration-500" style="transform: scaleX(1);"></span>
           </div>
         </button>
       </div>
@@ -45,7 +46,7 @@
       <div class="relative lg:order-3">
         <button id="btn-night" type="button" onclick="setPhase('night')" class="w-full cursor-pointer rounded-3xl border border-slate-700 bg-slate-900 p-6 text-left opacity-75 transition-all duration-500 hover:opacity-100 lg:p-8">
           <div class="flex items-center gap-3">
-            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-eco-green-light">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-solar-yellow">
               <i class="fa-solid fa-moon text-xl leading-none" aria-hidden="true"></i>
             </span>
             <span class="text-[1.25rem] font-bold tracking-tight text-white lg:text-[1.5rem]">{{ savings.night.title }}</span>
@@ -54,7 +55,7 @@
             {{ savings.night.desc }}
           </p>
           <div class="mt-4 h-1 overflow-hidden rounded-full bg-white/15">
-            <span id="bar-night" class="block h-full w-full origin-left rounded-full bg-eco-green-light transition-transform duration-500" style="transform: scaleX(0);"></span>
+            <span id="bar-night" class="block h-full w-full origin-left rounded-full bg-solar-yellow transition-transform duration-500" style="transform: scaleX(0);"></span>
           </div>
         </button>
       </div>
@@ -68,7 +69,7 @@
         <div class="inline-flex rounded-full bg-slate-200/80 p-1.5 ring-1 ring-slate-300" role="group" aria-label="System Capacity">
           <button type="button" onclick="setCapacity(6)" id="kw-6" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6 hover:text-slate-900">6 kW</button>
           <button type="button" onclick="setCapacity(8)" id="kw-8" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6 hover:text-slate-900">8 kW</button>
-          <button type="button" onclick="setCapacity(10)" id="kw-10" class="kw-btn active rounded-full bg-eco-green-light px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(162,208,50,0.35)] transition-colors duration-300 md:px-6">10 kW</button>
+          <button type="button" onclick="setCapacity(10)" id="kw-10" class="kw-btn active rounded-full bg-solar-yellow px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(251,191,36,0.35)] transition-colors duration-300 md:px-6">10 kW</button>
           <button type="button" onclick="setCapacity(12)" id="kw-12" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">12 kW</button>
         </div>
       </div>
@@ -77,23 +78,23 @@
       <div class="mt-6 grid gap-6 sm:grid-cols-3">
         
         <!-- Daily Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-solar-yellow/60">
           <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.dailyLabel }}</span>
-          <span id="save-daily" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-eco-green md:text-[2.5rem]">₺385</span>
+          <span id="save-daily" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺385</span>
           <span class="text-[0.95rem] text-slate-600">{{ savings.calc.dailySub }}</span>
         </div>
 
         <!-- Monthly Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-solar-yellow/60 shadow-xs transition-all duration-300 hover:shadow-md">
           <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.monthlyLabel }}</span>
-          <span id="save-monthly" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-eco-green md:text-[2.5rem]">₺11,550</span>
+          <span id="save-monthly" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺11,550</span>
           <span class="text-[0.95rem] text-slate-600">{{ savings.calc.monthlySub }}</span>
         </div>
 
         <!-- Annual Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-eco-green-light/60">
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-solar-yellow/60 shadow-xs transition-all duration-300 hover:shadow-md">
           <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.annualLabel }}</span>
-          <span id="save-annual" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-eco-green md:text-[2.5rem]">₺83,200</span>
+          <span id="save-annual" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺83,200</span>
           <span class="text-[0.95rem] text-slate-600">{{ savings.calc.annualSub }}</span>
         </div>
 
@@ -101,6 +102,7 @@
 
       <!-- Legal Disclaimer -->
       <p class="mt-6 text-center text-[0.9rem] leading-relaxed text-slate-500">
+        {{ savings.currencyNote }}<br>
         {{ savings.disclaimer }}
       </p>
     </div>
@@ -140,7 +142,7 @@
       });
     const selectedBtn = document.getElementById(`kw-${kw}`);
     if (selectedBtn) {
-      selectedBtn.className = "kw-btn active rounded-full bg-eco-green-light px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(162,208,50,0.35)] transition-colors duration-300 md:px-6";
+      selectedBtn.className = "kw-btn active rounded-full bg-solar-yellow px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(251,191,36,0.35)] transition-colors duration-300 md:px-6";
     }
 
     document.getElementById('save-daily').innerText = kwData[kw].daily;

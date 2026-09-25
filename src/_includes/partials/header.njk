@@ -1,12 +1,6 @@
 <header class="fixed inset-x-0 top-0 z-50 h-14 w-full bg-dark-slate/65 backdrop-blur-md transition-all duration-300">
   <nav class="mx-auto flex h-full w-full items-center justify-between gap-2 px-3 md:px-6" aria-label="Main menu">
 
-    <!-- Compute the clean path & language-specific base URLs -->
-    {%- set cleanPath = page.url | replace('/en/', '/') | replace('/tr/', '/') | replace('/ru/', '/') -%}
-    {%- if not cleanPath.startsWith('/') -%}
-      {%- set cleanPath = '/' + cleanPath -%}
-    {%- endif -%}
-
     {%- set homeUrl = "/en/" -%}
     {%- if page.url.startsWith('/ru/') -%}
       {%- set homeUrl = "/ru/" -%}
@@ -121,6 +115,14 @@
     const iconOpen = document.getElementById('menu-icon-open-wrap');
     const iconClose = document.getElementById('menu-icon-close-wrap');
 
+    const closeMobileMenu = () => {
+      mobileBtn?.setAttribute('aria-expanded', 'false');
+      mobileMenu?.classList.remove('grid-rows-[1fr]');
+      mobileMenu?.classList.add('grid-rows-[0fr]');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+    };
+
     mobileBtn?.addEventListener('click', () => {
       const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
       mobileBtn.setAttribute('aria-expanded', !isExpanded);
@@ -136,6 +138,10 @@
         iconOpen.classList.remove('hidden');
         iconClose.classList.add('hidden');
       }
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMobileMenu);
     });
   });
 </script>
