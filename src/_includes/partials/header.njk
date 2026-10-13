@@ -1,4 +1,4 @@
-<header class="fixed inset-x-0 top-0 z-50 h-14 w-full bg-dark-slate/65 backdrop-blur-md transition-all duration-300">
+<header class="fixed inset-x-0 top-0 z-50 h-14 w-full bg-linear-to-b from-black/90 via-black/60 via-80% to-black/40 transition-all duration-300 border-b-dark-slate/20">
   <nav class="mx-auto flex h-full w-full items-center justify-between gap-2 px-3 md:px-6" aria-label="Main menu">
 
     {%- set homeUrl = "/en/" -%}
@@ -14,26 +14,26 @@
         <!-- Small Logo Icon -->
         <img src="/assets/img/logo_small_transparent.png" alt="Solar4Turkey Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 sm:h-9"/>
         <!-- Logo Text Image -->
-        <img src="/assets/img/logo_text_transparent.png" alt="Solar4Turkey" class="h-6 w-auto object-contain sm:h-7"/>
+        <img src="/assets/img/logo_text_transparent.png" alt="Solar4Turkey" class="h-6 w-auto object-contain"/>
       </a>
     </div>
 
     <!-- Middle Section: Main Navigation Links -->
     <div class="hidden min-w-0 flex-1 lg:block">
       <div class="flex items-center justify-center gap-1 xl:gap-2">
-        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#zero-investment-model">{{ nav.financing }}</a>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#zero-investment-model">{{ nav.financing }}</a>
 
         <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
-        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
 
         <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
-        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
 
         <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
-        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
 
         <span class="h-3.5 w-px shrink-0 bg-white/20" aria-hidden="true"></span>
-        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-medium text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
+        <a class="whitespace-nowrap rounded-lg px-2.5 py-1.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
       </div>
     </div>
 
@@ -42,9 +42,9 @@
 
       <!-- Language Switcher (Desktop) -->
       <div class="flex items-center rounded-lg bg-white/10 p-0.5 ring-1 ring-white/20 text-xs font-semibold text-white">
-        <a href="/en{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">EN</a>
-        <a href="/tr{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">TR</a>
-        <a href="/ru{{ cleanPath }}" class="rounded-md px-2 py-1 transition-colors {% if page.url.startsWith('/ru/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">RU</a>
+        <a href="/en{{ cleanPath }}" aria-label="English" title="English" class="rounded-md px-2 py-1 text-base leading-none transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">🇬🇧</a>
+        <a href="/tr{{ cleanPath }}" aria-label="Türkçe" title="Türkçe" class="rounded-md px-2 py-1 text-base leading-none transition-colors {% if page.url.startsWith('/tr/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">🇹🇷</a>
+        <a href="/ru{{ cleanPath }}" aria-label="Русский" title="Русский" class="rounded-md px-2 py-1 text-base leading-none transition-colors {% if page.url.startsWith('/ru/') %}bg-solar-yellow text-dark-slate{% else %}hover:bg-white/10 text-white/80{% endif %}">🇷🇺</a>
       </div>
 
       <a href="tel:+905000000000" class="flex items-center gap-1.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-semibold text-white ring-1 ring-white/30 transition-colors hover:bg-white/10">
@@ -79,9 +79,9 @@
 
         <!-- Language Switcher (Mobile) -->
         <div class="flex items-center justify-center gap-2 rounded-lg bg-slate-100 p-1 text-sm font-semibold text-dark-slate">
-          <a href="/en{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">English</a>
-          <a href="/tr{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">Türkçe</a>
-          <a href="/ru{{ cleanPath }}" class="flex-1 rounded-md py-1.5 text-center transition-colors {% if page.url.startsWith('/ru/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">Русский</a>
+          <a href="/en{{ cleanPath }}" aria-label="English" title="English" class="flex-1 rounded-md py-1.5 text-center text-xl leading-none transition-colors {% if not page.url.startsWith('/ru/') and not page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">🇬🇧</a>
+          <a href="/tr{{ cleanPath }}" aria-label="Türkçe" title="Türkçe" class="flex-1 rounded-md py-1.5 text-center text-xl leading-none transition-colors {% if page.url.startsWith('/tr/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">🇹🇷</a>
+          <a href="/ru{{ cleanPath }}" aria-label="Русский" title="Русский" class="flex-1 rounded-md py-1.5 text-center text-xl leading-none transition-colors {% if page.url.startsWith('/ru/') %}bg-dark-slate text-white{% else %}hover:bg-slate-200{% endif %}">🇷🇺</a>
         </div>
 
         <!-- Action items -->

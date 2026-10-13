@@ -9,25 +9,29 @@
     "cta": "Ücretsiz Keşif Alın"
   },
   "hero": {
-    "title": "Türkiye'de Enerji Bağımsızlığı ve Elektrik Faturalarında %80'e Varan Tasarruf",
-    "subtitle": "Villalar ve konut siteleri için anahtar teslim güneş enerjisi · €0 peşinat · Garanti ve 7/24 servis",
-    "value_prop_line1": "Türkiye'ye özel bir sistemle elektrik faturalarınızı %80'e varan oranda azaltın.",
-    "value_prop_highlight": "Uygun konut siteleri için €0 başlangıç maliyeti.",
+    "title": "Elektrik Faturanızı Bugünden Düşürün",
+    "subtitle": "Villalar ve konut siteleri için garanti ve 7/24 izleme sunan Türkiye'nin en yüksek puanlı güneş enerjisi kurulumcusu.",
+    "value_prop_highlights": [
+      "Uygun konut siteleri için ₺0 başlangıç maliyeti",
+      "Ücretsiz enerji ve çatı keşfi",
+      "Garanti ve 7/24 uzaktan izleme",
+      "Bakım ve panel temizliği dahil"
+    ],
     "cta_offer": "Ücretsiz Teklif Alın",
     "cta_packages": "Fiyat Paketlerini İnceleyin"
   },
   "financing": {
     "badge": "%100 Finanse Edilen Güneş Enerjisi Çözümleri",
     "titlePrefix": "Siteler ve Apartmanlar İçin Çatı Tipi Güneş Enerjisi",
-    "titleHighlight": "€0 İlk Yatırım",
+    "titleHighlight": "₺0 İlk Yatırım",
     "description": "Türkiye genelindeki apartmanlar ve konut siteleri için çatı tipi güneş enerjisi santrallerini tamamen finanse ediyor, kuruyor ve bakımını üstleniyoruz. Kat malikleri ön ödeme yapmaz.",
     "card1": {
-      "stat": "€0",
+      "stat": "₺0",
       "title": "Sıfır Peşinat",
       "desc": "Mülk sahiplerinden veya site yönetiminden herhangi bir katkı payı veya gizli ücret talep edilmez."
     },
     "card2": {
-      "stat": "€10k – €50k",
+      "stat": "₺10k – ₺50k",
       "title": "Site Başına Proje Değeri",
       "desc": "Tesis alanına bağlı olarak Solar4Turkey tarafından %100 finanse edilir ve hayata geçirilir."
     },
@@ -66,7 +70,7 @@
       "annualLabel": "Yıllık Tasarruf",
       "annualSub": "Türk ikliminde tam bir yıl"
     },
-    "currencyNote": "* Tasarruf hesaplamaları TRY elektrik tarifelerine dayanır; EUR tutarları güncel kur üzerinden gösterilir.",
+    "currencyNote": "* Tasarruf hesaplamaları Türk lirası elektrik tarifelerine dayanır; tüm tutarlar TRY cinsinden gösterilir.",
     "disclaimer": "* Hesaplama, Türkiye için PVGIS ışınım verilerine (35° eğim, güney cepheli), vergiler dahil ₺3.50/kWh elektrik tarife oranına ve tam batarya öz tüketimine dayanmaktadır. Gerçek tasarruf, bölgesel hava koşullarına ve hane halkı tüketim alışkanlıklarına bağlıdır."
   },
   "tariffGrowth": {
@@ -176,70 +180,95 @@
   },
   "projects": {
     "section_title": "Öne Çıkan Konut Projeleri",
-    "section_subtitle": "Türkiye genelindeki ev sahipleri için hayata geçirilen son çatı ve arazi tipi güneş enerjisi kurulumlarını inceleyin.",
-    "footnote": "* Tüm performans verileri ve toplam proje tasarrufları, yerel güneş enerjisi verim denetimlerine ve bireysel enerji tüketim kalıplarına göre hesaplanmıştır.",
-    "cta_proposal": "Benzer Teklif Al",
-    "cta_view": "Vaka Çalışmasını İncele",
+    "section_subtitle": "Türk ev sahipleri için hayata geçirilen gerçek çatı kurulumlarını inceleyin; tasarruflar her mülkün kendi tüketimi ve yerel güneş verimine göre hesaplanır.",
+    "footnote": "* Tasarruflar yerel güneş verimi denetimlerine ve her hanenin elektrik tüketimine dayalı tahminlerdir. Gerçek sonuçlar değişiklik gösterebilir.",
+    "savings_label": "Tahmini yıllık tasarruf",
+    "cta_proposal": "Tasarrufumu hesapla",
+    "cta_view": "Detayları gör",
     "list": [
       {
         "id": "villa-6kw",
         "image": "/assets/img/projects/project-1.png",
         "location": "Bodrum, Muğla · Müstakil Villa",
         "title": "Villa Güneş Enerjisi Sistemi 6 kW",
-        "output": "6 kW Güç · 16 kWh Batarya Depolama",
-        "savings": "Tahmini Yıllık Tasarruf: ~€1,850",
-        "configuration": "Şebeke Bağlantılı Hibrit Yapı",
-        "specs": "12 × Aiko 500W Panel · Growatt 6 kW İnverter · Renon 16 kWh Batarya"
+        "output": "6 kW sistem · 16 kWh batarya yedeği",
+        "savings": "₺10,850 / yıl",
+        "configuration": "Şebeke bağlantılı hibrit sistem. Gece kesintilerinde ışıkları açık tutar.",
+        "specs_list": [
+          "12 × Aiko 500W panel",
+          "Growatt 6 kW inverter",
+          "Renon 16 kWh batarya"
+        ]
       },
       {
         "id": "suburban-8kw",
         "image": "/assets/img/projects/project-2.png",
         "location": "Urla, İzmir · Tek Aileli Konut",
         "title": "Banliyö Güneş Enerjisi Kurulumu 8 kW",
-        "output": "8 kW Güç · 16 kWh Depolama Sistemi",
-        "savings": "Tahmini Yıllık Tasarruf: ~€2,400",
-        "configuration": "Yüksek Verimli N-Type TOPCon Paneller",
-        "specs": "16 × Aiko 500W Panel · Growatt 8 kW İnverter · Renon 16 kWh Batarya"
+        "output": "8 kW sistem · 16 kWh depolama",
+        "savings": "₺20,400 / yıl",
+        "configuration": "Düşük ışıkta güçlü üretim sağlayan yüksek verimli N-Type TOPCon paneller.",
+        "specs_list": [
+          "16 × Aiko 500W panel",
+          "Growatt 8 kW inverter",
+          "Renon 16 kWh batarya"
+        ]
       },
       {
         "id": "antalya-penthouse-10kw",
         "image": "/assets/img/projects/project-3.png",
         "location": "Konyaaltı, Antalya · Lüks Çatı Katı",
         "title": "Çatı Tipi Hibrit Tesis 10 kW",
-        "output": "10 kW Güç · 20 kWh Batarya Depolama",
-        "savings": "Tahmini Yıllık Tasarruf: ~€3,100",
-        "configuration": "Balkon ve Çatı Hibrit Dizilimi",
-        "specs": "20 × Longi 500W Panel · Huawei 10 kW İnverter · Luna2000 20 kWh Batarya"
+        "output": "10 kW sistem · 20 kWh batarya yedeği",
+        "savings": "₺30,100 / yıl",
+        "configuration": "Yaz aylarındaki yüksek tüketim için boyutlandırılmış çatı ve balkon dizilimi.",
+        "specs_list": [
+          "20 × Longi 500W panel",
+          "Huawei 10 kW inverter",
+          "Luna2000 20 kWh batarya"
+        ]
       },
       {
         "id": "bursa-family-home-12kw",
         "image": "/assets/img/projects/project-4.png",
         "location": "Nilüfer, Bursa · Müstakil Ev",
         "title": "Geniş Aile Evi Sistemi 12 kW",
-        "output": "12 kW Güç · 25 kWh Batarya Depolama",
-        "savings": "Tahmini Yıllık Tasarruf: ~€3,850",
-        "configuration": "Üç Fazlı Akıllı Hibrit Düzen",
-        "specs": "24 × JA Solar 500W Panel · Deye 12 kW İnverter · Pylontech 25 kWh Batarya"
+        "output": "12 kW sistem · 25 kWh batarya yedeği",
+        "savings": "₺30,850 / yıl",
+        "configuration": "Daha büyük haneler için üç fazlı akıllı hibrit sistem.",
+        "specs_list": [
+          "24 × JA Solar 500W panel",
+          "Deye 12 kW inverter",
+          "Pylontech 25 kWh batarya"
+        ]
       },
       {
         "id": "fethiye-eco-villa-5kw",
         "image": "/assets/img/projects/project-5.png",
         "location": "Fethiye, Muğla · Eko Villa",
         "title": "Kompakt Şebekeden Bağımsız Uyumlu 5 kW",
-        "output": "5 kW Güç · 10 kWh Batarya Depolama",
-        "savings": "Tahmini Yıllık Tasarruf: ~€1,500",
-        "configuration": "Şebeke Bağımsız Çalışabilen Hibrit",
-        "specs": "10 × Trina 500W Panel · Victron MultiPlus 5 kW · Dyness 10 kWh Batarya"
+        "output": "5 kW sistem · 10 kWh batarya yedeği",
+        "savings": "₺10,500 / yıl",
+        "configuration": "Şebeke kesilirse evin bağımsız çalışabilmesi için şebekeden bağımsız kullanıma hazır.",
+        "specs_list": [
+          "10 × Trina 500W panel",
+          "Victron MultiPlus 5 kW",
+          "Dyness 10 kWh batarya"
+        ]
       },
       {
         "id": "ankara-modern-duplex-15kw",
         "image": "/assets/img/projects/project-6.png",
         "location": "Çankaya, Ankara · Modern Dubleks",
         "title": "Yüksek Kapasiteli Konut Dubleksi 15 kW",
-        "output": "15 kW Güç · 30 kWh Batarya Depolama",
-        "savings": "Tahmini Yıllık Tasarruf: ~€4,700",
-        "configuration": "Ticari Sınıf Konut Kurulumu",
-        "specs": "30 × Jinko 500W Panel · Solis 15 kW İnverter · BYD Battery-Box 30 kWh Batarya"
+        "output": "15 kW sistem · 30 kWh batarya yedeği",
+        "savings": "₺40,700 / yıl",
+        "configuration": "Günlük tüketimi yüksek, ortak kullanımlı haneler için tasarlanmıştır.",
+        "specs_list": [
+          "30 × Jinko 500W panel",
+          "Solis 15 kW inverter",
+          "BYD Battery-Box 30 kWh"
+        ]
       }
     ]
   },
@@ -268,6 +297,48 @@
         "description": "Sistemi bağlar, 7/24 izleme erişimini sunar ve tasarruf ilk günden başlar."
       }
     ]
+  },
+  "interactive": {
+    "section_title": "Güneş Enerjisi Sisteminizi Keşfedin",
+    "section_subtitle": "Güneş enerjisi kurulumunuzun temel bileşenlerini keşfedin ve evinize enerji sağlamak için nasıl birlikte çalıştıklarını görün.",
+    "house_alt": "Ev genel görünümü",
+    "panels_alt": "Güneş panelleri detay görünümü",
+    "inverter_alt": "İnverter ve batarya detay görünümü",
+    "open_label": "Tam ekranda keşfedin",
+    "rotate_hint": "En iyi görünüm için telefonunuzu yatay çevirin",
+    "rotate_prompt": "Telefonunuzu yatay çevirin",
+    "exit_label": "Kapat",
+    "select_prompt": "Bir öğe seçin",
+    "panels_hotspot": "Güneş Panelleri",
+    "inverter_hotspot": "İnverter ve Batarya",
+    "back_label": "Genel görünüme dön",
+    "audit_cta": "Ücretsiz Keşif Alın",
+    "panels": {
+      "title": "CW Energy Tier-1 Paneller",
+      "description": "Gelişmiş TOPCon ve çift taraflı teknolojiye sahip, Türkiye üretimi premium Tier-1 güneş modülleri. Her iki taraftan maksimum güneş ışığı toplamak için bozulmaya karşı koruma ile tasarlanmıştır.",
+      "main_stat_title": "Yıllık Üretim",
+      "main_stat_value": "~9.800",
+      "main_stat_unit": "kWh",
+      "stat1_value": "30 Yıl",
+      "stat1_label": "Kullanım ömrü",
+      "stat2_value": "Çift taraflı",
+      "stat2_label": "Teknoloji"
+    },
+    "inverter": {
+      "title": "TommaTech Hibrit İnverter",
+      "description": "Kesintisiz güç kaynağı (UPS) işlevine sahip akıllı enerji akış yönetim sistemi. Ortak alanlar için maksimum verimlilik ve güvenilirlik sağlar.",
+      "main_stat_title": "Sistem Verimliliği",
+      "main_stat_value": "98,6",
+      "main_stat_unit": "%",
+      "stat1_value": "5 Yıl",
+      "stat1_label": "İnverter ömrü",
+      "stat2_value": "10 Yıl",
+      "stat2_label": "Batarya ömrü"
+    },
+    "battery": {
+      "title": "TommaTech HV Lityum Batarya",
+      "description": "Gelişmiş yüksek voltajlı (HV) LiFePO4 batarya depolama sistemi. 6.000'den fazla döngüyle derin deşarj için tasarlanmış olup mülkünüzü gece boyunca güvenle çalıştırır."
+    }
   },
   "audit": {
     "badge": "Ücretsiz Değerlendirme",

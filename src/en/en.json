@@ -9,25 +9,29 @@
     "cta": "Get Free Audit"
   },
   "hero": {
-    "title": "Energy Independence and Up to 80% Lower Bills in Turkey",
-    "subtitle": "Turnkey solar power systems for villas and residential complexes · €0 upfront · Warranty and 24/7 service",
-    "value_prop_line1": "Cut electricity bills by up to 80% with a system designed for Turkey.",
-    "value_prop_highlight": "€0 upfront for qualifying residential complexes.",
+    "title": "Cut Your Electricity Bills Starting Today",
+    "subtitle": "Turkey's top-rated solar installer for villas and residential complexes, with warranty and 24/7 monitoring.",
+    "value_prop_highlights": [
+      "₺0 upfront for qualifying residential complexes",
+      "Free energy and roof audit",
+      "Warranty and 24/7 remote monitoring",
+      "Maintenance and panel cleaning included"
+    ],
     "cta_offer": "Get Free Offer",
     "cta_packages": "View Pricing Packages"
   },
   "financing": {
     "badge": "100% Fully Financed Solar Solutions",
     "titlePrefix": "Rooftop Solar for Residential Complexes",
-    "titleHighlight": "€0 Initial Investment",
+    "titleHighlight": "₺0 Initial Investment",
     "description": "We fully finance, install, and maintain rooftop solar power stations for apartment complexes and residential communities across Turkey. Homeowners pay zero upfront costs.",
     "card1": {
-      "stat": "€0",
+      "stat": "₺0",
       "title": "Zero Upfront Down Payment",
       "desc": "No contributions or hidden fees required from property owners or site management."
     },
     "card2": {
-      "stat": "€10k – €50k",
+      "stat": "₺10k – ₺50k",
       "title": "Project Value per Complex",
       "desc": "100% funded and executed by Solar4Turkey depending on facility footprint."
     },
@@ -66,7 +70,7 @@
       "annualLabel": "Annual Savings",
       "annualSub": "full year under Turkish climate"
     },
-    "currencyNote": "* Savings are calculated using TRY electricity tariffs; EUR figures are shown using the current exchange rate.",
+    "currencyNote": "* Savings are calculated using Turkish lira electricity tariffs; all figures are shown in TRY.",
     "disclaimer": "* Calculation based on PVGIS irradiance data for Turkey (35° tilt, south-facing), electricity tariff rate of ₺3.50/kWh with tax, and full battery self-consumption. Actual savings depend on regional weather patterns and household consumption habits."
   },
   "tariffGrowth": {
@@ -176,70 +180,95 @@
   },
   "projects": {
     "section_title": "Featured Residential Projects",
-    "section_subtitle": "Explore recent rooftop and ground-mounted solar installations delivered for homeowners across Turkey.",
-    "footnote": "* All performance figures and total project savings are calculated based on local solar yield audits and individual energy consumption patterns.",
-    "cta_proposal": "Get Similar Proposal",
-    "cta_view": "View Case Study",
+    "section_subtitle": "Real rooftop installations delivered for Turkish homeowners, with savings calculated from each property's own consumption and local solar yield.",
+    "footnote": "* Savings are estimates based on local solar yield audits and each household's electricity consumption. Actual results may vary.",
+    "savings_label": "Estimated yearly savings",
+    "cta_proposal": "Calculate my savings",
+    "cta_view": "See details",
     "list": [
       {
         "id": "villa-6kw",
         "image": "/assets/img/projects/project-1.png",
-        "location": "Bodrum, Muğla · Residential Villa",
+        "location": "Bodrum, Muğla · Residential villa",
         "title": "Villa Solar System 6 kW",
-        "output": "6 kW Output · 16 kWh Battery Backup",
-        "savings": "Estimated Yearly Savings: ~€1,850",
-        "configuration": "Grid-Tied Hybrid Configuration",
-        "specs": "12 × Aiko 500W Panels · Growatt 6 kW Inverter · Renon 16 kWh Battery"
+        "output": "6 kW system · 16 kWh battery backup",
+        "savings": "₺10,850 / year",
+        "configuration": "Grid-tied hybrid. Keeps the lights on during night-time outages.",
+        "specs_list": [
+          "12 × Aiko 500W panels",
+          "Growatt 6 kW inverter",
+          "Renon 16 kWh battery"
+        ]
       },
       {
         "id": "suburban-8kw",
         "image": "/assets/img/projects/project-2.png",
-        "location": "Urla, Izmir · Single Family Residence",
+        "location": "Urla, İzmir · Single-family home",
         "title": "Suburban Solar Setup 8 kW",
-        "output": "8 kW Output · 16 kWh Storage System",
-        "savings": "Estimated Yearly Savings: ~€2,400",
-        "configuration": "High-efficiency N-Type TOPCon Panels",
-        "specs": "16 × Aiko 500W Panels · Growatt 8 kW Inverter · Renon 16 kWh Battery"
+        "output": "8 kW system · 16 kWh storage",
+        "savings": "₺20,400 / year",
+        "configuration": "High-efficiency N-type TOPCon panels for strong output in low light.",
+        "specs_list": [
+          "16 × Aiko 500W panels",
+          "Growatt 8 kW inverter",
+          "Renon 16 kWh battery"
+        ]
       },
       {
         "id": "antalya-penthouse-10kw",
         "image": "/assets/img/projects/project-3.png",
-        "location": "Konyaaltı, Antalya · Luxury Penthouse",
+        "location": "Konyaaltı, Antalya · Luxury penthouse",
         "title": "Rooftop Hybrid Plant 10 kW",
-        "output": "10 kW Output · 20 kWh Battery Backup",
-        "savings": "Estimated Yearly Savings: ~€3,100",
-        "configuration": "Balcony & Roof Hybrid Array",
-        "specs": "20 × Longi 500W Panels · Huawei 10 kW Inverter · Luna2000 20 kWh Battery"
+        "output": "10 kW system · 20 kWh battery backup",
+        "savings": "₺30,100 / year",
+        "configuration": "Combined roof and balcony array, sized for high summer demand.",
+        "specs_list": [
+          "20 × Longi 500W panels",
+          "Huawei 10 kW inverter",
+          "Luna2000 20 kWh battery"
+        ]
       },
       {
         "id": "bursa-family-home-12kw",
         "image": "/assets/img/projects/project-4.png",
-        "location": "Nilüfer, Bursa · Detached House",
+        "location": "Nilüfer, Bursa · Detached house",
         "title": "Extended Family Home System 12 kW",
-        "output": "12 kW Output · 25 kWh Battery Backup",
-        "savings": "Estimated Yearly Savings: ~€3,850",
-        "configuration": "Three-Phase Smart Hybrid Layout",
-        "specs": "24 × JA Solar 500W Panels · Deye 12 kW Inverter · Pylontech 25 kWh Battery"
+        "output": "12 kW system · 25 kWh battery backup",
+        "savings": "₺30,850 / year",
+        "configuration": "Three-phase smart hybrid layout for larger households.",
+        "specs_list": [
+          "24 × JA Solar 500W panels",
+          "Deye 12 kW inverter",
+          "Pylontech 25 kWh battery"
+        ]
       },
       {
         "id": "fethiye-eco-villa-5kw",
         "image": "/assets/img/projects/project-5.png",
-        "location": "Fethiye, Muğla · Eco Villa",
+        "location": "Fethiye, Muğla · Eco villa",
         "title": "Compact Off-Grid Ready 5 kW",
-        "output": "5 kW Output · 10 kWh Battery Backup",
-        "savings": "Estimated Yearly Savings: ~€1,500",
-        "configuration": "Off-Grid Capable Hybrid Setup",
-        "specs": "10 × Trina 500W Panels · Victron MultiPlus 5 kW · Dyness 10 kWh Battery"
+        "output": "5 kW system · 10 kWh battery backup",
+        "savings": "₺10,500 / year",
+        "configuration": "Off-grid capable, so the home can run independently if the grid fails.",
+        "specs_list": [
+          "10 × Trina 500W panels",
+          "Victron MultiPlus 5 kW",
+          "Dyness 10 kWh battery"
+        ]
       },
       {
         "id": "ankara-modern-duplex-15kw",
         "image": "/assets/img/projects/project-6.png",
-        "location": "Çankaya, Ankara · Modern Duplex",
+        "location": "Çankaya, Ankara · Modern duplex",
         "title": "High-Capacity Residential Duplex 15 kW",
-        "output": "15 kW Output · 30 kWh Battery Backup",
-        "savings": "Estimated Yearly Savings: ~€4,700",
-        "configuration": "Commercial-Grade Residential Setup",
-        "specs": "30 × Jinko 500W Panels · Solis 15 kW Inverter · BYD Battery-Box 30 kWh"
+        "output": "15 kW system · 30 kWh battery backup",
+        "savings": "₺40,700 / year",
+        "configuration": "Built for shared-use households with high daily consumption.",
+        "specs_list": [
+          "30 × Jinko 500W panels",
+          "Solis 15 kW inverter",
+          "BYD Battery-Box 30 kWh"
+        ]
       }
     ]
   },
@@ -268,6 +297,48 @@
         "description": "We connect the system, provide 24/7 monitoring access, and savings begin from day one."
       }
     ]
+  },
+  "interactive": {
+    "section_title": "Explore Your Solar System",
+    "section_subtitle": "Explore the key components of your solar installation and see how they work together to power your home.",
+    "house_alt": "House overview",
+    "panels_alt": "Solar panels detailed view",
+    "inverter_alt": "Inverter and battery detailed view",
+    "open_label": "Explore in fullscreen",
+    "rotate_hint": "Rotate your phone for the best view",
+    "rotate_prompt": "Turn your phone sideways",
+    "exit_label": "Close",
+    "select_prompt": "Select an element",
+    "panels_hotspot": "Solar Panels",
+    "inverter_hotspot": "Inverter & Battery",
+    "back_label": "Back to Overview",
+    "audit_cta": "Get Free Audit",
+    "panels": {
+      "title": "CW Energy Tier-1 Panels",
+      "description": "Premium Turkish Tier-1 solar modules featuring advanced TOPCon and Bifacial technology. Designed with anti-degradation protection to capture maximum sunlight from both sides.",
+      "main_stat_title": "Yearly Production",
+      "main_stat_value": "~9,800",
+      "main_stat_unit": "kWh",
+      "stat1_value": "30 Yrs",
+      "stat1_label": "Lifespan",
+      "stat2_value": "Bifacial",
+      "stat2_label": "Technology"
+    },
+    "inverter": {
+      "title": "TommaTech Hybrid Inverter",
+      "description": "Intelligent energy flow management system featuring a seamless Uninterruptible Power Supply (UPS) function. Ensures maximum efficiency and reliability for common areas.",
+      "main_stat_title": "System Efficiency",
+      "main_stat_value": "98.6",
+      "main_stat_unit": "%",
+      "stat1_value": "5 Yrs",
+      "stat1_label": "Inv. Lifespan",
+      "stat2_value": "10 Yrs",
+      "stat2_label": "Bat. Lifespan"
+    },
+    "battery": {
+      "title": "TommaTech HV Lithium Battery",
+      "description": "Advanced High Voltage (HV) LiFePO4 battery storage. Built for deep discharge with over 6,000 cycles to power your property safely through the night."
+    }
   },
   "audit": {
     "badge": "Free Evaluation",

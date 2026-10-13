@@ -1,0 +1,427 @@
+<section id="interactive-visualisation" class="relative overflow-hidden bg-slate-50 py-16 md:py-20">
+  <div class="mx-auto max-w-7xl px-6">
+    <!-- Section Header -->
+    <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
+      <h2 class="text-3xl font-extrabold uppercase tracking-wide text-slate-900 md:text-4xl">
+        {{ interactive.section_title }}
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-solar-yellow" aria-hidden="true"></div>
+      <p class="mt-4 text-lg text-slate-600">
+        {{ interactive.section_subtitle }}
+      </p>
+    </div>
+
+    <!-- 3d interactive canvas -->
+    <div id="viz-container" class="relative mx-auto w-full aspect-video overflow-hidden rounded-[2rem] bg-slate-900 shadow-[0_24px_60px_rgba(13,27,46,0.15)] ring-1 ring-slate-200">
+
+      <!-- base state: house view -->
+      <img
+        id="img-house"
+        src="/assets/img/interactive-visualisation/house-view.jpeg"
+        alt="{{ interactive.house_alt }}"
+        class="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
+      />
+
+      <!-- panels assets -->
+      <video
+        id="vid-to-panels"
+        src="/assets/img/interactive-visualisation/transition-to-panels.mp4"
+        muted playsinline preload="auto"
+        class="absolute inset-0 z-10 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      ></video>
+      <video
+        id="vid-from-panels"
+        src="/assets/img/interactive-visualisation/transition-from-panels.mp4"
+        muted playsinline preload="auto"
+        class="absolute inset-0 z-30 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      ></video>
+      <img
+        id="img-panels"
+        src="/assets/img/interactive-visualisation/panels-view.jpeg"
+        alt="{{ interactive.panels_alt }}"
+        class="absolute inset-0 z-20 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      />
+
+      <!-- inverter & battery assets -->
+      <video
+        id="vid-to-inverter"
+        src="/assets/img/interactive-visualisation/transition-to-inverter.mp4"
+        muted playsinline preload="auto"
+        class="absolute inset-0 z-10 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      ></video>
+      <video
+        id="vid-from-inverter"
+        src="/assets/img/interactive-visualisation/transition-from-inverter.mp4"
+        muted playsinline preload="auto"
+        class="absolute inset-0 z-30 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      ></video>
+      <img
+        id="img-inverter"
+        src="/assets/img/interactive-visualisation/inverter-view.jpeg"
+        alt="{{ interactive.inverter_alt }}"
+        class="absolute inset-0 z-20 h-full w-full object-cover opacity-0 pointer-events-none transition-opacity duration-300"
+      />
+
+      <!-- dark gradient overlay -->
+      <div class="pointer-events-none absolute inset-0 z-40 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/20"></div>
+
+      <!-- MOBILE: tap-to-open gate (hidden on desktop via CSS below) -->
+      <button
+        id="mobile-enter"
+        type="button"
+        onclick="enterMobile()"
+        class="absolute inset-0 z-[60] flex-col items-center justify-center gap-4 bg-slate-900/55 px-6 text-center text-white backdrop-blur-[2px]"
+      >
+        <span class="flex h-16 w-16 items-center justify-center rounded-full bg-solar-yellow shadow-[0_10px_30px_rgba(4,16,30,0.35)]">
+          <svg class="h-7 w-7 text-dark-slate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+        </span>
+        <span class="text-base font-bold">{{ interactive.open_label }}</span>
+        <span class="text-xs text-white/75">{{ interactive.rotate_hint }}</span>
+      </button>
+
+      <div id="rotate-prompt" class="pointer-events-none absolute inset-0 z-[65] hidden flex-col items-center justify-center gap-3 bg-slate-900/80 text-center text-white">
+        <svg class="h-10 w-10 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        <span class="text-sm font-bold">{{ interactive.rotate_prompt }}</span>
+      </div>
+
+      <!-- MOBILE: exit button (only visible in fullscreen mode) -->
+      <button
+        id="mobile-exit"
+        type="button"
+        onclick="exitMobile()"
+        class="absolute right-4 top-4 z-[70] items-center gap-2 rounded-full bg-white/95 py-2 pl-3 pr-4 text-xs font-bold text-amber-700 shadow-[0_10px_28px_rgba(4,16,30,0.3)] ring-1 ring-white/70 backdrop-blur-md"
+      >
+        <svg class="h-4 w-4 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        {{ interactive.exit_label }}
+      </button>
+
+      <!-- interactive hint element (placed above gradient with z-50) -->
+      <div id="ui-hint" class="pointer-events-none absolute bottom-4 left-4 z-50 flex origin-bottom-left scale-90 items-center gap-2 whitespace-nowrap rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-amber-700 ring-1 ring-white/60 backdrop-blur-md transition-opacity duration-500 lg:bottom-8 lg:left-8 lg:scale-100 lg:gap-3 lg:px-8 lg:py-4 lg:text-[1.2rem] shadow-[0_10px_30px_rgba(4,16,30,0.35)]">
+        <svg class="h-4 w-4 text-amber-700 animate-bounce lg:h-5 lg:w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg>
+        {{ interactive.select_prompt }}
+      </div>
+
+      <!-- hotspots layer -->
+      <div id="hotspots-layer" class="absolute inset-0 z-50 transition-opacity duration-500">
+
+        <!-- panels hotspot -->
+        <button
+          type="button"
+          onclick="openView('panels')"
+          style="left: 48%; top: 10%;"
+          class="group absolute -translate-x-1/2 -translate-y-1/2 scale-[0.65] cursor-pointer transition-all duration-500 sm:scale-75 lg:scale-100"
+        >
+          <span class="flex items-center gap-2 whitespace-nowrap rounded-full bg-white/90 py-2.5 pl-3 pr-5 text-sm font-bold text-amber-700 shadow-[0_10px_30px_rgba(4,16,30,0.35)] ring-1 ring-white/60 backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
+            <span class="relative flex h-2.5 w-2.5 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-solar-yellow opacity-60"></span>
+              <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-solar-yellow"></span>
+            </span>
+            {{ interactive.panels_hotspot }}
+          </span>
+        </button>
+
+        <!-- inverter & battery hotspot -->
+        <button
+          type="button"
+          onclick="openView('inverter')"
+          style="left: 38%; bottom: 12%;"
+          class="group absolute -translate-x-1/2 -translate-y-1/2 scale-[0.65] cursor-pointer transition-all duration-500 sm:scale-75 lg:scale-100"
+        >
+          <span class="flex items-center gap-2 whitespace-nowrap rounded-full bg-white/90 py-2.5 pl-3 pr-5 text-sm font-bold text-amber-700 shadow-[0_10px_30px_rgba(4,16,30,0.35)] ring-1 ring-white/60 backdrop-blur-md transition-transform duration-300 group-hover:scale-105">
+            <span class="relative flex h-2.5 w-2.5 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-solar-yellow opacity-60"></span>
+              <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-solar-yellow"></span>
+            </span>
+            {{ interactive.inverter_hotspot }}
+          </span>
+        </button>
+
+      </div>
+
+      <!-- dynamic detail ui layer -->
+      <div id="detail-ui-layer" class="pointer-events-none absolute inset-0 z-50 opacity-0 transition-opacity duration-500">
+
+        <!-- top left: return button & descriptions -->
+        <div class="absolute left-4 top-4 flex max-w-[15rem] scale-90 origin-top-left flex-col gap-3 lg:left-8 lg:top-8 lg:max-w-sm lg:scale-100 lg:gap-4">
+
+          <!-- return button -->
+          <button
+            type="button"
+            onclick="closeView()"
+            class="pointer-events-auto flex w-fit items-center gap-2 rounded-full bg-white/95 py-2 pl-3 pr-4 text-xs font-bold text-amber-700 shadow-[0_10px_28px_rgba(4,16,30,0.3)] ring-1 ring-white/70 backdrop-blur-md transition-transform duration-300 hover:scale-105 lg:py-2.5 lg:pl-4 lg:pr-5 lg:text-sm"
+          >
+            <svg class="h-4 w-4 text-amber-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            {{ interactive.back_label }}
+          </button>
+
+          <!-- primary description card -->
+          <div class="pointer-events-auto rounded-2xl bg-white/92 p-4 shadow-[0_24px_70px_rgba(4,16,30,0.2)] ring-1 ring-white/50 backdrop-blur-xl lg:p-5">
+            <h3 id="ui-title" class="text-lg font-extrabold tracking-tight text-slate-900 lg:text-xl"></h3>
+            <p id="ui-desc" class="mt-2 text-xs leading-relaxed text-slate-600 lg:text-sm"></p>
+          </div>
+
+          <!-- secondary description card -->
+          <div id="ui-card-secondary" class="pointer-events-auto hidden rounded-2xl bg-white/92 p-4 shadow-[0_24px_70px_rgba(4,16,30,0.2)] ring-1 ring-white/50 backdrop-blur-xl lg:p-5">
+            <h3 id="ui-title-secondary" class="text-lg font-extrabold tracking-tight text-slate-900 lg:text-xl"></h3>
+            <p id="ui-desc-secondary" class="mt-2 text-xs leading-relaxed text-slate-600 lg:text-sm"></p>
+          </div>
+
+        </div>
+
+        <!-- right side: stats card -->
+        <div class="absolute bottom-4 right-4 pointer-events-auto w-[13rem] rounded-[1.3rem] bg-white/92 p-4 shadow-[0_24px_70px_rgba(4,16,30,0.3)] ring-1 ring-white/50 backdrop-blur-xl lg:bottom-8 lg:right-8 lg:w-[16rem] lg:p-6">
+          <div id="ui-main-stat-title" class="text-[0.75rem] font-bold uppercase tracking-[0.15em] text-amber-700"></div>
+          <div class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 lg:text-4xl">
+            <span id="ui-main-stat-value"></span> <span id="ui-main-stat-unit" class="text-sm font-semibold text-slate-500 lg:text-base"></span>
+          </div>
+
+          <div class="mt-4 h-px bg-slate-200 w-full lg:mt-6"></div>
+
+          <div class="mt-3 grid grid-cols-2 gap-3 lg:mt-4 lg:gap-4">
+            <div>
+              <div id="ui-stat1-val" class="text-base font-bold text-slate-900 lg:text-lg"></div>
+              <div id="ui-stat1-label" class="text-[0.7rem] font-medium text-slate-500"></div>
+            </div>
+            <div>
+              <div id="ui-stat2-val" class="text-base font-bold text-slate-900 lg:text-lg"></div>
+              <div id="ui-stat2-label" class="text-[0.7rem] font-medium text-slate-500"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom center: get free audit button -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 pointer-events-auto">
+          <a href="#audit-form-section" onclick="exitMobile(true)" class="inline-flex items-center justify-center gap-2 rounded-xl bg-solar-yellow px-10 py-4 text-base font-bold text-black shadow-[0_8px_26px_rgba(252,211,77,0.4)] transition-all duration-300 hover:scale-105 hover:bg-solar-yellow/90 hover:shadow-[0_12px_32px_rgba(252,211,77,0.5)]">
+            {{ interactive.audit_cta }}
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- mobile fullscreen styles -->
+<style>
+  /* Mobile gate and exit button: shown only below the lg breakpoint */
+  #mobile-enter { display: none; }
+  #mobile-exit { display: none; }
+
+  @media (max-width: 1023px) {
+    #mobile-enter { display: flex; }
+  }
+
+  /* Fullscreen state: the container covers the whole viewport */
+  #viz-container.is-fullscreen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    aspect-ratio: auto !important;
+    border-radius: 0 !important;
+    z-index: 9999;
+  }
+  #viz-container.is-fullscreen #mobile-enter { display: none !important; }
+  #viz-container.is-fullscreen #mobile-exit { display: flex; }
+  #viz-container.is-fullscreen #rotate-prompt { display: none; }
+
+  @media (orientation: portrait) {
+    #viz-container.is-fullscreen #rotate-prompt { display: flex; }
+  }
+
+  /* Stop the page behind the overlay from scrolling */
+  body.viz-locked { overflow: hidden; }
+</style>
+
+<!-- logic for transitions -->
+<script>
+  const viewData = {
+    panels: {
+      img: 'img-panels',
+      vidTo: 'vid-to-panels',
+      vidFrom: 'vid-from-panels',
+
+      // primary card
+      title: {{ interactive.panels.title | dump | safe }},
+      desc: {{ interactive.panels.description | dump | safe }},
+      hasSecondary: false,
+
+      // stats
+      mainStatTitle: {{ interactive.panels.main_stat_title | dump | safe }},
+      mainStatValue: {{ interactive.panels.main_stat_value | dump | safe }},
+      mainStatUnit: {{ interactive.panels.main_stat_unit | dump | safe }},
+      stat1Value: {{ interactive.panels.stat1_value | dump | safe }},
+      stat1Label: {{ interactive.panels.stat1_label | dump | safe }},
+      stat2Value: {{ interactive.panels.stat2_value | dump | safe }},
+      stat2Label: {{ interactive.panels.stat2_label | dump | safe }}
+    },
+    inverter: {
+      img: 'img-inverter',
+      vidTo: 'vid-to-inverter',
+      vidFrom: 'vid-from-inverter',
+
+      // primary card (inverter)
+      title: {{ interactive.inverter.title | dump | safe }},
+      desc: {{ interactive.inverter.description | dump | safe }},
+
+      // secondary card (battery)
+      hasSecondary: true,
+      titleSecondary: {{ interactive.battery.title | dump | safe }},
+      descSecondary: {{ interactive.battery.description | dump | safe }},
+
+      // stats
+      mainStatTitle: {{ interactive.inverter.main_stat_title | dump | safe }},
+      mainStatValue: {{ interactive.inverter.main_stat_value | dump | safe }},
+      mainStatUnit: {{ interactive.inverter.main_stat_unit | dump | safe }},
+      stat1Value: {{ interactive.inverter.stat1_value | dump | safe }},
+      stat1Label: {{ interactive.inverter.stat1_label | dump | safe }},
+      stat2Value: {{ interactive.inverter.stat2_value | dump | safe }},
+      stat2Label: {{ interactive.inverter.stat2_label | dump | safe }}
+    }
+  };
+
+  let isTransitioning = false;
+  let activeView = null;
+
+  // ---- Mobile fullscreen handling ----
+  const vizContainer = document.getElementById('viz-container');
+  let isMobileFullscreen = false;
+
+  async function enterMobile() {
+    if (isMobileFullscreen) return;
+    isMobileFullscreen = true;
+    vizContainer.classList.add('is-fullscreen');
+    document.body.classList.add('viz-locked');
+    history.pushState({ vizFullscreen: true }, '');
+
+    // Try the real fullscreen API and landscape lock (Android Chrome).
+    // Both calls fail silently on iPhone, where the overlay alone is used.
+    try {
+      if (vizContainer.requestFullscreen) {
+        await vizContainer.requestFullscreen();
+      }
+      if (screen.orientation && screen.orientation.lock) {
+        await screen.orientation.lock('landscape');
+      }
+    } catch (err) {
+      // Not supported or denied: the overlay still works.
+    }
+  }
+
+  async function exitMobile(skipHistory = false) {
+    if (!isMobileFullscreen) return;
+    isMobileFullscreen = false;
+    vizContainer.classList.remove('is-fullscreen');
+    document.body.classList.remove('viz-locked');
+
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+    } catch (err) {}
+
+    if (!skipHistory && history.state && history.state.vizFullscreen) {
+      history.back();
+    }
+  }
+
+  window.addEventListener('popstate', () => exitMobile(true));
+
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => {
+    if (e.matches) exitMobile(true);
+  });
+
+  // ---- Detail views ----
+  function openView(viewKey) {
+    if (isTransitioning || activeView === viewKey) return;
+    isTransitioning = true;
+    activeView = viewKey;
+
+    const data = viewData[viewKey];
+
+    // 1. populate ui text dynamically
+    document.getElementById('ui-title').innerText = data.title;
+    document.getElementById('ui-desc').innerText = data.desc;
+
+    // 2. handle optional secondary card
+    const secondaryCard = document.getElementById('ui-card-secondary');
+    if (data.hasSecondary) {
+      document.getElementById('ui-title-secondary').innerText = data.titleSecondary;
+      document.getElementById('ui-desc-secondary').innerText = data.descSecondary;
+      secondaryCard.classList.remove('hidden');
+    } else {
+      secondaryCard.classList.add('hidden');
+    }
+
+    // 3. populate stats
+    document.getElementById('ui-main-stat-title').innerText = data.mainStatTitle;
+    document.getElementById('ui-main-stat-value').innerText = data.mainStatValue;
+    document.getElementById('ui-main-stat-unit').innerText = data.mainStatUnit;
+    document.getElementById('ui-stat1-val').innerText = data.stat1Value;
+    document.getElementById('ui-stat1-label').innerText = data.stat1Label;
+    document.getElementById('ui-stat2-val').innerText = data.stat2Value;
+    document.getElementById('ui-stat2-label').innerText = data.stat2Label;
+
+    const houseImg = document.getElementById('img-house');
+    const hotspots = document.getElementById('hotspots-layer');
+    const hintUi = document.getElementById('ui-hint');
+    const detailUI = document.getElementById('detail-ui-layer');
+    const vidTo = document.getElementById(data.vidTo);
+    const detailImg = document.getElementById(data.img);
+
+    // 4. hide hotspots and hint
+    hotspots.classList.add('opacity-0', 'pointer-events-none');
+    hintUi.classList.add('opacity-0');
+
+    // 5. play transition video
+    vidTo.classList.remove('opacity-0');
+    vidTo.play();
+
+    vidTo.onended = () => {
+      // 6. show static detail image and ui overlay
+      detailImg.classList.remove('opacity-0');
+      vidTo.classList.add('opacity-0');
+
+      detailUI.classList.remove('opacity-0', 'pointer-events-none');
+      houseImg.classList.add('opacity-0'); // hide base to save render resources
+
+      isTransitioning = false;
+    };
+  }
+
+  function closeView() {
+    if (isTransitioning || !activeView) return;
+    isTransitioning = true;
+
+    const data = viewData[activeView];
+    const houseImg = document.getElementById('img-house');
+    const hotspots = document.getElementById('hotspots-layer');
+    const hintUi = document.getElementById('ui-hint');
+    const detailUI = document.getElementById('detail-ui-layer');
+    const vidFrom = document.getElementById(data.vidFrom);
+    const detailImg = document.getElementById(data.img);
+
+    // 1. hide detail ui
+    detailUI.classList.add('opacity-0', 'pointer-events-none');
+
+    // 2. prep house image and play reverse video
+    houseImg.classList.remove('opacity-0');
+    vidFrom.classList.remove('opacity-0');
+    vidFrom.play();
+
+    // hide static detail image so video shows smoothly
+    detailImg.classList.add('opacity-0');
+
+    vidFrom.onended = () => {
+      // 3. clean up and restore hotspots and hint
+      vidFrom.classList.add('opacity-0');
+      hotspots.classList.remove('opacity-0', 'pointer-events-none');
+      hintUi.classList.remove('opacity-0');
+
+      activeView = null;
+      isTransitioning = false;
+    };
+  }
+</script>

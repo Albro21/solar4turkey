@@ -1,12 +1,14 @@
-<section id="top" data-dark-hero="true" class="relative flex min-h-svh flex-col overflow-hidden bg-dark-slate pt-14 lg:min-h-[calc(100svh-4rem)]">
-  <!-- Background Image & Overlay -->
+<section id="top" data-dark-hero="true" class="relative flex h-svh min-h-svh flex-col overflow-hidden bg-dark-slate pt-14">
+  <!-- Background Video & Overlay -->
   <div class="absolute inset-0">
-    <img src="/assets/img/hero_bg.jpeg" alt="Residential Solar Panels" class="absolute inset-0 h-full w-full object-cover object-center"/>
-    <div class="absolute inset-0 bg-linear-to-t from-dark-slate via-dark-slate/80 to-transparent"></div>
+    <video autoplay muted loop playsinline poster="/assets/img/hero_bg.jpeg" class="absolute inset-0 h-full w-full object-cover object-center" aria-hidden="true">
+      <source src="/assets/img/hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/80 sm:via-30% to-transparent"></div>
   </div>
 
   <!-- Hero Main Content -->
-  <div class="relative z-10 mt-auto flex flex-col items-center px-6 pb-12 text-center md:pb-16">
+  <div class="relative z-10 mt-auto flex flex-col items-center px-6 pb-24 text-center">
     
     <!-- Main Heading -->
     <h1 class="mx-auto max-w-5xl text-3xl font-extrabold uppercase tracking-wide text-white md:text-5xl lg:text-6xl mt-5 sm:mt-0">
@@ -23,32 +25,70 @@
 
     <!-- Value Proposition -->
     <div class="mt-5 max-w-4xl md:mt-6">
-      <p class="text-base font-bold leading-relaxed text-white md:text-lg">
-        {{ hero.value_prop_line1 }}
-        <br>
-        <span class="text-solar-yellow">{{ hero.value_prop_highlight }}</span>
+      <p class="min-h-7 text-base font-bold leading-relaxed text-white md:text-lg" aria-live="polite">
+        {% for highlight in hero.value_prop_highlights %}
+        <span class="inline-block text-solar-yellow transition-all duration-500 ease-out motion-reduce:transition-none" data-value-prop style="{% if not loop.first %}display: none;{% endif %}">{{ highlight }}</span>
+        {% endfor %}
       </p>
     </div>
 
     <!-- Call to Action Buttons -->
     <div class="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
-      <a href="/{{ page.lang | default('en') }}/#audit-form-section" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-solar-yellow px-8 py-4 text-base font-bold text-dark-slate shadow-lg transition-all duration-300 hover:bg-solar-yellow/90 hover:scale-105">
+      <a href="/{{ page.lang | default('en') }}/#audit-form-section" class="inline-flex items-center justify-center gap-2.5 rounded-xl bg-solar-yellow px-8 py-4 text-base font-bold text-dark-slate shadow-[0_0_20px_4px_rgba(250,204,21,0.4)] transition-all duration-300 hover:bg-solar-yellow/90 hover:scale-105 hover:shadow-[0_0_28px_8px_rgba(250,204,21,0.7)]">
         {{ hero.cta_offer }}
         <i class="fa-solid fa-arrow-right h-4 w-4" aria-hidden="true"></i>
       </a>
 
       <!-- Direct Phone Contact CTA -->
-      <a href="tel:+905000000000" class="inline-flex items-center justify-center gap-2.5 rounded-lg bg-white/10 px-8 py-4 text-base font-bold text-white ring-1 ring-white/40 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:ring-white">
+      <a href="tel:+905000000000" class="inline-flex items-center justify-center gap-2.5 rounded-xl bg-white/10 px-8 py-4 text-base font-bold text-white ring-1 ring-white/40 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:ring-white">
         <i class="fa-solid fa-phone h-4 w-4 text-solar-yellow" aria-hidden="true"></i>
         +90 500 000 0000
       </a>
     </div>
 
-    <!-- Quick Link Anchor -->
-    <a href="#packages" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 underline underline-offset-4 transition-colors duration-200 hover:text-solar-yellow">
-      {{ hero.cta_packages }}
-      <i class="fa-solid fa-arrow-down h-4 w-4" aria-hidden="true"></i>
-    </a>
-
   </div>
+
+  <!-- Scroll cue -->
+  <a href="#zero-investment-model" aria-label="Scroll down to explore our solar solutions" class="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1 text-white/80 transition-colors duration-200 hover:text-solar-yellow motion-reduce:animate-none">
+    <span class="text-[0.65rem] font-bold uppercase tracking-[0.2em] mb-1">Scroll</span>
+    <span class="animate-bounce motion-reduce:animate-none">
+      <i class="fa-solid fa-angles-down text-lg" aria-hidden="true"></i>
+    </span>
+  </a>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const highlights = [...document.querySelectorAll('[data-value-prop]')];
+    if (highlights.length < 2) return;
+
+    let currentIndex = 0;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.setInterval(() => {
+      const current = highlights[currentIndex];
+      const nextIndex = (currentIndex + 1) % highlights.length;
+      const next = highlights[nextIndex];
+
+      if (!reducedMotion) {
+        current.classList.add('opacity-0', 'translate-y-4', 'scale-90');
+      }
+
+      window.setTimeout(() => {
+        current.style.display = 'none';
+        current.classList.remove('opacity-0', 'translate-y-4', 'scale-90');
+        next.style.display = 'inline-block';
+        if (!reducedMotion) {
+          next.classList.add('opacity-0', 'translate-y-4', 'scale-90');
+          void next.offsetWidth;
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              next.classList.remove('opacity-0', 'translate-y-4', 'scale-90');
+            });
+          });
+        }
+        currentIndex = nextIndex;
+      }, reducedMotion ? 0 : 500);
+    }, 3500);
+  });
+</script>
