@@ -9,14 +9,14 @@
 
   <!-- Hero Main Content -->
   <div class="relative z-10 mt-auto flex flex-col items-center px-6 pb-24 text-center">
-    
+
     <!-- Main Heading -->
     <h1 class="mx-auto max-w-5xl text-3xl font-extrabold uppercase tracking-wide text-white md:text-5xl lg:text-6xl mt-5 sm:mt-0">
       {{ hero.title }}
     </h1>
 
     <!-- Free Offer Heading -->
-    <p class="mt-3 text-4xl font-extrabold uppercase tracking-wide text-solar-yellow md:text-6xl">
+    <p class="mt-3 text-4xl font-extrabold uppercase tracking-wide text-solar-yellow drop-shadow-[0_0_10px_rgba(250,204,21,0.85)] md:text-6xl">
       {{ hero.free_title }}
     </p>
 
@@ -32,7 +32,7 @@
     <div class="mt-5 max-w-4xl md:mt-6">
       <p class="min-h-7 text-base font-bold leading-relaxed text-white md:text-lg" aria-live="polite">
         {% for highlight in hero.value_prop_highlights %}
-        <span class="inline-block text-solar-yellow transition-all duration-500 ease-out motion-reduce:transition-none" data-value-prop style="{% if not loop.first %}display: none;{% endif %}">{{ highlight }}</span>
+          <span class="inline-block text-solar-yellow transition-all duration-500 ease-out motion-reduce:transition-none" data-value-prop style="{% if not loop.first %}display: none;{% endif %}">{{ highlight }}</span>
         {% endfor %}
       </p>
     </div>
@@ -83,6 +83,7 @@
         current.style.display = 'none';
         current.classList.remove('opacity-0', 'translate-y-4', 'scale-90');
         next.style.display = 'inline-block';
+
         if (!reducedMotion) {
           next.classList.add('opacity-0', 'translate-y-4', 'scale-90');
           void next.offsetWidth;
@@ -92,6 +93,7 @@
             });
           });
         }
+
         currentIndex = nextIndex;
       }, reducedMotion ? 0 : 500);
     }, 3500);

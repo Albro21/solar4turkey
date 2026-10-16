@@ -14,11 +14,13 @@
 
 <section id="benefits" class="relative overflow-hidden bg-slate-100 py-16 text-slate-900 md:py-20">
   <div class="mx-auto max-w-7xl px-5 md:px-8">
-    <div class="mx-auto mb-12 max-w-3xl text-center md:mb-16">
-      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
+    <!-- Section Header -->
+    <div class="mx-auto mb-10 max-w-3xl text-center md:mb-12">
+      <h2 class="text-3xl font-extrabold uppercase tracking-wide text-slate-900 md:text-4xl">
         {{ benefits.section_title }}
       </h2>
-      <p class="mt-4 text-base leading-relaxed text-slate-500 md:text-lg">
+      <div class="mx-auto mt-4 h-1 w-24 rounded-full bg-brand-green" aria-hidden="true"></div>
+      <p class="mt-4 text-lg text-slate-600">
         {{ benefits.section_subtitle }}
       </p>
     </div>
@@ -29,11 +31,13 @@
         <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
           {{ benefits.categories.financial }}
         </h3>
-        <img src="/assets/img/benefit-1.jpg" alt="{{ benefits.categories.financial }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
+        <img src="/assets/img/benefit-1.jpg" alt="{{ benefits.categories.financial }}" class="mt-5 block aspect-[1.8] w-full rounded-2xl object-cover">
       </div>
       <div class="grid gap-3 md:gap-4">
         {% for item in benefits.list %}
-          {% if loop.index0 < 5 %}{{ benefit_card(item) }}{% endif %}
+          {% if loop.index0 < 5 %}
+            {{ benefit_card(item) }}
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -44,11 +48,13 @@
         <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
           {{ benefits.categories.reliability }}
         </h3>
-        <img src="/assets/img/benefit-2.jpg" alt="{{ benefits.categories.reliability }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
+        <img src="/assets/img/benefit-2.jpg" alt="{{ benefits.categories.reliability }}" class="mt-5 block aspect-[1.8] w-full rounded-2xl object-cover">
       </div>
       <div class="grid gap-3 md:gap-4">
         {% for item in benefits.list %}
-          {% if loop.index0 >= 5 and loop.index0 < 10 %}{{ benefit_card(item) }}{% endif %}
+          {% if loop.index0 >= 5 and loop.index0 < 10 %}
+            {{ benefit_card(item) }}
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -59,11 +65,13 @@
         <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
           {{ benefits.categories.service }}
         </h3>
-        <img src="/assets/img/benefit-3.jpg" alt="{{ benefits.categories.service }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
+        <img src="/assets/img/benefit-3.jpg" alt="{{ benefits.categories.service }}" class="mt-5 block aspect-[1.8] w-full rounded-2xl object-cover">
       </div>
       <div class="grid gap-3 md:gap-4">
         {% for item in benefits.list %}
-          {% if loop.index0 >= 10 %}{{ benefit_card(item) }}{% endif %}
+          {% if loop.index0 >= 10 %}
+            {{ benefit_card(item) }}
+          {% endif %}
         {% endfor %}
       </div>
     </div>

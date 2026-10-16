@@ -2,7 +2,6 @@
   "lang": "tr",
   "layout": "layouts/base.njk",
   "nav": {
-    "financing": "Sıfır Yatırım",
     "solutions": "Çözümler",
     "howItWorks": "Nasıl Çalışır",
     "benefits": "Avantajlar",
@@ -26,38 +25,6 @@
     "cta_offer": "Ücretsiz Teklif Alın",
     "cta_packages": "Fiyat Paketlerini İnceleyin",
     "scroll": "Kaydır"
-  },
-  "financing": {
-    "badge": "%100 Finanse Edilen Güneş Enerjisi Çözümleri",
-    "titlePrefix": "Siteler ve Apartmanlar İçin Çatı Tipi Güneş Enerjisi",
-    "titleHighlight": "₺0 İlk Yatırım",
-    "description": "Türkiye genelindeki apartmanlar ve konut siteleri için çatı tipi güneş enerjisi santrallerini tamamen finanse ediyor, kuruyor ve bakımını üstleniyoruz. Kat malikleri ön ödeme yapmaz.",
-    "card1": {
-      "stat": "₺0",
-      "title": "Sıfır Peşinat",
-      "desc": "Mülk sahiplerinden veya site yönetiminden herhangi bir katkı payı veya gizli ücret talep edilmez."
-    },
-    "card2": {
-      "stat": "₺10k – ₺50k",
-      "title": "Site Başına Proje Değeri",
-      "desc": "Tesis alanına bağlı olarak Solar4Turkey tarafından %100 finanse edilir ve hayata geçirilir."
-    },
-    "card3": {
-      "stat": "%50'ye varan",
-      "title": "Yıllık Elektrik Maliyeti Düşüşü",
-      "desc": "1–10. yıllar arasında %20'ye varan tasarruf, sonrasında %50'ye varan tasarruf imkanı."
-    },
-    "card4": {
-      "stat": "7 / 24",
-      "title": "Enerji Bağımsızlığı ve Tarife Sabitleme",
-      "desc": "Aidatlarda anında düşüş ve artan şebeke tarifelerine karşı uzun vadeli koruma."
-    },
-    "banner": {
-      "tag": "Özelleştirilmiş Dağıtım Modelleri",
-      "title": "Sitenizin tam yapısına göre tasarlanmış özel finansal modeller.",
-      "desc": "Her konut kompleksinin ortak alan enerji talepleri (asansörler, aydınlatma, havuzlar) benzersizdir. Site yönetiminizin tercihlerine uygun özelleştirilmiş gelir ve tasarruf paylaşım yapıları kuruyoruz.",
-      "cta": "Ücretsiz Keşif Talebi"
-    }
   },
   "savings": {
     "title": "Solar4Turkey Sistemi ile Avantajlarınız",
@@ -188,9 +155,18 @@
   "projects": {
     "section_title": "Öne Çıkan Konut Projeleri",
     "categories": [
-      { "id": "business", "title": "Ticari ve İş Binaları" },
-      { "id": "villas", "title": "Villalar ve Özel Mülkler" },
-      { "id": "apartments", "title": "Apartmanlar / Daireler" }
+      {
+        "id": "business",
+        "title": "Ticari ve İş Binaları"
+      },
+      {
+        "id": "villas",
+        "title": "Villalar ve Özel Mülkler"
+      },
+      {
+        "id": "apartments",
+        "title": "Apartmanlar / Daireler"
+      }
     ],
     "section_subtitle": "Türk ev sahipleri için hayata geçirilen gerçek çatı kurulumlarını inceleyin; tasarruflar her mülkün kendi tüketimi ve yerel güneş verimine göre hesaplanır.",
     "footnote": "* Tasarruflar yerel güneş verimi denetimlerine ve her hanenin elektrik tüketimine dayalı tahminlerdir. Gerçek sonuçlar değişiklik gösterebilir.",

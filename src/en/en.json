@@ -2,7 +2,6 @@
   "lang": "en",
   "layout": "layouts/base.njk",
   "nav": {
-    "financing": "Zero Investment",
     "solutions": "Solutions",
     "howItWorks": "How It Works",
     "benefits": "Benefits",
@@ -26,38 +25,6 @@
     "cta_offer": "Get Free Offer",
     "cta_packages": "View Pricing Packages",
     "scroll": "Scroll"
-  },
-  "financing": {
-    "badge": "100% Fully Financed Solar Solutions",
-    "titlePrefix": "Rooftop Solar for Residential Complexes",
-    "titleHighlight": "₺0 Initial Investment",
-    "description": "We fully finance, install, and maintain rooftop solar power stations for apartment complexes and residential communities across Turkey. Homeowners pay zero upfront costs.",
-    "card1": {
-      "stat": "₺0",
-      "title": "Zero Upfront Down Payment",
-      "desc": "No contributions or hidden fees required from property owners or site management."
-    },
-    "card2": {
-      "stat": "₺10k – ₺50k",
-      "title": "Project Value per Complex",
-      "desc": "100% funded and executed by Solar4Turkey depending on facility footprint."
-    },
-    "card3": {
-      "stat": "Up to 50%",
-      "title": "Annual Power Cost Reduction",
-      "desc": "Up to 20% savings during years 1–10, scaling up to 50% savings thereafter."
-    },
-    "card4": {
-      "stat": "24 / 7",
-      "title": "Energy Autonomy & Tariff Lock",
-      "desc": "Immediate aidat (dues) reduction and long-term protection from rising grid rates."
-    },
-    "banner": {
-      "tag": "Tailored Distribution Models",
-      "title": "Custom financial models designed around your complex’s exact layout.",
-      "desc": "Every residential complex has unique common area energy demands (elevators, lighting, pools). We build customized revenue and savings allocation structures suited to your site board’s preferences.",
-      "cta": "Request Free Site Audit"
-    }
   },
   "savings": {
     "title": "Your Benefits with Solar4Turkey System",
@@ -188,9 +155,18 @@
   "projects": {
     "section_title": "Featured Residential Projects",
     "categories": [
-      { "id": "business", "title": "Business & Commerce Buildings" },
-      { "id": "villas", "title": "Villas & Private Properties" },
-      { "id": "apartments", "title": "Apartments / Flats" }
+      {
+        "id": "business",
+        "title": "Business & Commerce Buildings"
+      },
+      {
+        "id": "villas",
+        "title": "Villas & Private Properties"
+      },
+      {
+        "id": "apartments",
+        "title": "Apartments / Flats"
+      }
     ],
     "section_subtitle": "Real rooftop installations delivered for Turkish homeowners, with savings calculated from each property's own consumption and local solar yield.",
     "footnote": "* Savings are estimates based on local solar yield audits and each household's electricity consumption. Actual results may vary.",

@@ -12,7 +12,7 @@
   { label: nav.forApartments,  href: "#for-apartments" }
 ] -%}
 
-<header class="fixed inset-x-0 top-0 z-50 h-14 w-full bg-linear-to-b from-black/90 via-black/60 via-80% to-black/40 transition-all duration-300 border-b-dark-slate/20">
+<header class="fixed inset-x-0 top-0 z-10000 h-14 w-full bg-linear-to-b from-black/90 via-black/60 via-80% to-black/40 transition-all duration-300 border-b-dark-slate/20 lg:z-50">
   <nav class="mx-auto flex h-full w-full items-center justify-between gap-2 px-3 md:px-6" aria-label="Main menu">
 
     <!-- Left Section: Logo Image & Logo Text -->
@@ -31,37 +31,26 @@
 
         <!-- Solutions dropdown (desktop) -->
         <div class="group relative">
-          <button
-            type="button"
-            aria-haspopup="menu"
-            class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-solar-yellow/10 px-3 py-2.5 text-[0.88rem] font-bold leading-none text-solar-yellow ring-1 ring-solar-yellow/60 transition-all duration-200 group-hover:bg-solar-yellow group-hover:text-dark-slate group-hover:ring-transparent group-focus-within:bg-solar-yellow group-focus-within:text-dark-slate group-focus-within:ring-transparent focus-visible:outline-none active:scale-[0.98] 2xl:px-4 2xl:text-[0.9rem]"
-          >
+          <button type="button" aria-haspopup="menu" class="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-solar-yellow/10 px-3 py-2.5 text-[0.88rem] font-bold leading-none text-solar-yellow ring-1 ring-solar-yellow/60 transition-all duration-200 group-hover:bg-solar-yellow group-hover:text-dark-slate group-hover:ring-transparent group-focus-within:bg-solar-yellow group-focus-within:text-dark-slate group-focus-within:ring-transparent focus-visible:outline-none active:scale-[0.98] 2xl:px-4 2xl:text-[0.9rem]" >
             <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-solar-yellow transition-colors duration-200 group-hover:bg-dark-slate group-focus-within:bg-dark-slate" aria-hidden="true"></span>
             <span>{{ nav.solutions }}</span>
             <i class="fa-solid fa-chevron-down text-[0.6rem] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" aria-hidden="true"></i>
           </button>
 
           <!-- Dropdown panel -->
-          <div
-            role="menu"
-            class="invisible absolute left-0 top-full z-50 w-64 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
-          >
+          <div role="menu" class="invisible absolute left-0 top-full z-50 w-64 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100" >
             <div class="overflow-hidden rounded-2xl bg-linear-to-b from-black/90 via-black/60 via-80% to-black/40 p-2 shadow-2xl ring-1 ring-white/20 backdrop-blur-md">
               {% for link in solutionLinks %}
-              <a
-                role="menuitem"
-                href="{{ homeUrl }}{{ link.href }}"
-                class="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none"
-              >
-                <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-solar-yellow transition-transform duration-200 group-hover/item:scale-125" aria-hidden="true"></span>
-                <span class="flex-1">{{ link.label }}</span>
-                <svg viewBox="0 0 16 16" class="h-3 w-3 -ml-1 opacity-0 transition-all duration-200 group-hover/item:ml-0 group-hover/item:opacity-100" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"></path>
-                </svg>
-              </a>
-              {% if not loop.last %}
-              <span class="mx-3 my-0.5 block h-px bg-white/10" aria-hidden="true"></span>
-              {% endif %}
+                <a role="menuitem" href="{{ homeUrl }}{{ link.href }}" class="group/item flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:text-white focus-visible:outline-none" >
+                  <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-solar-yellow transition-transform duration-200 group-hover/item:scale-125" aria-hidden="true"></span>
+                  <span class="flex-1">{{ link.label }}</span>
+                  <svg viewBox="0 0 16 16" class="h-3 w-3 -ml-1 opacity-0 transition-all duration-200 group-hover/item:ml-0 group-hover/item:opacity-100" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"></path>
+                  </svg>
+                </a>
+                {% if not loop.last %}
+                  <span class="mx-3 my-0.5 block h-px bg-white/10" aria-hidden="true"></span>
+                {% endif %}
               {% endfor %}
             </div>
           </div>
@@ -143,7 +132,7 @@
         <div class="flex flex-col">
           <span class="px-3 pb-1 pt-2 text-xs font-bold uppercase tracking-wider text-slate-500">{{ nav.solutions }}</span>
           {% for link in solutionLinks %}
-          <a class="rounded-lg py-2 pl-6 pr-3 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}{{ link.href }}">{{ link.label }}</a>
+            <a class="rounded-lg py-2 pl-6 pr-3 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}{{ link.href }}">{{ link.label }}</a>
           {% endfor %}
         </div>
 
@@ -151,7 +140,6 @@
         <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#how-it-works">{{ nav.howItWorks }}</a>
         <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#benefits">{{ nav.benefits }}</a>
         <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#projects">{{ nav.projects }}</a>
-        <a class="rounded-lg px-3 py-2 text-base font-medium text-dark-slate hover:bg-slate-100" href="{{ homeUrl }}#audit-form-section">{{ nav.cta }}</a>
       </div>
     </div>
   </div>
