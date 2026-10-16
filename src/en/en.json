@@ -3,13 +3,19 @@
   "layout": "layouts/base.njk",
   "nav": {
     "financing": "Zero Investment",
+    "solutions": "Solutions",
     "howItWorks": "How It Works",
     "benefits": "Benefits",
     "projects": "Projects",
+    "forComplex": "For Complexes",
+    "forBusiness": "For Businesses",
+    "forVillas": "For Villas",
+    "forApartments": "For Apartments",
     "cta": "Get Free Audit"
   },
   "hero": {
     "title": "Cut Your Electricity Bills Starting Today",
+    "free_title": "FREE",
     "subtitle": "Turkey's top-rated solar installer for villas and residential complexes, with warranty and 24/7 monitoring.",
     "value_prop_highlights": [
       "₺0 upfront for qualifying residential complexes",
@@ -18,7 +24,8 @@
       "Maintenance and panel cleaning included"
     ],
     "cta_offer": "Get Free Offer",
-    "cta_packages": "View Pricing Packages"
+    "cta_packages": "View Pricing Packages",
+    "scroll": "Scroll"
   },
   "financing": {
     "badge": "100% Fully Financed Solar Solutions",
@@ -64,14 +71,14 @@
     },
     "calc": {
       "dailyLabel": "Daily Savings",
-      "dailySub": "average peak summer day",
+      "dailySub": "average daily savings",
       "monthlyLabel": "Monthly Savings",
-      "monthlySub": "July — peak generation month",
+      "monthlySub": "average monthly savings",
       "annualLabel": "Annual Savings",
-      "annualSub": "full year under Turkish climate"
+      "annualSub": "annual savings at 1,400 kWh/kW"
     },
-    "currencyNote": "* Savings are calculated using Turkish lira electricity tariffs; all figures are shown in TRY.",
-    "disclaimer": "* Calculation based on PVGIS irradiance data for Turkey (35° tilt, south-facing), electricity tariff rate of ₺3.50/kWh with tax, and full battery self-consumption. Actual savings depend on regional weather patterns and household consumption habits."
+    "currencyNote": "* Savings are estimated using an average annual generation of 1,400 kWh per kW of installed capacity in southern Turkey.",
+    "disclaimer": "* Calculation uses an electricity tariff of ₺5.50/kWh. Actual generation and savings vary with location, weather, system performance, and consumption."
   },
   "tariffGrowth": {
     "badge": "Inflation Protection",
@@ -180,6 +187,11 @@
   },
   "projects": {
     "section_title": "Featured Residential Projects",
+    "categories": [
+      { "id": "business", "title": "Business & Commerce Buildings" },
+      { "id": "villas", "title": "Villas & Private Properties" },
+      { "id": "apartments", "title": "Apartments / Flats" }
+    ],
     "section_subtitle": "Real rooftop installations delivered for Turkish homeowners, with savings calculated from each property's own consumption and local solar yield.",
     "footnote": "* Savings are estimates based on local solar yield audits and each household's electricity consumption. Actual results may vary.",
     "savings_label": "Estimated yearly savings",
@@ -273,7 +285,8 @@
     ]
   },
   "onboarding": {
-    "title": "4 Simple Steps to Get Started",
+    "title_prefix": "4 Simple Steps",
+    "title_highlight": "to Get Started",
     "subtitle": "We handle the technical work, paperwork, and installation so your board can move forward with confidence.",
     "steps": [
       {

@@ -3,13 +3,19 @@
   "layout": "layouts/base.njk",
   "nav": {
     "financing": "Sıfır Yatırım",
+    "solutions": "Çözümler",
     "howItWorks": "Nasıl Çalışır",
     "benefits": "Avantajlar",
     "projects": "Projeler",
+    "forComplex": "Siteler İçin",
+    "forBusiness": "İşletmeler İçin",
+    "forVillas": "Villalar İçin",
+    "forApartments": "Apartmanlar İçin",
     "cta": "Ücretsiz Keşif Alın"
   },
   "hero": {
     "title": "Elektrik Faturanızı Bugünden Düşürün",
+    "free_title": "ÜCRETSİZ",
     "subtitle": "Villalar ve konut siteleri için garanti ve 7/24 izleme sunan Türkiye'nin en yüksek puanlı güneş enerjisi kurulumcusu.",
     "value_prop_highlights": [
       "Uygun konut siteleri için ₺0 başlangıç maliyeti",
@@ -18,7 +24,8 @@
       "Bakım ve panel temizliği dahil"
     ],
     "cta_offer": "Ücretsiz Teklif Alın",
-    "cta_packages": "Fiyat Paketlerini İnceleyin"
+    "cta_packages": "Fiyat Paketlerini İnceleyin",
+    "scroll": "Kaydır"
   },
   "financing": {
     "badge": "%100 Finanse Edilen Güneş Enerjisi Çözümleri",
@@ -64,14 +71,14 @@
     },
     "calc": {
       "dailyLabel": "Günlük Tasarruf",
-      "dailySub": "ortalama zirve yaz günü",
+      "dailySub": "ortalama günlük tasarruf",
       "monthlyLabel": "Aylık Tasarruf",
-      "monthlySub": "Temmuz — en yüksek üretim ayı",
+      "monthlySub": "ortalama aylık tasarruf",
       "annualLabel": "Yıllık Tasarruf",
-      "annualSub": "Türk ikliminde tam bir yıl"
+      "annualSub": "1.400 kWh/kW üzerinden yıllık tasarruf"
     },
-    "currencyNote": "* Tasarruf hesaplamaları Türk lirası elektrik tarifelerine dayanır; tüm tutarlar TRY cinsinden gösterilir.",
-    "disclaimer": "* Hesaplama, Türkiye için PVGIS ışınım verilerine (35° eğim, güney cepheli), vergiler dahil ₺3.50/kWh elektrik tarife oranına ve tam batarya öz tüketimine dayanmaktadır. Gerçek tasarruf, bölgesel hava koşullarına ve hane halkı tüketim alışkanlıklarına bağlıdır."
+    "currencyNote": "* Tasarruf tahmini, Türkiye'nin güney bölgelerinde kurulu gücün her 1 kW'ı için yıllık ortalama 1.400 kWh üretim esas alınarak yapılmıştır.",
+    "disclaimer": "* Hesaplama ₺5,50/kWh elektrik tarifesi kullanılarak yapılmıştır. Gerçek üretim ve tasarruf; konuma, hava koşullarına, sistem performansına ve tüketime göre değişir."
   },
   "tariffGrowth": {
     "badge": "Enflasyona Karşı Koruma",
@@ -180,6 +187,11 @@
   },
   "projects": {
     "section_title": "Öne Çıkan Konut Projeleri",
+    "categories": [
+      { "id": "business", "title": "Ticari ve İş Binaları" },
+      { "id": "villas", "title": "Villalar ve Özel Mülkler" },
+      { "id": "apartments", "title": "Apartmanlar / Daireler" }
+    ],
     "section_subtitle": "Türk ev sahipleri için hayata geçirilen gerçek çatı kurulumlarını inceleyin; tasarruflar her mülkün kendi tüketimi ve yerel güneş verimine göre hesaplanır.",
     "footnote": "* Tasarruflar yerel güneş verimi denetimlerine ve her hanenin elektrik tüketimine dayalı tahminlerdir. Gerçek sonuçlar değişiklik gösterebilir.",
     "savings_label": "Tahmini yıllık tasarruf",
@@ -273,7 +285,8 @@
     ]
   },
   "onboarding": {
-    "title": "Başlamak İçin 4 Basit Adım",
+    "title_prefix": "Başlamak İçin",
+    "title_highlight": "4 Basit Adım",
     "subtitle": "Teknik çalışmaları, resmi süreci ve kurulumu biz üstleniriz; site yönetiminiz güvenle ilerler.",
     "steps": [
       {

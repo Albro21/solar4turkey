@@ -66,11 +66,12 @@
     <div class="mx-auto mt-12 max-w-4xl">
       <!-- System Size Toggle -->
       <div class="flex justify-center">
-        <div class="inline-flex rounded-full bg-slate-200/80 p-1.5 ring-1 ring-slate-300" role="group" aria-label="System Capacity">
-          <button type="button" onclick="setCapacity(6)" id="kw-6" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6 hover:text-slate-900">6 kW</button>
-          <button type="button" onclick="setCapacity(8)" id="kw-8" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6 hover:text-slate-900">8 kW</button>
-          <button type="button" onclick="setCapacity(10)" id="kw-10" class="kw-btn active rounded-full bg-solar-yellow px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(251,191,36,0.35)] transition-colors duration-300 md:px-6">10 kW</button>
-          <button type="button" onclick="setCapacity(12)" id="kw-12" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">12 kW</button>
+        <div class="inline-flex rounded-full bg-slate-200/80 p-1.5 ring-1 ring-brand-green" role="group" aria-label="System Capacity">
+          <button type="button" onclick="setCapacity(10)" id="kw-10" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">10 kW</button>
+          <button type="button" onclick="setCapacity(15)" id="kw-15" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">15 kW</button>
+          <button type="button" onclick="setCapacity(20)" id="kw-20" class="kw-btn active rounded-full bg-solar-yellow px-5 py-2 text-[0.9rem] font-bold text-slate-900 shadow-[0_6px_18px_rgba(251,191,36,0.35)] transition-colors duration-300 md:px-6">20 kW</button>
+          <button type="button" onclick="setCapacity(30)" id="kw-30" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">30 kW</button>
+          <button type="button" onclick="setCapacity(50)" id="kw-50" class="kw-btn rounded-full px-5 py-2 text-[0.9rem] font-bold text-slate-700 transition-colors duration-300 md:px-6">50 kW</button>
         </div>
       </div>
 
@@ -78,24 +79,21 @@
       <div class="mt-6 grid gap-6 sm:grid-cols-3">
         
         <!-- Daily Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-solar-yellow/60">
-          <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.dailyLabel }}</span>
-          <span id="save-daily" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺385</span>
-          <span class="text-[0.95rem] text-slate-600">{{ savings.calc.dailySub }}</span>
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-brand-green shadow-xs transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-brand-green hover:shadow-xl">
+          <span class="font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.dailyLabel }}</span>
+          <span id="save-daily" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-brand-green md:text-[2.5rem]">₺421.92</span>
         </div>
 
         <!-- Monthly Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-solar-yellow/60 shadow-xs transition-all duration-300 hover:shadow-md">
-          <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.monthlyLabel }}</span>
-          <span id="save-monthly" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺11,550</span>
-          <span class="text-[0.95rem] text-slate-600">{{ savings.calc.monthlySub }}</span>
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-brand-green shadow-xs transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-brand-green hover:shadow-xl">
+          <span class="font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.monthlyLabel }}</span>
+          <span id="save-monthly" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-brand-green md:text-[2.5rem]">₺12,833.33</span>
         </div>
 
         <!-- Annual Savings Card -->
-        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-solar-yellow/60 shadow-xs transition-all duration-300 hover:shadow-md">
-          <span class="text-[0.75rem] font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.annualLabel }}</span>
-          <span id="save-annual" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-amber-700 md:text-[2.5rem]">₺83,200</span>
-          <span class="text-[0.95rem] text-slate-600">{{ savings.calc.annualSub }}</span>
+        <div class="flex h-full flex-col items-center justify-between gap-2 rounded-2xl bg-white p-6 text-center border border-brand-green shadow-xs transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-brand-green hover:shadow-xl">
+          <span class="font-semibold uppercase tracking-wider text-slate-500">{{ savings.calc.annualLabel }}</span>
+          <span id="save-annual" class="text-[2.2rem] font-extrabold leading-none tracking-tight text-brand-green md:text-[2.5rem]">₺154,000</span>
         </div>
 
       </div>
@@ -157,25 +155,30 @@
 <!-- Interactive Logic JS -->
 <script>
   const kwData = {
-    6: {
-      daily: "₺230",
-      monthly: "₺6,930",
-      annual: "₺49,900"
-    },
-    8: {
-      daily: "₺308",
-      monthly: "₺9,240",
-      annual: "₺66,500"
-    },
     10: {
-      daily: "₺385",
-      monthly: "₺11,550",
-      annual: "₺83,200"
+      daily: "₺210.96",
+      monthly: "₺6,416.67",
+      annual: "₺77,000"
     },
-    12: {
-      daily: "₺462",
-      monthly: "₺13,860",
-      annual: "₺99,800"
+    15: {
+      daily: "₺316.44",
+      monthly: "₺9,625.00",
+      annual: "₺115,500"
+    },
+    20: {
+      daily: "₺421.92",
+      monthly: "₺12,833.33",
+      annual: "₺154,000"
+    },
+    30: {
+      daily: "₺632.88",
+      monthly: "₺19,250.00",
+      annual: "₺231,000"
+    },
+    50: {
+      daily: "₺1,054.79",
+      monthly: "₺32,083.33",
+      annual: "₺385,000"
     }
   };
 
@@ -249,5 +252,6 @@
     }, 10000);
   }
 
+  setCapacity(20);
   setPhase('day');
 </script>

@@ -1,42 +1,71 @@
-<section id="benefits" class="relative overflow-hidden bg-slate-100 py-20 text-slate-900">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-3xl font-extrabold uppercase tracking-wide md:text-4xl text-slate-900">
+{% macro benefit_card(item) %}
+  <article class="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-green/40 hover:shadow-md md:p-6">
+    <div class="flex items-start gap-4">
+      <i class="fa-solid {{ item.icon }} mt-1 w-5 shrink-0 text-lg text-brand-green" aria-hidden="true"></i>
+      <div class="min-w-0 flex-1">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-base font-bold leading-snug text-slate-900 md:text-lg">{{ item.title }}</h3>
+        </div>
+        <p class="mt-2 text-sm leading-relaxed text-slate-500 md:text-slate-600">{{ item.description }}</p>
+      </div>
+    </div>
+  </article>
+{% endmacro %}
+
+<section id="benefits" class="relative overflow-hidden bg-slate-100 py-16 text-slate-900 md:py-20">
+  <div class="mx-auto max-w-7xl px-5 md:px-8">
+    <div class="mx-auto mb-12 max-w-3xl text-center md:mb-16">
+      <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl">
         {{ benefits.section_title }}
       </h2>
-      <div class="mt-4 h-1 w-24 mx-auto rounded-full bg-solar-yellow" aria-hidden="true"></div>
-      <p class="mt-4 text-lg text-slate-600">
+      <p class="mt-4 text-base leading-relaxed text-slate-500 md:text-lg">
         {{ benefits.section_subtitle }}
       </p>
     </div>
 
-    <!-- Benefits Grid (2 Columns on Desktop) -->
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {% for item in benefits.list %}
-      {% if loop.index0 == 0 %}<h3 class="md:col-span-2 lg:col-span-3 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.financial }}</h3>{% endif %}
-      {% if loop.index0 == 5 %}<h3 class="md:col-span-2 lg:col-span-3 mt-4 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.reliability }}</h3>{% endif %}
-      {% if loop.index0 == 10 %}<h3 class="md:col-span-2 lg:col-span-3 mt-4 text-sm font-bold uppercase tracking-[0.16em] text-amber-700">{{ benefits.categories.service }}</h3>{% endif %}
-      <div class="flex items-start gap-5 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:border-solar-yellow/60 hover:shadow-md">
-        
-        <!-- Dynamic Icon -->
-        <div class="shrink-0 rounded-xl bg-solar-yellow/15 p-3.5 text-amber-700">
-          <i class="fa-solid {{ item.icon }} h-6 w-6 text-xl leading-none flex items-center justify-center" aria-hidden="true"></i>
-        </div>
-        
-        <!-- Content -->
-        <div>
-          <h3 class="text-lg font-bold text-slate-900 mb-1.5">
-            {{ item.title }}
-          </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            {{ item.description }}
-          </p>
-        </div>
+    <!-- Financial benefit group -->
+    <div class="grid gap-6 md:gap-8 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
+      <div class="lg:sticky lg:top-24">
+        <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
+          {{ benefits.categories.financial }}
+        </h3>
+        <img src="/assets/img/benefit-1.jpg" alt="{{ benefits.categories.financial }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
       </div>
-      {% endfor %}
+      <div class="grid gap-3 md:gap-4">
+        {% for item in benefits.list %}
+          {% if loop.index0 < 5 %}{{ benefit_card(item) }}{% endif %}
+        {% endfor %}
+      </div>
     </div>
 
+    <!-- Technical reliability group -->
+    <div class="mt-12 grid gap-6 md:mt-16 md:gap-8 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
+      <div class="lg:sticky lg:top-24">
+        <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
+          {{ benefits.categories.reliability }}
+        </h3>
+        <img src="/assets/img/benefit-2.jpg" alt="{{ benefits.categories.reliability }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
+      </div>
+      <div class="grid gap-3 md:gap-4">
+        {% for item in benefits.list %}
+          {% if loop.index0 >= 5 and loop.index0 < 10 %}{{ benefit_card(item) }}{% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Full service and long-term value group -->
+    <div class="mt-12 grid gap-6 md:mt-16 md:gap-8 lg:grid-cols-[0.9fr_1.35fr] lg:items-start">
+      <div class="lg:sticky lg:top-24">
+        <h3 class="text-2xl font-bold uppercase leading-tight text-brand-green md:text-3xl">
+          {{ benefits.categories.service }}
+        </h3>
+        <img src="/assets/img/benefit-3.jpg" alt="{{ benefits.categories.service }}" class="mt-5 hidden aspect-[1.8] w-full rounded-2xl object-cover lg:block">
+      </div>
+      <div class="grid gap-3 md:gap-4">
+        {% for item in benefits.list %}
+          {% if loop.index0 >= 10 %}{{ benefit_card(item) }}{% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>

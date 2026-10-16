@@ -10,13 +10,17 @@
     </p>
   </div>
 
-  <!-- Projects Horizontal Scroll Container -->
-  <div class="relative w-full">
-    <div id="projects-carousel" class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-3 scroll-px-3 scroll-smooth scrollbar-none md:px-7 md:scroll-px-7 lg:px-13 lg:scroll-px-13 [&::-webkit-scrollbar]:hidden" role="region" aria-label="Completed Residential Projects Gallery">
+  {% set currentLang = page.lang | default('en') %}
+  {% for category in projects.categories %}
+  <div class="mt-16 first:mt-0 md:mt-24">
+    <h3 class="mx-auto mb-8 max-w-6xl px-6 text-center text-2xl font-bold text-dark-slate md:mb-10 md:text-3xl">{{ category.title }}</h3>
 
-      {% set currentLang = page.lang | default('en') %}
+    <!-- Projects Horizontal Scroll Container -->
+    <div class="relative w-full">
+      <div id="projects-carousel-{{ category.id }}" data-project-carousel class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-3 scroll-px-3 scroll-smooth scrollbar-none md:px-7 md:scroll-px-7 lg:px-13 lg:scroll-px-13 [&::-webkit-scrollbar]:hidden" role="region" aria-label="{{ category.title }}">
+
       {% for project in self[currentLang].projects.list or projects.list %}
-        <div class="project-card-shell flex min-h-112 w-[88%] shrink-0 snap-start sm:w-[72%] md:min-h-136 lg:w-[calc((100%-40px)/2)]">
+        <div class="project-card-shell flex min-h-112 w-[88%] shrink-0 snap-start sm:w-[72%] md:min-h-136 lg:w-[calc((100%-48px)/3)]">
         <article class="project-card group relative flex min-h-112 w-full flex-col overflow-hidden rounded-4xl bg-dark-slate transition-all duration-300 hover:border-4 hover:border-solar-yellow md:min-h-136 border-l-6 border-solar-yellow">
 
           <!-- Background image -->
@@ -91,8 +95,21 @@
         </div>
       {% endfor %}
 
+      </div>
+    </div>
+
+    <!-- Carousel Indicator Controls -->
+    <div class="mt-4 flex items-center justify-center gap-2">
+      <button type="button" data-project-prev aria-label="Previous project" class="hidden h-10 w-10 place-items-center rounded-full bg-solar-yellow text-dark-slate ring-1 ring-gray-300 opacity-40 transition-all duration-200 hover:bg-solar-yellow/90 disabled:bg-solar-yellow/40 disabled:opacity-50 disabled:cursor-not-allowed md:grid">
+        <i class="fa-solid fa-arrow-right flex h-5 w-5 items-center justify-center leading-none rotate-180" aria-hidden="true"></i>
+      </button>
+      <div data-project-dots class="flex justify-center gap-1.5"></div>
+      <button type="button" data-project-next aria-label="Next project" class="hidden h-10 w-10 place-items-center rounded-full bg-solar-yellow text-dark-slate ring-1 ring-gray-300 transition-all duration-200 hover:bg-solar-yellow/90 disabled:bg-solar-yellow/40 disabled:opacity-50 disabled:cursor-not-allowed md:grid">
+        <i class="fa-solid fa-arrow-right flex h-5 w-5 items-center justify-center leading-none" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
+  {% endfor %}
 
   <!-- Footnote Clarification -->
   <div class="mx-auto max-w-6xl px-6">
@@ -100,92 +117,71 @@
       {{ projects.footnote }}
     </p>
   </div>
-
-  <!-- Carousel Indicator Controls -->
-  <div class="mt-4 flex items-center justify-center gap-2">
-    <button id="prev-btn" type="button" aria-label="Previous project" class="hidden h-10 w-10 place-items-center rounded-full bg-solar-yellow text-dark-slate ring-1 ring-gray-300 opacity-40 transition-all duration-200 hover:bg-solar-yellow/90 disabled:bg-solar-yellow/40 disabled:opacity-50 disabled:cursor-not-allowed md:grid">
-      <i class="fa-solid fa-arrow-right flex h-5 w-5 items-center justify-center leading-none rotate-180" aria-hidden="true"></i>
-    </button>
-
-    <div id="dots-container" class="flex justify-center gap-1.5"></div>
-
-    <button id="next-btn" type="button" aria-label="Next project" class="hidden h-10 w-10 place-items-center rounded-full bg-solar-yellow text-dark-slate ring-1 ring-gray-300 transition-all duration-200 hover:bg-solar-yellow/90 disabled:bg-solar-yellow/40 disabled:opacity-50 disabled:cursor-not-allowed md:grid">
-      <i class="fa-solid fa-arrow-right flex h-5 w-5 items-center justify-center leading-none" aria-hidden="true"></i>
-    </button>
-  </div>
 </section>
 
 <!-- Carousel Script -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const carousel = document.getElementById('projects-carousel');
-    const cards = carousel?.querySelectorAll('.project-card');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const dotsContainer = document.getElementById('dots-container');
+    document.querySelectorAll('[data-project-carousel]').forEach((carousel) => {
+      const cards = carousel.querySelectorAll('.project-card');
+      const controls = carousel.parentElement.nextElementSibling;
+      const prevBtn = controls?.querySelector('[data-project-prev]');
+      const nextBtn = controls?.querySelector('[data-project-next]');
+      const dotsContainer = controls?.querySelector('[data-project-dots]');
 
-    if (!carousel || !cards || cards.length === 0) return;
+      if (!cards.length || !dotsContainer) return;
 
-    cards.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.ariaLabel = `Go to project ${idx + 1}`;
-      dot.className = `h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'w-6 bg-solar-yellow ring-1 ring-dark-slate/20' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`;
-      dot.addEventListener('click', () => scrollToCard(idx));
-      dotsContainer.appendChild(dot);
-    });
+      cards.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.ariaLabel = `Go to project ${idx + 1}`;
+        dot.className = `h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'w-6 bg-solar-yellow ring-1 ring-dark-slate/20' : 'w-2.5 bg-gray-300 hover:bg-gray-400'}`;
+        dot.addEventListener('click', () => {
+          const card = cards[idx];
+          carousel.scrollTo({ left: card.offsetLeft - carousel.offsetLeft, behavior: 'smooth' });
+        });
+        dotsContainer.appendChild(dot);
+      });
 
-    const dots = dotsContainer.querySelectorAll('button');
+      const dots = dotsContainer.querySelectorAll('button');
+      const updateActiveState = () => {
+        const scrollLeft = carousel.scrollLeft;
+        let activeIndex = 0;
+        let minDistance = Infinity;
 
-    function scrollToCard(index) {
-      const card = cards[index];
-      const targetOffset = card.offsetLeft - carousel.offsetLeft;
-      carousel.scrollTo({ left: targetOffset, behavior: 'smooth' });
-    }
+        cards.forEach((card, index) => {
+          const distance = Math.abs(card.offsetLeft - carousel.offsetLeft - scrollLeft);
+          if (distance < minDistance) {
+            minDistance = distance;
+            activeIndex = index;
+          }
+        });
 
-    function updateActiveState() {
-      const scrollLeft = carousel.scrollLeft;
-      let activeIndex = 0;
-      let minDistance = Infinity;
+        dots.forEach((dot, idx) => {
+          dot.className = idx === activeIndex
+            ? 'h-2.5 w-6 rounded-full bg-solar-yellow ring-1 ring-dark-slate/20 transition-all duration-300'
+            : 'h-2.5 w-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
+        });
 
-      cards.forEach((card, index) => {
-        const distance = Math.abs(card.offsetLeft - carousel.offsetLeft - scrollLeft);
-        if (distance < minDistance) {
-          minDistance = distance;
-          activeIndex = index;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        if (prevBtn) {
+          prevBtn.disabled = scrollLeft <= 10;
+          prevBtn.classList.toggle('opacity-40', prevBtn.disabled);
         }
-      });
+        if (nextBtn) {
+          nextBtn.disabled = scrollLeft >= maxScroll - 10;
+          nextBtn.classList.toggle('opacity-40', nextBtn.disabled);
+        }
+      };
 
-      dots.forEach((dot, idx) => {
-        dot.className = idx === activeIndex
-          ? 'h-2.5 w-6 rounded-full bg-solar-yellow ring-1 ring-dark-slate/20 transition-all duration-300'
-          : 'h-2.5 w-2.5 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300';
-      });
-
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      if (prevBtn) {
-        prevBtn.disabled = scrollLeft <= 10;
-        prevBtn.classList.toggle('opacity-40', prevBtn.disabled);
-      }
-      if (nextBtn) {
-        nextBtn.disabled = scrollLeft >= maxScroll - 10;
-        nextBtn.classList.toggle('opacity-40', nextBtn.disabled);
-      }
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+      prevBtn?.addEventListener('click', () => {
         carousel.scrollBy({ left: -(cards[0].offsetWidth + 24), behavior: 'smooth' });
       });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+      nextBtn?.addEventListener('click', () => {
         carousel.scrollBy({ left: cards[0].offsetWidth + 24, behavior: 'smooth' });
       });
-    }
-
-    carousel.addEventListener('scroll', updateActiveState, { passive: true });
-    updateActiveState();
+      carousel.addEventListener('scroll', updateActiveState, { passive: true });
+      updateActiveState();
+    });
   });
 </script>
