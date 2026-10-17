@@ -9,8 +9,12 @@
     <div class="relative grid gap-6 px-5 py-7 md:grid-cols-[0.85fr_1.15fr] md:gap-12 md:px-12 md:py-14 lg:items-center lg:px-16">
       <!-- Section Header -->
       <div class="max-w-md">
-        <span class="inline-block rounded-full bg-solar-yellow/20 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-solar-yellow md:px-4 md:py-1.5 md:text-xs">
-          {{ audit.badge }}
+        <span class="relative inline-flex items-center rounded-full border border-solar-yellow bg-solar-yellow/20 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-solar-yellow md:px-4 md:py-1.5 md:text-xs">
+          <span class="absolute left-3 top-1/2 flex h-2 w-2 -translate-y-1/2" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-solar-yellow opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-solar-yellow"></span>
+          </span>
+          <span class="pl-4">{{ audit.badge }}</span>
         </span>
         <h2 class="mt-3 text-2xl font-extrabold uppercase tracking-wide text-white md:mt-4 md:text-4xl">
           {{ audit.section_title }}
@@ -23,40 +27,40 @@
       <form onsubmit="event.preventDefault();" class="grid grid-cols-1 gap-x-5 gap-y-3 md:grid-cols-2 md:gap-y-4">
 
         <!-- Full Name -->
-        <div class="flex flex-col gap-1.5 md:gap-2">
-          <label for="audit-name" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:min-h-8 md:text-xs">
+        <div class="flex flex-col gap-1">
+          <label for="audit-name" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:text-xs">
             {{ audit.field_name }}
           </label>
           <input type="text" id="audit-name" placeholder="{{ audit.placeholder_name }}" class="h-10 rounded-lg border border-white/20 bg-white px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition-colors focus:border-solar-yellow focus:ring-2 focus:ring-solar-yellow md:h-12 md:px-4"/>
         </div>
 
         <!-- Phone Number -->
-        <div class="flex flex-col gap-1.5 md:gap-2">
-          <label for="audit-phone" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:min-h-8 md:text-xs">
+        <div class="flex flex-col gap-1">
+          <label for="audit-phone" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:text-xs">
             {{ audit.field_phone }}
           </label>
           <input type="tel" id="audit-phone" placeholder="{{ audit.placeholder_phone }}" class="h-10 rounded-lg border border-white/20 bg-white px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition-colors focus:border-solar-yellow focus:ring-2 focus:ring-solar-yellow md:h-12 md:px-4"/>
         </div>
 
+        <!-- Email -->
+        <div class="flex flex-col gap-1">
+          <label for="audit-email" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:text-xs">
+            {{ audit.field_email }}
+          </label>
+          <input type="email" id="audit-email" placeholder="{{ audit.placeholder_email }}" class="h-10 rounded-lg border border-white/20 bg-white px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition-colors focus:border-solar-yellow focus:ring-2 focus:ring-solar-yellow md:h-12 md:px-4"/>
+        </div>
+
         <!-- City / Location -->
-        <div class="flex flex-col gap-1.5 md:gap-2">
-          <label for="audit-city" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:min-h-8 md:text-xs">
+        <div class="flex flex-col gap-1">
+          <label for="audit-city" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:text-xs">
             {{ audit.field_city }}
           </label>
           <input type="text" id="audit-city" placeholder="{{ audit.placeholder_city }}" class="h-10 rounded-lg border border-white/20 bg-white px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition-colors focus:border-solar-yellow focus:ring-2 focus:ring-solar-yellow md:h-12 md:px-4"/>
         </div>
 
-        <!-- Monthly Electricity Bill / Consumption -->
-        <div class="flex flex-col gap-1.5 md:gap-2">
-          <label for="audit-bill" class="text-[0.7rem] font-semibold leading-4 text-white/90 md:min-h-8 md:text-xs">
-            {{ audit.field_bill }}
-          </label>
-          <input type="text" id="audit-bill" placeholder="{{ audit.placeholder_bill }}" class="h-10 rounded-lg border border-white/20 bg-white px-3 text-sm text-slate-900 placeholder-slate-400 outline-none transition-colors focus:border-solar-yellow focus:ring-2 focus:ring-solar-yellow md:h-12 md:px-4"/>
-        </div>
-
         <!-- Submit Button -->
         <div class="mt-1 md:col-span-2 md:mt-2">
-          <button type="submit" class="w-full rounded-lg bg-solar-yellow px-6 py-2.5 text-center text-sm font-bold text-dark-slate transition-colors duration-300 hover:bg-solar-yellow/90 focus:ring-2 focus:ring-solar-yellow focus:outline-none md:py-3.5">
+          <button type="submit" class="w-full rounded-xl bg-solar-yellow px-6 py-2.5 text-center text-sm font-bold text-dark-slate shadow-[0_0_20px_4px_rgba(250,204,21,0.4)] transition-all duration-300 hover:bg-solar-yellow/90 hover:shadow-[0_0_28px_8px_rgba(250,204,21,0.7)] focus:ring-2 focus:ring-solar-yellow focus:outline-none md:py-3.5">
             {{ audit.submit_btn }}
           </button>
           <p class="mt-2 text-center text-[0.7rem] leading-relaxed text-white/60 md:mt-3 md:text-xs">

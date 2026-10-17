@@ -12,9 +12,7 @@
 
   {% set currentLang = page.lang | default('en') %}
   {% for category in projects.categories %}
-  <div class="mt-16 first:mt-0 md:mt-24">
-    <h3 class="mx-auto mb-8 max-w-6xl px-6 text-center text-2xl font-bold text-dark-slate md:mb-10 md:text-3xl">{{ category.title }}</h3>
-
+  <div class="mt-16 first:mt-0 md:mt-20">
     <!-- Projects Horizontal Scroll Container -->
     <div class="relative w-full">
       <div id="projects-carousel-{{ category.id }}" data-project-carousel class="flex snap-x snap-mandatory gap-6 overflow-x-auto px-3 scroll-px-3 scroll-smooth scrollbar-none md:px-7 md:scroll-px-7 lg:px-13 lg:scroll-px-13 [&::-webkit-scrollbar]:hidden" role="region" aria-label="{{ category.title }}">

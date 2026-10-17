@@ -2,39 +2,40 @@
   "lang": "tr",
   "layout": "layouts/base.njk",
   "nav": {
-    "solutions": "Çözümler",
-    "howItWorks": "Nasıl Çalışır",
+    "solutions": "Hizmetlerimiz",
+    "howItWorks": "Sistem Nasıl Çalışır",
     "benefits": "Avantajlar",
-    "projects": "Projeler",
+    "projects": "Projelerimiz",
     "forComplex": "Siteler İçin",
     "forBusiness": "İşletmeler İçin",
     "forVillas": "Villalar İçin",
     "forApartments": "Apartmanlar İçin",
-    "cta": "Ücretsiz Keşif Alın"
+    "cta": "Ücretsiz Keşif",
+    "services": "Hizmetlerimiz"
   },
   "hero": {
-    "title": "Elektrik Faturanızı Bugünden Düşürün",
+    "title": "Siteniz İçin Güneş Enerjisi Sistemleri",
     "free_title": "ÜCRETSİZ",
-    "subtitle": "Villalar ve konut siteleri için garanti ve 7/24 izleme sunan Türkiye'nin en yüksek puanlı güneş enerjisi kurulumcusu.",
+    "subtitle": "Elektrik faturalarınızı bugünden düşürün!",
     "value_prop_highlights": [
       "Uygun konut siteleri için ₺0 başlangıç maliyeti",
-      "Ücretsiz enerji ve çatı keşfi",
-      "Garanti ve 7/24 uzaktan izleme",
-      "Bakım ve panel temizliği dahil"
+      "Siteniz için ücretsiz keşif ve elektrik tüketim analizi",
+      "7/24 izleme",
+      "Garanti kapsamında onarım ve servis bakımı"
     ],
-    "cta_offer": "Ücretsiz Teklif Alın",
-    "cta_packages": "Fiyat Paketlerini İnceleyin",
+    "cta_offer": "Teklif Alın",
+    "cta_packages": "Fiyat Paketlerini Görüntüleyin",
     "scroll": "Kaydır"
   },
   "savings": {
-    "title": "Solar4Turkey Sistemi ile Avantajlarınız",
+    "title": "Sistem Nasıl Çalışır",
     "day": {
       "title": "Gündüz",
-      "desc": "Türkiye genelinde güneş parlarken çatınız sizin için çalışır — güneş panelleri evinize enerji sağlar, elektrikli aracınızı şarj eder ve bataryanızı %100 doldurur. Gündüz enerjisi için şebekeye sıfır ödeme yaparsınız."
+      "desc": "Güneş parlarken çatınız sizin için çalışır. Güneş panelleri sitenize elektrik sağlar. Gündüz üretilen fazla enerji borsada satılır ve geceleyin kullanmak üzere geri alım seçeneği bulunur."
     },
     "night": {
       "title": "Gece",
-      "desc": "Güneş battığında bataryanız devreye girer; ortak alanların (havuzlar, pompalar, sauna, hamam, aydınlatma, havalandırma, kameralar vb.) enerji maliyetlerini ilk günden itibaren önemli ölçüde düşürür. Karanlıktan sonra bile tam kendine yeterlilik."
+      "desc": "Güneş battığında sistem sorunsuz şekilde batarya gücüne geçer. Bu, gece ortak alanlardaki elektrik maliyetlerini önemli ölçüde düşürür. Gündüz üretimi, gece açığını kapatmak için de kullanılabilir; böylece 7/24 tasarruf sağlanır."
     },
     "calc": {
       "dailyLabel": "Günlük Tasarruf",
@@ -44,66 +45,66 @@
       "annualLabel": "Yıllık Tasarruf",
       "annualSub": "1.400 kWh/kW üzerinden yıllık tasarruf"
     },
-    "currencyNote": "* Tasarruf tahmini, Türkiye'nin güney bölgelerinde kurulu gücün her 1 kW'ı için yıllık ortalama 1.400 kWh üretim esas alınarak yapılmıştır.",
-    "disclaimer": "* Hesaplama ₺5,50/kWh elektrik tarifesi kullanılarak yapılmıştır. Gerçek üretim ve tasarruf; konuma, hava koşullarına, sistem performansına ve tüketime göre değişir."
+    "currencyNote": "* Hesaplamalar Türk lirası cinsinden elektrik tarifelerine dayanır; tüm tutarlar TRY olarak gösterilmiştir.",
+    "disclaimer": "* Hesaplama; Türkiye için PVGIS güneşlenme verileri (35° eğim, güney yönü), vergiler dahil ₺5,50/kWh elektrik tarifesi ve bataryadan tam öz tüketim esas alınarak yapılmıştır. Gerçek tasarruf, bölgesel hava koşullarına ve tüketim alışkanlıklarına bağlıdır."
   },
   "tariffGrowth": {
     "badge": "Enflasyona Karşı Koruma",
-    "title": "Türkiye'de Elektrik Tarifelerinin Yükselişi",
-    "descriptionBefore": "Son on yılda ticari işletmeler ve konut sitelerinin ortak alanlarında elektrik maliyetleri",
-    "multiplier": "12–15 kat",
+    "title": "Türkiye'de Elektrik Tarifelerindeki Artış",
+    "descriptionBefore": "Son on yılda elektrik maliyetleri en az",
+    "multiplier": "12–15 kat arttı",
     "chartTitle": "Maliyet Artışı (TRY / kWh)",
     "chartLabel": "Tarife (TRY / kWh)",
     "tooltipLabel": "Tarife",
     "period": "2015–2026",
-    "insightTitle": "Tarifeler her yıl yükseliyor",
-    "insightDescription": "Dağıtım bedelleri, liranın değer kaybı ve enflasyon şebeke elektriğini her yıl daha pahalı hale getiriyor.",
-    "solutionTitle": "Solar4Turkey çözümü",
-    "solutionDescription": "Güneş enerjisi santrali, sitenin enerji maliyetlerini daha öngörülebilir hale getirir ve üretilen her kilovatsaati doğrudan bütçe tasarrufuna dönüştürür."
+    "insightTitle": "Tarifeler her yıl artıyor",
+    "insightDescription": "Elektrik ithalatına bağımlılık, lira değer kaybı ve enflasyon, şebeke elektriğini her yıl daha pahalı hale getiriyor.",
+    "solutionTitle": "Solar4Turkey Çözümü",
+    "solutionDescription": "Güneş enerjisi santrali, sitenin giderlerini azaltmaya yardımcı olur ve ürettiği her kWh'yi doğrudan bütçe tasarrufuna dönüştürür."
   },
   "benefits": {
     "section_title": "Sakinler İçin Avantajlar",
-    "section_subtitle": "Ev sahipleri için sıfır risk ile maksimum tasarruf ve konfor",
+    "section_subtitle": "Her mülk sahibi için maksimum kazanç, konfor ve güvenlik",
     "categories": {
-      "financial": "Finansal Fayda",
+      "financial": "Finansal Kazanç",
       "reliability": "Teknik Güvenilirlik",
-      "service": "Eksiksiz Hizmet ve Uzun Vadeli Değer"
+      "service": "Tam Hizmet ve Uzun Vadeli Değer"
     },
     "list": [
       {
         "icon": "fa-hand-holding-dollar",
-        "title": "İlk Yatırım Maliyeti Yok",
-        "description": "Sahiplerin ekipman satın almak veya ek aidat toplamak için ödeme yapması gerekmez."
+        "title": "İlk Yatırım Yok",
+        "description": "Mülk sahiplerinin ekipman satın alması veya özel toplamalara katılması gerekmez."
       },
       {
         "icon": "fa-bolt",
-        "title": "İlk Günden İtibaren Tasarruf",
-        "description": "Santral devreye girer girmez ortak alanların elektrik tüketim maliyetlerini düşürmeye başlar."
+        "title": "İlk Günden Tasarruf",
+        "description": "Santral devreye girer girmez site, ortak alanların elektrik giderlerini düşürmeye başlar."
       },
       {
         "icon": "fa-file-invoice-dollar",
-        "title": "Kredi ve Borç Yükü Yok",
-        "description": "Sakinlerin pahalı ekipmanlar için banka kredisi çekmesine veya mali yükümlülük altına girmesine gerek yoktur."
+        "title": "Kredi ve Borç Yok",
+        "description": "Sakinlerin pahalı ekipman için banka kredisi çekmesi veya mali yükümlülük üstlenmesi gerekmez."
       },
       {
         "icon": "fa-scale-balanced",
-        "title": "Aidat Yükünün Hafiflemesi",
-        "description": "Elektrik giderlerinin bir kısmı güneş enerjisi üretimiyle karşılanır, aidatların dengede kalması sağlanır."
+        "title": "Aidat Yükünün Azalması",
+        "description": "Elektrik giderlerinin bir kısmı güneş enerjisi üretimiyle karşılanarak aidatların istikrarlı kalmasına yardımcı olunur."
       },
       {
         "icon": "fa-shield-halved",
         "title": "Tarife Artışlarına Karşı Koruma",
-        "description": "Gelecekte elektrik tarifeleri arttıkça güneş enerjisi sisteminin sağladığı finansal fayda da o kadar artar."
+        "description": "Gelecekte elektrik fiyatları ne kadar yükselirse, güneş enerjisinin sağladığı finansal fayda da o kadar artar."
       },
       {
         "icon": "fa-triangle-exclamation",
         "title": "Teknik Risk Yok",
-        "description": "Ekipmanla ilgili tüm hukuki ve teknik sorumluluk Solar4Turkey şirketine aittir."
+        "description": "Ekipmanın tüm hukuki ve teknik sorumluluğu Solar4Turkey'dedir."
       },
       {
         "icon": "fa-screwdriver-wrench",
         "title": "Ücretsiz Bakım",
-        "description": "Santralin tüm periyodik bakım çalışmaları Solar4Turkey tarafından karşılanır."
+        "description": "Santralin planlı tüm bakım işleri Solar4Turkey tarafından karşılanır."
       },
       {
         "icon": "fa-shower",
@@ -112,76 +113,68 @@
       },
       {
         "icon": "fa-rotate",
-        "title": "Garanti Kapsamında Onarım ve Değişim",
-        "description": "Garanti kapsamındaki arızalarda tüm tamir masrafları tamamen Solar4Turkey tarafından karşılanır."
+        "title": "Ücretsiz Onarım ve Değişim",
+        "description": "Garanti kapsamındaki ekipman arızalandığında tüm masraflar Solar4Turkey tarafından tamamen karşılanır."
       },
       {
         "icon": "fa-chart-line",
-        "title": "7/24 Kesintisiz İzleme",
-        "description": "Sistem uzaktan 7/24 izlenir, bu sayede olası arızalar anında tespit edilip giderilir."
+        "title": "Kesintisiz İzleme",
+        "description": "Sistem 7/24 uzaktan izlenir; arızalar anında tespit edilip giderilir."
       },
       {
         "icon": "fa-house-chimney",
-        "title": "Maliyetsiz Çatı Kullanımı",
-        "description": "Binaların kullanılmayan çatısı komplekse gerçek anlamda finansal kazanç sağlamaya başlar."
+        "title": "Çatı Kullanımı Maliyetsiz",
+        "description": "Kullanılmayan bina çatısı siteye gerçek bir finansal fayda sağlamaya başlar."
       },
       {
         "icon": "fa-star",
-        "title": "Kompleksin Değer Artışı",
-        "description": "Modern güneş enerjisi santrali, binanın statüsünü yükselterek kiracı ve alıcılar için cazibesini artırır."
+        "title": "Artan Cazibe",
+        "description": "Modern güneş enerjisi santrali, mülkün statüsünü yükseltir ve kiracılar ile alıcılar için cazibesini artırır."
       },
       {
         "icon": "fa-arrow-trend-up",
-        "title": "Gayrimenkul Değerinde Artış",
-        "description": "Mülk sahipleri gelecekte gayrimenkullerini ek bir yatırım yapmadan çok daha avantajlı fiyatlarla satabilir."
+        "title": "Mülk Değerinde Artış",
+        "description": "Gelecekte mülk sahipleri, ek yatırım yapmadan mülklerini daha avantajlı bir fiyata satabilir."
       },
       {
         "icon": "fa-leaf",
-        "title": "Çevrecilik ve Sürdürülebilirlik",
-        "description": "Şebeke elektriği tüketimi azalır, binanın ekolojik profili iyileşir ve pik yük sorunları çözülür."
+        "title": "Çevre Dostu İşletim",
+        "description": "Şebeke elektriği tüketimi azalır, binanın ekolojik profili iyileşir ve yoğun yük sorunları çözülür."
       },
       {
         "icon": "fa-piggy-bank",
-        "title": "Tasarruf Payı Elde Etme",
-        "description": "Kompleks, kendi tarafından tek bir kuruş yatırım yapmadan net tasarruftan payını alır."
+        "title": "Tasarruf Payı",
+        "description": "Site, tek bir kuruş yatırım yapmadan net tasarrufun belirli bir yüzdesini alır."
       },
       {
         "icon": "fa-building-shield",
         "title": "Finansal İstikrar",
-        "description": "Karmaşık enerji ekipmanlarını kendi başınıza yönetme zorunluluğu olmadan uzun vadeli kazanç elde edin."
+        "description": "Karmaşık enerji altyapısını kendiniz yönetme zorunluluğu olmadan uzun vadeli kazanç."
       }
     ]
   },
   "projects": {
-    "section_title": "Öne Çıkan Konut Projeleri",
+    "section_title": "Öne Çıkan Projeler",
     "categories": [
       {
-        "id": "business",
-        "title": "Ticari ve İş Binaları"
-      },
-      {
-        "id": "villas",
-        "title": "Villalar ve Özel Mülkler"
-      },
-      {
         "id": "apartments",
-        "title": "Apartmanlar / Daireler"
+        "title": "Konut Siteleri"
       }
     ],
-    "section_subtitle": "Türk ev sahipleri için hayata geçirilen gerçek çatı kurulumlarını inceleyin; tasarruflar her mülkün kendi tüketimi ve yerel güneş verimine göre hesaplanır.",
-    "footnote": "* Tasarruflar yerel güneş verimi denetimlerine ve her hanenin elektrik tüketimine dayalı tahminlerdir. Gerçek sonuçlar değişiklik gösterebilir.",
+    "section_subtitle": "Türkiye'deki konut projelerimizden örnekler. Her proje için tasarruf, gerçek tüketim profiline ve bölgenin iklim koşullarına göre ayrı ayrı hesaplanmıştır.",
+    "footnote": "* Tasarruflar, yerel güneşlenme denetimine ve her mülkün elektrik tüketimine dayalı tahminlerdir. Gerçek sonuçlar farklılık gösterebilir.",
     "savings_label": "Tahmini yıllık tasarruf",
     "cta_proposal": "Tasarrufumu hesapla",
-    "cta_view": "Detayları gör",
+    "cta_view": "Detaylar",
     "list": [
       {
         "id": "villa-6kw",
         "image": "/assets/img/projects/project-1.png",
-        "location": "Bodrum, Muğla · Müstakil Villa",
-        "title": "Villa Güneş Enerjisi Sistemi 6 kW",
-        "output": "6 kW sistem · 16 kWh batarya yedeği",
+        "location": "Bodrum, Muğla · Müstakil villa",
+        "title": "6 kW Villa Güneş Enerjisi Sistemi",
+        "output": "6 kW sistem · 16 kWh yedek batarya",
         "savings": "₺10,850 / yıl",
-        "configuration": "Şebeke bağlantılı hibrit sistem. Gece kesintilerinde ışıkları açık tutar.",
+        "configuration": "Şebekeye bağlı hibrit sistem. Gece kesintilerinde aydınlatmayı çalışır durumda tutar.",
         "specs_list": [
           "12 × Aiko 500W panel",
           "Growatt 6 kW inverter",
@@ -191,8 +184,8 @@
       {
         "id": "suburban-8kw",
         "image": "/assets/img/projects/project-2.png",
-        "location": "Urla, İzmir · Tek Aileli Konut",
-        "title": "Banliyö Güneş Enerjisi Kurulumu 8 kW",
+        "location": "Urla, İzmir · Müstakil konut",
+        "title": "8 kW Banliyö Güneş Enerjisi Sistemi",
         "output": "8 kW sistem · 16 kWh depolama",
         "savings": "₺20,400 / yıl",
         "configuration": "Düşük ışıkta güçlü üretim sağlayan yüksek verimli N-Type TOPCon paneller.",
@@ -205,11 +198,11 @@
       {
         "id": "antalya-penthouse-10kw",
         "image": "/assets/img/projects/project-3.png",
-        "location": "Konyaaltı, Antalya · Lüks Çatı Katı",
-        "title": "Çatı Tipi Hibrit Tesis 10 kW",
-        "output": "10 kW sistem · 20 kWh batarya yedeği",
+        "location": "Konyaaltı, Antalya · Lüks çatı katı",
+        "title": "10 kW Çatı Tipi Hibrit Tesis",
+        "output": "10 kW sistem · 20 kWh yedek batarya",
         "savings": "₺30,100 / yıl",
-        "configuration": "Yaz aylarındaki yüksek tüketim için boyutlandırılmış çatı ve balkon dizilimi.",
+        "configuration": "Yaz aylarındaki yüksek talep için tasarlanmış, çatı ve balkon kombinasyonlu dizilim.",
         "specs_list": [
           "20 × Longi 500W panel",
           "Huawei 10 kW inverter",
@@ -219,11 +212,11 @@
       {
         "id": "bursa-family-home-12kw",
         "image": "/assets/img/projects/project-4.png",
-        "location": "Nilüfer, Bursa · Müstakil Ev",
-        "title": "Geniş Aile Evi Sistemi 12 kW",
-        "output": "12 kW sistem · 25 kWh batarya yedeği",
+        "location": "Nilüfer, Bursa · Müstakil ev",
+        "title": "12 kW Aile Güneş Enerjisi Sistemi",
+        "output": "12 kW sistem · 25 kWh yedek batarya",
         "savings": "₺30,850 / yıl",
-        "configuration": "Daha büyük haneler için üç fazlı akıllı hibrit sistem.",
+        "configuration": "Büyük haneler için üç fazlı akıllı hibrit sistem.",
         "specs_list": [
           "24 × JA Solar 500W panel",
           "Deye 12 kW inverter",
@@ -233,11 +226,11 @@
       {
         "id": "fethiye-eco-villa-5kw",
         "image": "/assets/img/projects/project-5.png",
-        "location": "Fethiye, Muğla · Eko Villa",
-        "title": "Kompakt Şebekeden Bağımsız Uyumlu 5 kW",
-        "output": "5 kW sistem · 10 kWh batarya yedeği",
+        "location": "Fethiye, Muğla · Eko villa",
+        "title": "5 kW Kompakt Bağımsız Sistem",
+        "output": "5 kW sistem · 10 kWh yedek batarya",
         "savings": "₺10,500 / yıl",
-        "configuration": "Şebeke kesilirse evin bağımsız çalışabilmesi için şebekeden bağımsız kullanıma hazır.",
+        "configuration": "Şebeke kesildiğinde evin bağımsız çalışabilmesi için bağımsız işletime hazırdır.",
         "specs_list": [
           "10 × Trina 500W panel",
           "Victron MultiPlus 5 kW",
@@ -247,9 +240,9 @@
       {
         "id": "ankara-modern-duplex-15kw",
         "image": "/assets/img/projects/project-6.png",
-        "location": "Çankaya, Ankara · Modern Dubleks",
-        "title": "Yüksek Kapasiteli Konut Dubleksi 15 kW",
-        "output": "15 kW sistem · 30 kWh batarya yedeği",
+        "location": "Çankaya, Ankara · Modern dubleks",
+        "title": "15 kW Yüksek Kapasiteli Konut Dubleksi Sistemi",
+        "output": "15 kW sistem · 30 kWh yedek batarya",
         "savings": "₺40,700 / yıl",
         "configuration": "Günlük tüketimi yüksek, ortak kullanımlı haneler için tasarlanmıştır.",
         "specs_list": [
@@ -261,40 +254,40 @@
     ]
   },
   "onboarding": {
-    "title_prefix": "Başlamak İçin",
-    "title_highlight": "4 Basit Adım",
-    "subtitle": "Teknik çalışmaları, resmi süreci ve kurulumu biz üstleniriz; site yönetiminiz güvenle ilerler.",
+    "title_prefix": "4 Basit Adım",
+    "title_highlight": "ile Başlayın",
+    "subtitle": "Teknik işleri, resmi süreçleri ve kurulumu biz üstleniriz; yönetim kurulunuz güvenle karar verebilir.",
     "steps": [
       {
         "icon": "fa-magnifying-glass-chart",
-        "title": "Ücretsiz Enerji Etüdü",
-        "description": "Çatıyı inceler, ortak alanların elektrik faturalarını analiz eder ve size özel proje hazırlarız."
+        "title": "Ücretsiz Enerji Keşfi",
+        "description": "Çatıyı inceler, ortak alanların elektrik tüketimini hesaplar ve siteniz için özel bir proje hazırlarız."
       },
       {
         "icon": "fa-file-signature",
         "title": "Onay Sürecine Destek",
-        "description": "Kat malikleri toplantısında kullanılacak sunumları ve hukuki belgeleri hazırlarız."
+        "description": "Siteniz için sunum ve hesaplamaları hazırlar, mülk sahiplerinin tüm sorularını yanıtlarız."
       },
       {
         "icon": "fa-screwdriver-wrench",
         "title": "Anahtar Teslim Kurulum",
-        "description": "Tasarım, sevkiyat ve kurulumu sakinlerin konforunu minimum düzeyde etkileyerek yönetiriz."
+        "description": "Ekipmanın tasarımı, teslimatı ve kurulumu tamamen Solar4Turkey tarafından finanse edilir."
       },
       {
         "icon": "fa-chart-line",
         "title": "Devreye Alma ve Tasarruf",
-        "description": "Sistemi bağlar, 7/24 izleme erişimini sunar ve tasarruf ilk günden başlar."
+        "description": "Sistem bağlandıktan sonra 7/24 izleme erişimi sağlanır ve site ilk günden tasarruf etmeye başlar."
       }
     ]
   },
   "interactive": {
-    "section_title": "Güneş Enerjisi Sisteminizi Keşfedin",
-    "section_subtitle": "Güneş enerjisi kurulumunuzun temel bileşenlerini keşfedin ve evinize enerji sağlamak için nasıl birlikte çalıştıklarını görün.",
-    "house_alt": "Ev genel görünümü",
-    "panels_alt": "Güneş panelleri detay görünümü",
-    "inverter_alt": "İnverter ve batarya detay görünümü",
-    "open_label": "Tam ekranda keşfedin",
-    "rotate_hint": "En iyi görünüm için telefonunuzu yatay çevirin",
+    "section_title": "Güneş Enerjisi Santralinizi Keşfedin",
+    "section_subtitle": "Güneş enerjisi kurulumunuzun görselleştirmesi ve temel bileşenleri",
+    "house_alt": "Evin genel görünümü",
+    "panels_alt": "Güneş panellerinin detay görünümü",
+    "inverter_alt": "İnverter ve bataryanın detay görünümü",
+    "open_label": "Tam ekranda aç",
+    "rotate_hint": "Daha iyi görünüm için telefonunuzu yatay çevirin",
     "rotate_prompt": "Telefonunuzu yatay çevirin",
     "exit_label": "Kapat",
     "select_prompt": "Bir öğe seçin",
@@ -303,57 +296,64 @@
     "back_label": "Genel görünüme dön",
     "audit_cta": "Ücretsiz Keşif Alın",
     "panels": {
-      "title": "CW Energy Tier-1 Paneller",
-      "description": "Gelişmiş TOPCon ve çift taraflı teknolojiye sahip, Türkiye üretimi premium Tier-1 güneş modülleri. Her iki taraftan maksimum güneş ışığı toplamak için bozulmaya karşı koruma ile tasarlanmıştır.",
-      "main_stat_title": "Yıllık Üretim",
-      "main_stat_value": "~9.800",
+      "title": "CW Enerji Tier-1 Paneller",
+      "description": "Gelişmiş TOPCon teknolojisine sahip, premium Türk yapımı CW Enerji Tier-1 güneş panelleri. Özel anti-yansıma ve kendini temizleyebilen camla yüksek verim ve minimum bozunma sunar.",
+      "main_stat_title": "Panel başına yıllık üretim",
+      "main_stat_value": ">900",
       "main_stat_unit": "kWh",
-      "stat1_value": "30 Yıl",
+      "stat1_value": "30+ yıl",
       "stat1_label": "Kullanım ömrü",
-      "stat2_value": "Çift taraflı",
-      "stat2_label": "Teknoloji"
+      "stat2_value": "12 yıl",
+      "stat2_label": "Garanti"
     },
     "inverter": {
       "title": "TommaTech Hibrit İnverter",
-      "description": "Kesintisiz güç kaynağı (UPS) işlevine sahip akıllı enerji akış yönetim sistemi. Ortak alanlar için maksimum verimlilik ve güvenilirlik sağlar.",
-      "main_stat_title": "Sistem Verimliliği",
-      "main_stat_value": "98,6",
+      "description": "TommaTech hibrit inverterleri; güneş panelleri, merkezi şebeke, akü bataryaları ve binanın yükü arasındaki enerji dağıtımı üzerinde tam kontrol sağlar. Ortak alanlar için maksimum verimlilik ve güvenilirlik sunar.",
+      "main_stat_title": "İnverter verimliliği",
+      "main_stat_value": "98",
       "main_stat_unit": "%",
-      "stat1_value": "5 Yıl",
-      "stat1_label": "İnverter ömrü",
-      "stat2_value": "10 Yıl",
-      "stat2_label": "Batarya ömrü"
+      "stat1_value": "5 yıl",
+      "stat1_label": "Garanti",
+      "stat2_value": "10+ yıl",
+      "stat2_label": "Kullanım ömrü"
     },
     "battery": {
-      "title": "TommaTech HV Lityum Batarya",
-      "description": "Gelişmiş yüksek voltajlı (HV) LiFePO4 batarya depolama sistemi. 6.000'den fazla döngüyle derin deşarj için tasarlanmış olup mülkünüzü gece boyunca güvenle çalıştırır."
+      "title": "TommaTech Yüksek Voltajlı Lityum Batarya",
+      "description": "TommaTech yüksek voltajlı enerji depolama sistemleri, güvenli lityum demir fosfat (LiFePO4) teknolojisine dayalı modern modüler bataryalardır. Üç fazlı hibrit inverterlerle çalışacak şekilde tasarlanmıştır; gerilim dalgalanmalarında, ani elektrik kesintilerinde ve şebeke aksamalarında siteye enerji sağlar.",
+      "stat1_value": "6000+",
+      "stat1_label": "Döngü",
+      "stat2_value": "5 yıl",
+      "stat2_label": "Garanti",
+      "stat3_value": "10+ yıl",
+      "stat3_label": "Kullanım ömrü",
+      "stats_note": "En fazla %90 deşarj derinliğinde"
     }
   },
   "audit": {
     "badge": "Ücretsiz Değerlendirme",
-    "section_title": "Ücretsiz Solar Denetiminizi Alın",
-    "section_subtitle": "Aşağıdaki kısa formu doldurun; mühendislerimiz tahmini tasarrufunuzu ve sistem boyutunuzu hesaplasın.",
+    "section_title": "Ücretsiz Güneş Enerjisi Denetiminizi Alın",
+    "section_subtitle": "Kısa bir talep bırakın; uzmanımız sizinle iletişime geçerek sisteminizin kapasitesini ve gelecekteki tasarrufunuzu hesaplasın.",
     "field_name": "Ad Soyad",
     "placeholder_name": "Ahmet Yılmaz",
     "field_phone": "Telefon Numarası",
     "placeholder_phone": "+90 (500) 000 00 00",
+    "field_email": "E-posta",
+    "placeholder_email": "ornek@mail.com",
     "field_city": "Şehir / Türkiye'deki Konum",
     "placeholder_city": "örn. Bodrum, İzmir, Antalya",
-    "field_bill": "Ortalama Aylık Elektrik Faturası",
-    "placeholder_bill": "örn. 3.500 TL / ay",
-    "submit_btn": "Ücretsiz Hesaplama Talep Et",
-    "privacy_note": "Gizliliğinize saygı duyuyoruz. Spam yok, yalnızca mülkünüz için net rakamlar."
+    "submit_btn": "Talebi Gönder",
+    "privacy_note": "Verilerinize saygı duyuyoruz. Spam yok, yalnızca mülkünüz için doğru hesaplamalar."
   },
   "footer": {
-    "description": "Türkiye genelinde anahtar teslim güneş enerjisi sistemleri — konut çatılarından tam ölçekli ticari kurulumlara kadar. Tamamen finanse edilir, kurulur ve bakımı yapılır.",
-    "cta": "Ücretsiz Denetim Alın",
+    "description": "Türkiye genelinde anahtar teslim güneş enerjisi santralleri. Konut siteleri ve ticari mülkler için finansman, tasarım, kurulum ve servis.",
+    "cta": "Ücretsiz Keşif Alın",
     "navigationTitle": "Navigasyon",
-    "contactTitle": "Bize Ulaşın",
+    "contactTitle": "İletişim",
     "address": "Maslak Mah., Büyükdere Cad. No: 245, Sarıyer / İstanbul",
-    "hours": "Pzt.–Cuma 09:00–18:00",
+    "hours": "Pzt.–Cum. 09:00–18:00",
     "copyright": "© 2026 Solar4Turkey A.Ş. Tüm hakları saklıdır.",
     "privacy": "Gizlilik Politikası",
-    "cookies": "Çerez Politikası",
-    "terms": "Kullanım Şartları"
+    "cookies": "Çerez Kullanım Politikası",
+    "terms": "Kullanım Koşulları"
   }
 }

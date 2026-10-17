@@ -2,39 +2,40 @@
   "lang": "en",
   "layout": "layouts/base.njk",
   "nav": {
-    "solutions": "Solutions",
+    "solutions": "Our Services",
     "howItWorks": "How It Works",
     "benefits": "Benefits",
-    "projects": "Projects",
+    "projects": "Our Projects",
     "forComplex": "For Complexes",
     "forBusiness": "For Businesses",
     "forVillas": "For Villas",
     "forApartments": "For Apartments",
-    "cta": "Get Free Audit"
+    "cta": "Free Audit",
+    "services": "Our Services"
   },
   "hero": {
-    "title": "Cut Your Electricity Bills Starting Today",
-    "free_title": "FREE",
-    "subtitle": "Turkey's top-rated solar installer for villas and residential complexes, with warranty and 24/7 monitoring.",
+    "title": "Solar Systems for Your Complex",
+    "free_title": "FOR FREE",
+    "subtitle": "Cut your electricity bills starting today!",
     "value_prop_highlights": [
-      "₺0 upfront for qualifying residential complexes",
-      "Free energy and roof audit",
-      "Warranty and 24/7 remote monitoring",
-      "Maintenance and panel cleaning included"
+      "₺0 upfront for residential complexes",
+      "Free audit and electricity consumption analysis for your complex",
+      "24/7 monitoring",
+      "Warranty repairs and service maintenance"
     ],
-    "cta_offer": "Get Free Offer",
+    "cta_offer": "Get a Quote",
     "cta_packages": "View Pricing Packages",
     "scroll": "Scroll"
   },
   "savings": {
-    "title": "Your Benefits with Solar4Turkey System",
+    "title": "How the System Works",
     "day": {
       "title": "Daytime",
-      "desc": "While the sun shines across Turkey, your rooftop works for you — solar panels power your home, charge your EV, and fill your battery to 100%. You pay zero to the grid for daytime energy."
+      "desc": "When the sun is shining, your roof works for you. Solar panels supply your complex with electricity. Surplus daytime energy is sold on the exchange, with the option to buy it back for use at night."
     },
     "night": {
       "title": "Nighttime",
-      "desc": "When the sun sets, your battery seamlessly takes over — significantly cutting energy costs for common areas (pools, pumps, sauna, hammam, lighting, ventilation, cameras, etc.) from day one of operation. Complete self-sufficiency even after dark."
+      "desc": "When the sun sets, the system smoothly switches to battery power. This significantly reduces electricity costs for common areas at night. Daytime generation can also be directed to cover the night-time shortfall, delivering round-the-clock savings."
     },
     "calc": {
       "dailyLabel": "Daily Savings",
@@ -44,26 +45,26 @@
       "annualLabel": "Annual Savings",
       "annualSub": "annual savings at 1,400 kWh/kW"
     },
-    "currencyNote": "* Savings are estimated using an average annual generation of 1,400 kWh per kW of installed capacity in southern Turkey.",
-    "disclaimer": "* Calculation uses an electricity tariff of ₺5.50/kWh. Actual generation and savings vary with location, weather, system performance, and consumption."
+    "currencyNote": "* Calculations are based on electricity tariffs in Turkish lira; all amounts are shown in TRY.",
+    "disclaimer": "* Calculation based on PVGIS solar irradiation data for Turkey (35° tilt, south-facing), an electricity tariff of ₺5.50/kWh including taxes, and full self-consumption from the battery. Actual savings depend on regional weather conditions and consumption habits."
   },
   "tariffGrowth": {
     "badge": "Inflation Protection",
-    "title": "How Electricity Tariffs Are Rising in Turkey",
-    "descriptionBefore": "Over the last decade, electricity costs for commercial properties and shared residential areas have increased by more than",
+    "title": "Electricity Tariff Growth in Turkey",
+    "descriptionBefore": "Over the past 10 years, electricity costs have risen by more than",
     "multiplier": "12–15×",
     "chartTitle": "Cost Growth (TRY / kWh)",
     "chartLabel": "Tariff (TRY / kWh)",
     "tooltipLabel": "Tariff",
     "period": "2015–2026",
     "insightTitle": "Tariffs rise every year",
-    "insightDescription": "Distribution charges, lira depreciation, and inflation continue to make grid electricity more expensive over time.",
-    "solutionTitle": "The Solar4Turkey solution",
-    "solutionDescription": "A solar power station helps stabilize complex energy costs and turns every generated kilowatt-hour into direct budget savings."
+    "insightDescription": "Dependence on electricity imports, lira depreciation and inflation make grid electricity more expensive each year.",
+    "solutionTitle": "The Solar4Turkey Solution",
+    "solutionDescription": "A solar power station helps reduce complex expenses and turns every kWh it generates into direct budget savings."
   },
   "benefits": {
     "section_title": "Resident Benefits",
-    "section_subtitle": "Maximum savings, comfort, and zero risk for property owners",
+    "section_subtitle": "Maximum benefit, comfort and security for every property owner",
     "categories": {
       "financial": "Financial Benefit",
       "reliability": "Technical Reliability",
@@ -73,115 +74,107 @@
       {
         "icon": "fa-hand-holding-dollar",
         "title": "Zero Initial Investment",
-        "description": "Owners do not need to pay for equipment purchases or participate in special targeted collections."
+        "description": "Owners don't need to pay for equipment or take part in special collections."
       },
       {
         "icon": "fa-bolt",
         "title": "Savings From Day One",
-        "description": "Once launched, the station immediately begins reducing energy costs consumed by common areas."
+        "description": "As soon as the station is running, the complex starts cutting electricity costs for common areas."
       },
       {
         "icon": "fa-file-invoice-dollar",
         "title": "No Loans or Debt",
-        "description": "Residents do not need to take out bank loans or assume financial obligations for expensive equipment."
+        "description": "Residents don't need bank loans or financial commitments for expensive equipment."
       },
       {
         "icon": "fa-scale-balanced",
-        "title": "Reduction of Aidat Burden",
-        "description": "Electricity expenses are offset by solar generation, helping keep maintenance fees stable."
+        "title": "Lower Aidat Burden",
+        "description": "Part of the electricity costs is offset by solar generation, helping keep aidat stable."
       },
       {
         "icon": "fa-shield-halved",
-        "title": "Protection Against Tariff Hikes",
-        "description": "The higher future electricity costs rise, the greater the financial benefit from your solar installation."
+        "title": "Protection From Tariff Hikes",
+        "description": "The higher electricity prices become in future, the greater the financial benefit of solar power."
       },
       {
         "icon": "fa-triangle-exclamation",
-        "title": "Zero Technical Risks",
-        "description": "Full legal and technical responsibility for the equipment rests entirely with Solar4Turkey."
+        "title": "No Technical Risks",
+        "description": "Full legal and technical responsibility for the equipment lies with Solar4Turkey."
       },
       {
         "icon": "fa-screwdriver-wrench",
         "title": "Free Maintenance",
-        "description": "All scheduled routine maintenance work is carried out at Solar4Turkey's expense."
+        "description": "All scheduled maintenance work on the station is covered by Solar4Turkey."
       },
       {
         "icon": "fa-shower",
         "title": "Free Panel Cleaning",
-        "description": "Regular panel washing to maintain maximum energy efficiency is included in the agreement."
+        "description": "Regular panel cleaning to maintain maximum efficiency is included in the contract."
       },
       {
         "icon": "fa-rotate",
-        "title": "Warranty Repairs & Replacement",
-        "description": "In case of equipment failure, all repair and replacement costs are fully covered by Solar4Turkey."
+        "title": "Free Repairs and Replacement",
+        "description": "If warranty equipment malfunctions, Solar4Turkey covers all costs in full."
       },
       {
         "icon": "fa-chart-line",
-        "title": "24/7 Continuous Monitoring",
-        "description": "The system is tracked remotely around the clock, allowing instant detection and resolution of issues."
+        "title": "Continuous Monitoring",
+        "description": "The system is monitored remotely 24/7, so faults are detected and fixed immediately."
       },
       {
         "icon": "fa-house-chimney",
-        "title": "Zero-Cost Roof Utilization",
-        "description": "Previously unused building roof space begins generating real financial value for the complex."
+        "title": "Roof Use at No Cost",
+        "description": "An unused building roof starts delivering real financial benefit to the complex."
       },
       {
         "icon": "fa-star",
-        "title": "Increased Attractiveness",
-        "description": "A modern solar power plant raises property status and appeals to buyers and tenants alike."
+        "title": "Increased Appeal",
+        "description": "A modern solar power station raises the status of the property and its appeal to tenants and buyers."
       },
       {
         "icon": "fa-arrow-trend-up",
-        "title": "Higher Real Estate Value",
-        "description": "Owners can eventually sell their properties at a more advantageous price without extra investments."
+        "title": "Higher Property Value",
+        "description": "In future, owners can sell their property at a better price without additional investment."
       },
       {
         "icon": "fa-leaf",
-        "title": "Eco-Friendly Operations",
-        "description": "Reduces grid electricity consumption, improves the building's green profile, and handles peak loads."
+        "title": "Eco-Friendly Operation",
+        "description": "Grid electricity consumption drops, the complex's environmental profile improves, and peak load issues are resolved."
       },
       {
         "icon": "fa-piggy-bank",
-        "title": "Share of Pure Savings",
+        "title": "Share of the Savings",
         "description": "The complex receives its percentage of net savings without investing a single lira."
       },
       {
         "icon": "fa-building-shield",
         "title": "Financial Stability",
-        "description": "Long-term benefits without the hassle of managing complex power infrastructure independently."
+        "description": "Long-term benefits without having to manage complex energy equipment yourself."
       }
     ]
   },
   "projects": {
-    "section_title": "Featured Residential Projects",
+    "section_title": "Featured Projects",
     "categories": [
       {
-        "id": "business",
-        "title": "Business & Commerce Buildings"
-      },
-      {
-        "id": "villas",
-        "title": "Villas & Private Properties"
-      },
-      {
         "id": "apartments",
-        "title": "Apartments / Flats"
+        "title": "Residential Complexes"
       }
     ],
-    "section_subtitle": "Real rooftop installations delivered for Turkish homeowners, with savings calculated from each property's own consumption and local solar yield.",
-    "footnote": "* Savings are estimates based on local solar yield audits and each household's electricity consumption. Actual results may vary.",
-    "savings_label": "Estimated yearly savings",
+    "section_subtitle": "Examples of our installations on residential properties in Turkey. Savings for each project are calculated individually based on the actual consumption profile and the climate of the region.",
+    "footnote": "* Savings are estimates based on a local solar irradiation audit and the energy consumption of each property. Actual results may differ.",
+    "savings_label": "Estimated annual savings",
     "cta_proposal": "Calculate my savings",
-    "cta_view": "See details",
+    "cta_view": "Details",
     "list": [
       {
         "id": "villa-6kw",
         "image": "/assets/img/projects/project-1.png",
         "location": "Bodrum, Muğla · Residential villa",
-        "title": "Villa Solar System 6 kW",
-        "output": "6 kW system · 16 kWh battery backup",
+        "title": "6 kW Villa Solar System",
+        "output": "6 kW system · 16 kWh backup battery",
         "savings": "₺10,850 / year",
-        "configuration": "Grid-tied hybrid. Keeps the lights on during night-time outages.",
+        "configuration": "Grid-connected hybrid system. Keeps lighting running during night-time outages.",
         "specs_list": [
           "12 × Aiko 500W panels",
           "Growatt 6 kW inverter",
@@ -191,11 +184,11 @@
       {
         "id": "suburban-8kw",
         "image": "/assets/img/projects/project-2.png",
-        "location": "Urla, İzmir · Single-family home",
-        "title": "Suburban Solar Setup 8 kW",
+        "location": "Urla, İzmir · Private house",
+        "title": "8 kW Suburban Solar System",
         "output": "8 kW system · 16 kWh storage",
         "savings": "₺20,400 / year",
-        "configuration": "High-efficiency N-type TOPCon panels for strong output in low light.",
+        "configuration": "High-efficiency N-Type TOPCon panels for strong output in low light.",
         "specs_list": [
           "16 × Aiko 500W panels",
           "Growatt 8 kW inverter",
@@ -206,10 +199,10 @@
         "id": "antalya-penthouse-10kw",
         "image": "/assets/img/projects/project-3.png",
         "location": "Konyaaltı, Antalya · Luxury penthouse",
-        "title": "Rooftop Hybrid Plant 10 kW",
-        "output": "10 kW system · 20 kWh battery backup",
+        "title": "10 kW Rooftop Hybrid Station",
+        "output": "10 kW system · 20 kWh backup battery",
         "savings": "₺30,100 / year",
-        "configuration": "Combined roof and balcony array, sized for high summer demand.",
+        "configuration": "Combined roof and balcony array, designed for high summer demand.",
         "specs_list": [
           "20 × Longi 500W panels",
           "Huawei 10 kW inverter",
@@ -220,10 +213,10 @@
         "id": "bursa-family-home-12kw",
         "image": "/assets/img/projects/project-4.png",
         "location": "Nilüfer, Bursa · Detached house",
-        "title": "Extended Family Home System 12 kW",
-        "output": "12 kW system · 25 kWh battery backup",
+        "title": "12 kW Family Solar System",
+        "output": "12 kW system · 25 kWh backup battery",
         "savings": "₺30,850 / year",
-        "configuration": "Three-phase smart hybrid layout for larger households.",
+        "configuration": "Three-phase smart hybrid system for large households.",
         "specs_list": [
           "24 × JA Solar 500W panels",
           "Deye 12 kW inverter",
@@ -234,10 +227,10 @@
         "id": "fethiye-eco-villa-5kw",
         "image": "/assets/img/projects/project-5.png",
         "location": "Fethiye, Muğla · Eco villa",
-        "title": "Compact Off-Grid Ready 5 kW",
-        "output": "5 kW system · 10 kWh battery backup",
+        "title": "Compact Standalone System 5 kW",
+        "output": "5 kW system · 10 kWh backup battery",
         "savings": "₺10,500 / year",
-        "configuration": "Off-grid capable, so the home can run independently if the grid fails.",
+        "configuration": "Ready for off-grid operation, so the home can run independently if the grid fails.",
         "specs_list": [
           "10 × Trina 500W panels",
           "Victron MultiPlus 5 kW",
@@ -248,10 +241,10 @@
         "id": "ankara-modern-duplex-15kw",
         "image": "/assets/img/projects/project-6.png",
         "location": "Çankaya, Ankara · Modern duplex",
-        "title": "High-Capacity Residential Duplex 15 kW",
-        "output": "15 kW system · 30 kWh battery backup",
+        "title": "15 kW High-Capacity Residential Duplex System",
+        "output": "15 kW system · 30 kWh backup battery",
         "savings": "₺40,700 / year",
-        "configuration": "Built for shared-use households with high daily consumption.",
+        "configuration": "Designed for shared households with high daily consumption.",
         "specs_list": [
           "30 × Jinko 500W panels",
           "Solis 15 kW inverter",
@@ -263,89 +256,96 @@
   "onboarding": {
     "title_prefix": "4 Simple Steps",
     "title_highlight": "to Get Started",
-    "subtitle": "We handle the technical work, paperwork, and installation so your board can move forward with confidence.",
+    "subtitle": "We take care of the technical work, paperwork and installation so the board can make a confident decision.",
     "steps": [
       {
         "icon": "fa-magnifying-glass-chart",
         "title": "Free Energy Audit",
-        "description": "We survey the roof, review common-area electricity bills, and prepare a tailored project plan."
+        "description": "We survey the roof, calculate the electricity consumption of common areas and prepare an individual project for your complex."
       },
       {
         "icon": "fa-file-signature",
         "title": "Approval Support",
-        "description": "You receive ready-to-use presentation materials and legal documents for the owners' meeting."
+        "description": "We prepare a presentation and calculations for your complex and answer all questions from owners."
       },
       {
         "icon": "fa-screwdriver-wrench",
         "title": "Turnkey Installation",
-        "description": "Our team manages design, delivery, and installation with minimal disruption for residents."
+        "description": "Design, delivery and installation of the equipment are fully financed by Solar4Turkey."
       },
       {
         "icon": "fa-chart-line",
         "title": "Launch and Savings",
-        "description": "We connect the system, provide 24/7 monitoring access, and savings begin from day one."
+        "description": "Once the system is connected, you get 24/7 monitoring access and the complex starts saving from day one."
       }
     ]
   },
   "interactive": {
-    "section_title": "Explore Your Solar System",
-    "section_subtitle": "Explore the key components of your solar installation and see how they work together to power your home.",
-    "house_alt": "House overview",
-    "panels_alt": "Solar panels detailed view",
-    "inverter_alt": "Inverter and battery detailed view",
-    "open_label": "Explore in fullscreen",
-    "rotate_hint": "Rotate your phone for the best view",
-    "rotate_prompt": "Turn your phone sideways",
+    "section_title": "Your Solar Power Station",
+    "section_subtitle": "Visualization and key components of your solar installation",
+    "house_alt": "General view of the house",
+    "panels_alt": "Detailed view of solar panels",
+    "inverter_alt": "Detailed view of inverter and battery",
+    "open_label": "Open full screen",
+    "rotate_hint": "Turn your phone for a better view",
+    "rotate_prompt": "Turn your phone horizontally",
     "exit_label": "Close",
-    "select_prompt": "Select an element",
+    "select_prompt": "Select an item",
     "panels_hotspot": "Solar Panels",
-    "inverter_hotspot": "Inverter & Battery",
-    "back_label": "Back to Overview",
+    "inverter_hotspot": "Inverter and Battery",
+    "back_label": "Back to overview",
     "audit_cta": "Get Free Audit",
     "panels": {
-      "title": "CW Energy Tier-1 Panels",
-      "description": "Premium Turkish Tier-1 solar modules featuring advanced TOPCon and Bifacial technology. Designed with anti-degradation protection to capture maximum sunlight from both sides.",
-      "main_stat_title": "Yearly Production",
-      "main_stat_value": "~9,800",
+      "title": "CW Enerji Tier-1 Panels",
+      "description": "Premium Turkish CW Enerji Tier-1 solar panels with advanced TOPCon technology, made of special anti-glare, self-cleaning glass with high efficiency and minimal degradation.",
+      "main_stat_title": "Annual output per panel",
+      "main_stat_value": ">900",
       "main_stat_unit": "kWh",
-      "stat1_value": "30 Yrs",
+      "stat1_value": "30+ years",
       "stat1_label": "Lifespan",
-      "stat2_value": "Bifacial",
-      "stat2_label": "Technology"
+      "stat2_value": "12 years",
+      "stat2_label": "Warranty"
     },
     "inverter": {
       "title": "TommaTech Hybrid Inverter",
-      "description": "Intelligent energy flow management system featuring a seamless Uninterruptible Power Supply (UPS) function. Ensures maximum efficiency and reliability for common areas.",
-      "main_stat_title": "System Efficiency",
-      "main_stat_value": "98.6",
+      "description": "TommaTech hybrid inverters provide full control over energy distribution between solar panels, the central grid, battery storage and the building's load, ensuring maximum efficiency and reliability for common areas.",
+      "main_stat_title": "Inverter efficiency",
+      "main_stat_value": "98",
       "main_stat_unit": "%",
-      "stat1_value": "5 Yrs",
-      "stat1_label": "Inv. Lifespan",
-      "stat2_value": "10 Yrs",
-      "stat2_label": "Bat. Lifespan"
+      "stat1_value": "5 years",
+      "stat1_label": "Warranty",
+      "stat2_value": "10+ years",
+      "stat2_label": "Lifespan"
     },
     "battery": {
-      "title": "TommaTech HV Lithium Battery",
-      "description": "Advanced High Voltage (HV) LiFePO4 battery storage. Built for deep discharge with over 6,000 cycles to power your property safely through the night."
+      "title": "TommaTech High-Voltage Lithium Battery",
+      "description": "TommaTech high-voltage energy storage systems are modern modular batteries based on safe lithium iron phosphate (LiFePO4) technology. They are designed to work with three-phase hybrid inverters, supplying the complex with energy during voltage surges, sudden power outages and grid interruptions.",
+      "stat1_value": "6000+",
+      "stat1_label": "Cycles",
+      "stat2_value": "5 years",
+      "stat2_label": "Warranty",
+      "stat3_value": "10+ years",
+      "stat3_label": "Lifespan",
+      "stats_note": "At up to 90% depth of discharge"
     }
   },
   "audit": {
-    "badge": "Free Evaluation",
+    "badge": "Free Assessment",
     "section_title": "Get Your Free Solar Audit",
-    "section_subtitle": "Fill out the quick form below and our engineers will calculate your estimated savings and system sizing.",
+    "section_subtitle": "Leave a short request and our specialist will contact you to calculate your system's capacity and your future savings.",
     "field_name": "Full Name",
     "placeholder_name": "John Doe",
     "field_phone": "Phone Number",
     "placeholder_phone": "+90 (500) 000 00 00",
+    "field_email": "Email",
+    "placeholder_email": "example@mail.com",
     "field_city": "City / Location in Turkey",
     "placeholder_city": "e.g. Bodrum, Izmir, Antalya",
-    "field_bill": "Average Monthly Electricity Bill",
-    "placeholder_bill": "e.g. 3,500 TL / month",
-    "submit_btn": "Request Free Calculation",
-    "privacy_note": "We respect your privacy. No spam, just exact figures for your property."
+    "submit_btn": "Submit Request",
+    "privacy_note": "We respect your data. No spam, only accurate calculations for your property."
   },
   "footer": {
-    "description": "Turnkey solar energy systems across Turkey — from residential rooftops to full-scale commercial installations. Fully financed, installed, and maintained.",
+    "description": "Turnkey solar power installation across Turkey. Financing, design, installation and service for residential complexes and commercial properties.",
     "cta": "Get Free Audit",
     "navigationTitle": "Navigation",
     "contactTitle": "Contact Us",
@@ -353,7 +353,7 @@
     "hours": "Mon.–Fri. 09:00–18:00",
     "copyright": "© 2026 Solar4Turkey A.Ş. All rights reserved.",
     "privacy": "Privacy Policy",
-    "cookies": "Cookie Policy",
+    "cookies": "Cookie Usage Policy",
     "terms": "Terms of Use"
   }
 }
